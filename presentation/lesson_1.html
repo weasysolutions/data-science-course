@@ -11783,8 +11783,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4><em><font color=blue>  Objetivo de la lección: </font></em></h4>
 <p><font color=blue>
-    <i>Objetivo de la lección</i>: Presentar el lenguaje de programación que estaremos usando: Python. 
+  Presentar el lenguaje de programación que estaremos usando: Python. 
 </font></p>
 
 </div>
@@ -11803,17 +11804,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>Fuerte vs Dinámico</em></p>
-<p>En computación  a menudo se usa el término <em>lenguaje fuertemente tecleado</em> para referirse a un lenguaje que está tipificado estáticamente (los tipos están asociados con una declaración de variable) o, más generalmente, el compilador puede decir a qué tipo se refiere una variable, por ejemplo, a través de la inferencia de tipos, sin ejecutar el programa) y <em>fuertemente tecleado</em> (restrictivo sobre cómo se pueden mezclar los tipos). Por lo tanto, si nos fijamos en la tipificación dinámica y la tipificación fuerte como conceptos ortogonales.</p>
-<h5 align="center"> <i> Python puede teclearse dinámica y fuertemente</i></h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="...Caracter&#237;sticas-Generales...">...Caracter&#237;sticas Generales...<a class="anchor-link" href="#...Caracter&#237;sticas-Generales...">&#182;</a></h3><p>Orientado a Objectos vs Funcional: <strong>Python</strong> soporta ambas.</p>
-<p><em>Al final hacemos uso de las funciones del lenguaje que hacen el trabajo con el código más corto y limpio posible. Si eso significa que mezclar ambas, entonces es lo que se hacemos</em></p>
+<p>En computación  a menudo se usa el término <em>lenguaje fuertemente tecleado</em> para referirse a un lenguaje que está <em>tipificado estáticamente</em> (los tipos están asociados con una declaración de variable o, más generalmente, el compilador puede decir a qué tipo se refiere una variable) y <em>fuertemente tecleado</em> (restrictivo sobre cómo se pueden mezclar los tipos). Por lo tanto, si nos fijamos en la tipificación dinámica y la tipificación fuerte como conceptos ortogonales:</p>
+<p><strong><em><center>  Python puede teclearse dinámica y fuertemente <center></em></strong></p>
 
 </div>
 </div>
@@ -11822,14 +11814,24 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Python</strong> distingue Mayusculas y Minusculas (<em>Case Sensitive</em>)</p>
+<h4 id="Orientado-a-Objectos-vs-Funcional"><em>Orientado a Objectos vs Funcional</em><a class="anchor-link" href="#Orientado-a-Objectos-vs-Funcional">&#182;</a></h4><p>El lenguaje <strong>Python</strong> soporta ambas.</p>
+<p>FILOSOFÍA DE USO: <em>Al final hacemos uso de las funciones del lenguaje que hacen el trabajo con el código más corto y limpio posible. Si eso significa que mezclar ambas, entonces eso hacemos</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Python</strong> distingue Mayúsculas y Minúsculas (<em>Case Sensitive</em>)</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Ejemplo</span>
@@ -11854,7 +11856,7 @@ div#notebook {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-37a8cd86d034&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-11-37a8cd86d034&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg">#Ejemplo</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> x <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1</span>
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
@@ -11877,7 +11879,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;este funciona&#39;</span><span class="p">),</span>
@@ -11912,15 +11914,15 @@ este también
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Asignaci&#243;n-de-Valores">Asignaci&#243;n de Valores<a class="anchor-link" href="#Asignaci&#243;n-de-Valores">&#182;</a></h3><p>Los valores se asignan (de hecho, los objetos están vinculados a los nombres) con el signo igual ("="), y la prueba de igualdad se realiza utilizando dos signos iguales ("=="). 
-Puede aumentar/disminuir los valores utilizando los operadores + = y - = respectivamente por la cantidad de la mano derecha. Esto funciona en muchos tipos de datos, incluidas las cadenas. También puede utilizar múltiples variables en una línea.</p>
+<h3 id="Asignaci&#243;n-de-Valores">Asignaci&#243;n de Valores<a class="anchor-link" href="#Asignaci&#243;n-de-Valores">&#182;</a></h3><p>Los valores se asignan (de hecho, los objetos están vinculados a los nombres) con el signo igual ("=")</p>
+<p>La prueba de igualdad se realiza utilizando dos signos iguales ("==")</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x vale 1</span>
@@ -11928,9 +11930,6 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="c1">#Nos preguntamos si x vale 1</span>
 <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span>
-<span class="c1">#Sumamos 1 a x</span>
-<span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11948,7 +11947,68 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1
-2
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Asignaci&#243;n-de-Valores">Asignaci&#243;n de Valores<a class="anchor-link" href="#Asignaci&#243;n-de-Valores">&#182;</a></h3><p>Puede aumentar/disminuir los valores utilizando los operadores + = y - =, respectivamente, por la cantidad del lado  derecho. Esto funciona en muchos tipos de datos, incluidas las cadenas.
+También puede utilizar múltiples variables en una línea.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Sumamos 1 a x</span>
+<span class="n">x</span>  <span class="o">=</span> <span class="mi">1</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Multiples variables en una línea</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span>  <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+1 2
 </pre>
 </div>
 </div>
@@ -11959,7 +12019,7 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#+= Funciona en cadenas</span>
@@ -12013,20 +12073,117 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Listas-(Ejemplo)">Listas (Ejemplo)<a class="anchor-link" href="#Listas-(Ejemplo)">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Lista</span>
-<span class="n">ejemplo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;otra lista&#39;</span><span class="p">],</span> <span class="s1">&#39;letras&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;esto es&#39;</span><span class="p">,</span> <span class="s1">&#39;una tupla&#39;</span><span class="p">)]</span> <span class="c1">#Combinadas</span>
-<span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;letras&#39;</span><span class="p">,</span><span class="mf">2.78</span><span class="p">]</span> <span class="c1">#Combinadas</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ejemplo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;otra lista&#39;</span><span class="p">],</span> <span class="s1">&#39;letras&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;esto es&#39;</span><span class="p">,</span> <span class="s1">&#39;una tupla&#39;</span><span class="p">)]</span> <span class="c1">#Lista Mezclada</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;letras&#39;</span><span class="p">,</span><span class="mf">2.78</span><span class="p">]</span> <span class="c1">#Otra lista Mezclada</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">)</span>
 <span class="n">milista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ahora es caracter&quot;</span>  <span class="c1"># Notemos que &quot; &quot; y &#39; &#39;son igualmente válidas</span>
 <span class="n">milista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.21</span> <span class="c1"># Nos referimos al último elemento.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 34, &#39;letras&#39;, 2.78]
+[&#39;ahora es caracter&#39;, 34, &#39;letras&#39;, 3.21]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Diccionarios-y-Tuplas-(Ejemplo)">Diccionarios y Tuplas (Ejemplo)<a class="anchor-link" href="#Diccionarios-y-Tuplas-(Ejemplo)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Dic</span>
 <span class="n">midic</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;llave 1&quot;</span><span class="p">:</span> <span class="s2">&quot;valor 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;euler&quot;</span><span class="p">:</span> <span class="mf">2.78</span><span class="p">}</span>
 <span class="n">midic</span><span class="p">[</span><span class="s2">&quot;euler&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Así cambiamos valores en los diccionario</span>
-<span class="n">mitupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">mifuncion</span> <span class="o">=</span> <span class="nb">len</span> <span class="c1">#Apunta hacia función predeterminada len</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#tupla</span>
+<span class="n">mitupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># Note los parentesis</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Asignacion-de-datos">Asignacion de datos<a class="anchor-link" href="#Asignacion-de-datos">&#182;</a></h3><h4 id="Las-variables-pueden-apuntar-a-funciones">Las variables pueden apuntar a funciones<a class="anchor-link" href="#Las-variables-pueden-apuntar-a-funciones">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ejemplo</span> <span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1">#Apunta hacia la función predeterminada len</span>
+<span class="n">mifuncion</span> <span class="o">=</span> <span class="nb">len</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mifuncion</span><span class="p">(</span><span class="n">ejemplo</span><span class="p">))</span>
 </pre></div>
 
@@ -12044,7 +12201,7 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4
+<pre>6
 </pre>
 </div>
 </div>
@@ -12053,16 +12210,26 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Asignacion-de-datos">Asignacion de datos<a class="anchor-link" href="#Asignacion-de-datos">&#182;</a></h3><p>El siguiente codigo intercambia las variables en una línea.
+ No viola la tipificación fuerte porque los valores no son
+ siendo asignado realmente, pero los nuevos objetos están vinculados a
+ los viejos nombres.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esto intercambia las variables en una línea (!).</span>
-<span class="c1"># No viola la tipificación fuerte porque los valores no son</span>
-<span class="c1"># siendo asignado realmente, pero los nuevos objetos están vinculados a</span>
-<span class="c1"># los viejos nombres.</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">milista</span> <span class="o">=</span> <span class="n">milista</span><span class="p">,</span> <span class="n">x</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>  <span class="o">=</span> <span class="mi">1</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="s1">&#39;hola&#39;</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">lista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">,</span> <span class="n">x</span>
 </pre></div>
 
 </div>
@@ -12074,14 +12241,16 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Puede acceder a los rangos de la matriz utilizando los dos puntos (:). Dejar el índice de inicio vacío supone el primer elemento, y el índice final supone el último elemento. La indexación es inclusiva-exclusiva, por lo que al especificar [2:10] se devolverán los ítems [2] (el tercer ítem, debido a la indexación 0) a [9] (el décimo ítem), inclusive (8 ítems). Los índices negativos cuentan desde el último elemento hacia atrás (por lo tanto, -1 es el último elemento) así:</p>
+<h3 id="Matrices">Matrices<a class="anchor-link" href="#Matrices">&#182;</a></h3><p>Puede acceder a los rangos de la matriz utilizando los dos puntos (:).</p>
+<p>Dejar el índice de inicio vacío supone el primer elemento, y el índice final supone el último elemento. 
+La indexación es inclusiva-exclusiva, por lo que al especificar [2:10] se devolverán los ítems [2] (el tercer ítem, debido a la indexación 0) al [9] (el décimo ítem), inclusive (8 ítems). Los índices negativos se cuentan desde el último elemento hacia atrás (por lo tanto, -1 es el último elemento) así:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;List item 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
@@ -12113,9 +12282,17 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Matrices.-M&#225;s-ejemplos">Matrices. M&#225;s ejemplos<a class="anchor-link" href="#Matrices.-M&#225;s-ejemplos">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
@@ -12160,7 +12337,8 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Las cadenas pueden usar comillas simples o dobles, y puede tener comillas de un tipo dentro de una cadena que usa el otro tipo (es decir, "Él dijo 'hola'" es válido). Las cadenas multilínea se incluyen entre _triple comillas dobles (o simples) ("" "). Las cadenas de Python siempre son Unicode, pero hay otro tipo de cadena que es bytes puros. Estos se denominan secuencias de bytes y se representan con el prefijo b, por ejemplo, b'Hello \ xce \ xb1 '. . Para llenar una cadena con valores, use el operado r% (módulo) y una tupla. Cada %s se reemplaza con un elemento de la tupla, de izquierda a derecha, como por ejemplo:</p>
+<p>Las cadenas pueden usar comillas simples o dobles, y puede tener comillas de un tipo dentro de una cadena que usa el otro tipo (es decir, "Él dijo 'hola'" es válido).</p>
+<p>Para llenar una cadena con valores, use el operado s% (módulo) y una tupla. Cada %s se reemplaza con un elemento de la tupla, de izquierda a derecha, como por ejemplo:</p>
 
 </div>
 </div>
@@ -12203,7 +12381,7 @@ Puede aumentar/disminuir los valores utilizando los operadores + = y - = respect
 <div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Mire la s en &quot;%(llave)s&quot;.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Atención a la s en &quot;%(llave)s&quot;.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Esto </span><span class="si">%(verbo)s</span><span class="s2"> a </span><span class="si">%(sustantivo)s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;sustantivo&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba&quot;</span><span class="p">,</span> <span class="s2">&quot;verbo&quot;</span><span class="p">:</span> <span class="s2">&quot;es&quot;</span><span class="p">})</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Enrique&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hola, </span><span class="si">{name}</span><span class="s2">!&quot;</span><span class="p">)</span>
@@ -12244,7 +12422,7 @@ Hola, Enrique!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">listarango</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -12278,24 +12456,20 @@ primer elemento 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">listarango</span><span class="p">:</span>
-    <span class="c1"># Verifica si el numero es uno Check</span>
-    <span class="c1"># de los numeros en la tupla.</span>
+    <span class="c1"># Verifica si el numero es uno Check de los numeros en la tupla.</span>
     <span class="k">if</span> <span class="n">numero</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
-        <span class="c1"># Con &#39;break&#39; rompemos la clausula </span>
-        <span class="c1"># o ejecutamos la clausula &#39;else&#39;</span>
+        <span class="c1"># Con &#39;break&#39; rompemos la clausula  o ejecutamos la clausula &#39;else&#39;</span>
         <span class="k">break</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># &quot;Continue&quot; empieza la siguiente iteracion</span>
-        <span class="c1"># del lazo. No tiene algun uso aqui,</span>
+        <span class="c1"># &quot;Continue&quot; empieza la siguiente iteracion del lazo. No tiene algun uso aqui,</span>
         <span class="c1"># puesto que es la ultima setencia del lazo  </span>
         <span class="k">continue</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="c1"># Este &#39;else&#39; es opcional y es</span>
-    <span class="c1"># ejecutado solo si el lazon no rompe (&#39;break&#39;).</span>
+    <span class="c1"># Este &#39;else&#39; es opcional y es ejecutado solo si el lazon no rompe (&#39;break&#39;).</span>
     <span class="k">pass</span> <span class="c1"># No hacemos nada</span>
 </pre></div>
 
