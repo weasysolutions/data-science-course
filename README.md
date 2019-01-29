@@ -1,3 +1,4 @@
+
 # Curso Ciencia de Datos
 
 Curso de Ciencia de datos con un enfoque pragmático. Presentamos un flujo de ciencia de datos para el conjunto de datos de Cancer de Mama del Hospital de Wisconsin.
