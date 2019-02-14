@@ -12250,7 +12250,7 @@ La indexación es inclusiva-exclusiva, por lo que al especificar [2:10] se devol
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;List item 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
@@ -12292,10 +12292,11 @@ La indexación es inclusiva-exclusiva, por lo que al especificar [2:10] se devol
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;List item 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
@@ -12376,9 +12377,17 @@ La indexación es inclusiva-exclusiva, por lo que al especificar [2:10] se devol
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Caracteres-(Llaves)">Caracteres (Llaves)<a class="anchor-link" href="#Caracteres-(Llaves)">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Atención a la s en &quot;%(llave)s&quot;.</span>
@@ -12415,17 +12424,18 @@ Hola, Enrique!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Declaraciones-de-control-de-flujo">Declaraciones de control de flujo<a class="anchor-link" href="#Declaraciones-de-control-de-flujo">&#182;</a></h3><p>Las declaraciones de control de flujo son <strong>if</strong>, <strong>for</strong> y <strong>while</strong>. No hay <strong>switch</strong>; en su lugar, use <strong>if</strong>. Use <strong>for</strong> para enumerar a través de miembros de una lista. Para obtener una lista de números, use el <em>rango(numero)</em>. La sintaxis de estas declaraciones es por lo tanto:</p>
+<h3 id="Declaraciones-de-control-de-flujo">Declaraciones de control de flujo<a class="anchor-link" href="#Declaraciones-de-control-de-flujo">&#182;</a></h3><p>Las declaraciones de control de flujo son <strong>if</strong>, <strong>for</strong> y <strong>while</strong>. No hay <strong>switch</strong>; en su lugar, use <strong>if</strong>. Use <strong>for</strong> para enumerar a través de miembros de una lista. Para obtener una lista de números, use la instrucción <em>rango(numero)</em>. La sintaxis de estas declaraciones es por lo tanto:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">listarango</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Iteramos y comparamos usando la siguiente lista</span>
+<span class="n">listarango</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">listarango</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;primer elemento&#39;</span><span class="p">,</span> <span class="n">listarango</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
@@ -12454,22 +12464,29 @@ primer elemento 0
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For--(Iteraciones)">For  (<em>Iteraciones</em>)<a class="anchor-link" href="#For--(Iteraciones)">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">listarango</span><span class="p">:</span>
-    <span class="c1"># Verifica si el numero es uno Check de los numeros en la tupla.</span>
+    <span class="c1"># Verifica si el numero es uno de los numeros en la tupla.</span>
     <span class="k">if</span> <span class="n">numero</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
-        <span class="c1"># Con &#39;break&#39; rompemos la clausula  o ejecutamos la clausula &#39;else&#39;</span>
+        <span class="c1"># Con &#39;break&#39; rompemos la clausula  </span>
         <span class="k">break</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># &quot;Continue&quot; empieza la siguiente iteracion del lazo. No tiene algun uso aqui,</span>
-        <span class="c1"># puesto que es la ultima setencia del lazo  </span>
+        <span class="c1"># &quot;Continue&quot; empieza la siguiente iteracion. No tiene algun uso aqui: es la ultima setencia del lazo  </span>
         <span class="k">continue</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="c1"># Este &#39;else&#39; es opcional y es ejecutado solo si el lazon no rompe (&#39;break&#39;).</span>
+    <span class="c1"># Este &#39;else&#39; es opcional y es ejecutado solo si el lazo no se rompe.</span>
     <span class="k">pass</span> <span class="c1"># No hacemos nada</span>
 </pre></div>
 
@@ -12478,9 +12495,17 @@ primer elemento 0
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="If-elif-else-(Condicionales)">If elif else (<em>Condicionales</em>)<a class="anchor-link" href="#If-elif-else-(Condicionales)">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">listarango</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -12518,15 +12543,15 @@ primer elemento 0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Los-bloques-se-especifican-por-sangr&#237;a.">Los bloques se especifican por sangr&#237;a.<a class="anchor-link" href="#Los-bloques-se-especifican-por-sangr&#237;a.">&#182;</a></h4><p>Sangrar para comenzar un bloque, des-sangrar para terminar uno.</p>
-<p>Las declaraciones que esperan un nivel de sangría terminan en dos puntos (:). Los comentarios comienzan con el signo de número (#) y son de una sola línea, las cadenas de varias líneas se utilizan para comentarios de varias líneas.</p>
+<h3 id="Los-bloques-se-especifican-por-sangr&#237;a.">Los bloques se especifican por sangr&#237;a.<a class="anchor-link" href="#Los-bloques-se-especifican-por-sangr&#237;a.">&#182;</a></h3><p>Sangrar para comenzar un bloque, des-sangrar para terminar uno.</p>
+<p>Las declaraciones que esperan un nivel de sangría terminan en dos puntos (:). Los comentarios comienzan con el signo de número (#) y son de una sola línea</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Esto es un comentario y no será compilado</span>
@@ -12568,20 +12593,19 @@ fuera del if
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Funciones">Funciones<a class="anchor-link" href="#Funciones">&#182;</a></h3><p>Las funciones se declaran con la palabra clave <strong>def</strong>. Los argumentos opcionales se establecen en la declaración de función después de los argumentos obligatorios al asignárseles un valor predeterminado.
-Para los argumentos con nombre, al nombre del argumento se le asigna un valor. Las funciones pueden devolver una tupla.
-Las funciones <strong>Lambda</strong> son funciones <em>ad hoc</em> que se componen de una sola declaración. Los parámetros se pasan por <em>referencia</em>, pero los tipos inmutables (tuplas, ints, cadenas, etc.) no pueden ser cambiados en la llamada por el que llama.
-Esto se debe a que solo se pasa la ubicación de memoria del elemento, y la vinculación de otro objeto a una variable descarta la anterior, por lo que se reemplazan los tipos inmutables.</p>
+<h3 id="def-(Funciones)">def (<em>Funciones</em>)<a class="anchor-link" href="#def-(Funciones)">&#182;</a></h3><p>Las funciones se declaran con la palabra clave <strong>def</strong>.</p>
+<p>Los argumentos opcionales se establecen en la declaración de función después de los argumentos obligatorios al asignárseles un valor predeterminado.
+Para los argumentos con nombre, al nombre del argumento se le asigna un valor. Las funciones pueden devolver una tupla.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># an_int and a_string son opcionales, tienen valores predeterminados </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># una_lista y un_entero son opcionales, tienen valores predeterminados </span>
 <span class="c1"># si alguno no ha sido pasado (2 and &quot;caracter por defecto&quot;, respectivamente).</span>
 <span class="k">def</span> <span class="nf">ejemplo_pase</span><span class="p">(</span><span class="n">una_lista</span><span class="p">,</span> <span class="n">un_entero</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">una_cadena</span> <span class="o">=</span> <span class="s2">&quot;caracter por defecto&quot;</span><span class="p">):</span>
     <span class="n">una_lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Un nuevo elemento&quot;</span><span class="p">)</span>
@@ -12620,10 +12644,364 @@ Esto se debe a que solo se pasa la ubicación de memoria del elemento, y la vinc
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Clases">Clases<a class="anchor-link" href="#Clases">&#182;</a></h3><p>Python admite una forma limitada de herencia múltiple en clases. Las variables y los métodos privados se pueden declarar (por <em>convención</em>, esto no se aplica en el idioma) agregando al menos dos guiones bajos y a lo más uno al final (por ejemplo, __spam). También podemos vincular nombres arbitrarios a instancias de clase. Un ejemplo sigue:</p>
+<h3 id="Lambda-(Funciones)">Lambda (<em>Funciones</em>)<a class="anchor-link" href="#Lambda-(Funciones)">&#182;</a></h3><p>Las funciones <strong>Lambda</strong> son funciones <em>ad hoc</em> que se componen de una sola declaración. Los parámetros se pasan por <em>referencia</em>, pero los tipos inmutables (tuplas, ints, cadenas, etc.) no pueden ser cambiados en la llamada por el que llama.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lo mismo que  def funcvar(x): return x + 1</span>
+<span class="n">funcvar</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">funcvar</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Clases">Clases<a class="anchor-link" href="#Clases">&#182;</a></h3><p>Python admite una forma limitada de herencia múltiple en clases. Las variables y los métodos privados se pueden declarar (por <em>convención</em>, esto no se aplica en el idioma) agregando al menos dos guiones bajos y a lo más uno al final (por ejemplo, __spam).</p>
+<p>También podemos vincular nombres arbitrarios a instancias de clase. Un ejemplo:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">MiClase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">comun</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">mivariable</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">def</span> <span class="nf">mifuncion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mivariable</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta es la instanciación de clase.</span>
+<span class="n">instancia_clase</span> <span class="o">=</span> <span class="n">MiClase</span><span class="p">()</span>
+<span class="n">instancia_clase</span><span class="o">.</span><span class="n">mifuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[101]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta variable la comparten todas las clases</span>
+<span class="n">instancia_clase_2</span> <span class="o">=</span> <span class="n">MiClase</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">,</span> <span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comportamiento-de-las-Instancias-(Clases)">Comportamiento de las Instancias (<em>Clases</em>)<a class="anchor-link" href="#Comportamiento-de-las-Instancias-(Clases)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Observe cómo usamos el nombre de la clase en lugar de la instancia.</span>
+<span class="n">MiClase</span><span class="o">.</span><span class="n">comun</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>30
+30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lo que sigue, no actualizará la variable en la clase, sino que enlazará </span>
+<span class="c1"># un nuevo objeto con el antiguo nombre de variable</span>
+<span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &quot;comun&quot; ahora es una variable de instancia.</span>
+<span class="n">MiClase</span><span class="o">.</span><span class="n">comun</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+50
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Herencia-de-Clases">Herencia de Clases<a class="anchor-link" href="#Herencia-de-Clases">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta clase hereda de MiClase. La clase del ejemplo anterior hereda de</span>
+<span class="c1">#&quot;objeto&quot;, (lo que la hace una &quot;clase de nuevo estilo&quot;). </span>
+<span class="c1"># La herencia múltiple se declara como: </span>
+<span class="c1">#class OtrasClases(MiClase1,MiClase2,MiClaseN)</span>
+
+<span class="k">class</span> <span class="nc">OtrasClases</span><span class="p">(</span><span class="n">MiClase</span><span class="p">):</span>
+    <span class="c1"># El argumento &quot;self&quot; se pasa automáticamente y hace referencia </span>
+    <span class="c1"># a la instancia de clase,   puede establecer variables de instancia</span>
+    <span class="c1"># como lo hicimos arriba, pero dentro de la clase.</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mivariable</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+
+<span class="n">instancia_clase</span> <span class="o">=</span> <span class="n">OtrasClases</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">)</span>
+<span class="n">instancia_clase</span><span class="o">.</span><span class="n">mifuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hola
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[111]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Nuevos-Miembros-(Clases)">Nuevos Miembros (<em>Clases</em>)<a class="anchor-link" href="#Nuevos-Miembros-(Clases)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta clase no tiene un miembro .prueba, pero</span>
+<span class="c1"># podemos agregar uno a la instancia. Notemos</span>
+<span class="c1"># que este solo será un miembro de instancia_clase.</span>
+<span class="n">instancia_clase</span><span class="o">.</span><span class="n">prueba</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">instancia_clase</span><span class="o">.</span><span class="n">prueba</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[112]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>100</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>

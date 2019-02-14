@@ -1,64 +1,8 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<title>lesson_1 slides</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head><meta charset="utf-8" />
+<title>lesson_4-back</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
-</script>
-
-<!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11774,199 +11718,784 @@ ul.typeahead-list > li > a {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-  font-size: 160%;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal pre code {
-  padding: 0px;
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #727272;
-}
-.reveal .controls .navigate-left.enabled:hover,
-.reveal .controls .navigate-left.enabled.enabled:hover {
-  border-right-color: #dfdfdf;
-}
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #727272;
-}
-.reveal .controls .navigate-right.enabled:hover,
-.reveal .controls .navigate-right.enabled.enabled:hover {
-  border-left-color: #dfdfdf;
-}
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #727272;
-}
-.reveal .controls .navigate-up.enabled:hover,
-.reveal .controls .navigate-up.enabled.enabled:hover {
-  border-bottom-color: #dfdfdf;
-}
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #727272;
-}
-.reveal .controls .navigate-down.enabled:hover,
-.reveal .controls .navigate-down.enabled.enabled:hover {
-  border-top-color: #dfdfdf;
-}
-.reveal .progress span {
-  background: #727272;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-div.text_cell.rendered .rendered_html {
-  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
-  overflow-y: hidden;
-}
-a.anchor-link {
-  /* There is still an anchor, we are only hidding it */
-  display: none;
-}
-.rendered_html p {
-  text-align: inherit;
-}
-::-webkit-scrollbar
-{
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar *
-{
-  background:transparent;
-}
-::-webkit-scrollbar-thumb
-{
-  background: #727272 !important;
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
-
-
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
 <body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
 
-
-<div class="reveal">
-<div class="slides">
-<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Lecci&#243;n-I">Lecci&#243;n I<a class="anchor-link" href="#Lecci&#243;n-I">&#182;</a></h1>
+<h1 id="Cuarta-Lecci&#243;n">Cuarta Lecci&#243;n<a class="anchor-link" href="#Cuarta-Lecci&#243;n">&#182;</a></h1>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4><em><font color=blue>  Objetivo de la lección: </font></em></h4>
+<p>Apache Spark está escrito en el lenguaje de programación Scala que compila el código del programa en un código de bytes para la Máquina Virtual de Java para el procesamiento de big data de spark. La comunidad de código abierto ha desarrollado una maravillosa utilidad para el procesamiento de big data de spark python conocido como PySpark.</p>
+<p>PySpark ayuda a los científicos de datos a interactuar con los Datos Resilientes Distribuidos (Resilient Distributed Datasets) en apache spark y python. Py4J es una biblioteca popular integrada en PySpark que permite a Python interactuar dinámicamente con objetos JVM (RDD).</p>
+<p>La mayoría de las operaciones de RDD son perezosas. Un RDD es como una descripción de una serie de operaciones. Un RDD no son datos. Las operaciones RDD que requieren la observación del contenido de los datos no pueden ser perezosas. (Estas son llamadas acciones.) Por ejemplo, la funcion count() que enumera el numero de elementos.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para el procesamiento paralelo, Apache Spark utiliza variables compartidas. Una copia de la variable compartida va a cada nodo del clúster cuando el controlador envía una tarea al ejecutor en el clúster, de modo que pueda usarse para realizar tareas.</p>
+<p>Apache Spark admite dos tipos de variables compartidas:</p>
+<p><strong>Emisión</strong></p>
+<p><strong>Acumulación</strong></p>
+<p>Vamos a entenderlos en detalle.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Emisi&#243;n">Emisi&#243;n<a class="anchor-link" href="#Emisi&#243;n">&#182;</a></h3><p>Las variables de difusión se utilizan para guardar la copia de datos en todos los nodos. Esta variable se almacena en caché en todas las máquinas y no se envía en máquinas con tareas. El siguiente bloque de código tiene los detalles de una clase de transmisión para PySpark.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span> 
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Broadcast app&quot;</span><span class="p">)</span> 
+<span class="n">words_new</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">broadcast</span><span class="p">([</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> <span class="s2">&quot;java&quot;</span><span class="p">,</span> <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> <span class="s2">&quot;spark&quot;</span><span class="p">,</span> <span class="s2">&quot;akka&quot;</span><span class="p">])</span> 
+<span class="n">data</span> <span class="o">=</span> <span class="n">words_new</span><span class="o">.</span><span class="n">value</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stored data -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">elem</span> <span class="o">=</span> <span class="n">words_new</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Printing a particular element in RDD -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">elem</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Consideremos el siguiente ejemplo de uso de SparkConf en un programa PySpark. En este ejemplo, estamos configurando el nombre de la aplicación de la chispa como aplicación PySpark y estableciendo la URL maestra para una aplicación de la chispa en → spark: // master: 7077.</p>
+<p>El siguiente bloque de código tiene las líneas, cuando se agregan en el archivo Python, establece las configuraciones básicas para ejecutar una aplicación PySpark.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkConf</span><span class="p">,</span> <span class="n">SparkContext</span>
+<span class="n">conf</span> <span class="o">=</span> <span class="n">SparkConf</span><span class="p">()</span><span class="o">.</span><span class="n">setAppName</span><span class="p">(</span><span class="s2">&quot;PySpark App&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="s2">&quot;spark://master:7077&quot;</span><span class="p">)</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">conf</span><span class="o">=</span><span class="n">conf</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkFiles</span>
+<span class="n">finddistance</span> <span class="o">=</span> <span class="s2">&quot;/home/hadoop/examples_pyspark/finddistance.R&quot;</span>
+<span class="n">finddistancename</span> <span class="o">=</span> <span class="s2">&quot;finddistance.R&quot;</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;SparkFile App&quot;</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">addFile</span><span class="p">(</span><span class="n">finddistance</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s2">&quot;Absolute Path -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">SparkFiles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">finddistancename</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><font color=blue>
-  Presentar el lenguaje de programación que estaremos usando: Python. 
+    _Objetivo del curso_: Aprender las diferentes fases del Aprendizaje de Datos (ML) a traves de  ejemplos reales. Esto con el fin de obtener una idea clara de lo que significa la ciencia de datos.
 </font></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Caracter&#237;sticas-Generales-del-Lenguaje">Caracter&#237;sticas Generales del Lenguaje<a class="anchor-link" href="#Caracter&#237;sticas-Generales-del-Lenguaje">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Fuerte vs Dinámico</em></p>
-<p>En computación  a menudo se usa el término <em>lenguaje fuertemente tecleado</em> para referirse a un lenguaje que está <em>tipificado estáticamente</em> (los tipos están asociados con una declaración de variable o, más generalmente, el compilador puede decir a qué tipo se refiere una variable) y <em>fuertemente tecleado</em> (restrictivo sobre cómo se pueden mezclar los tipos). Por lo tanto, si nos fijamos en la tipificación dinámica y la tipificación fuerte como conceptos ortogonales:</p>
-<p><strong><em><center>  Python puede teclearse dinámica y fuertemente <center></em></strong></p>
+<h2 align="center">El flujo de trabajo en un proyecto de ciencia de datos </h2><p>El conjunto de  lineamientos específicos ('ducto') en un proyecto de  ciencia de datos varía dependiendo de la naturaleza del mismo. Aquí presentamos un ducto estandar:</p>
+<h3 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h3><ul>
+<li>Extracción: Cargar el conjunto de datos y echarles una mirada</li>
+<li>Limpieza: Encontrar los valores que faltan</li>
+<li>Visualización: Crear algunas gráficas interesantes que nos permitan idendificar correlaciones y </li>
+<li>Suposiciones: Formular hipótesis sobre los gráficos</li>
+</ul>
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Orientado-a-Objectos-vs-Funcional"><em>Orientado a Objectos vs Funcional</em><a class="anchor-link" href="#Orientado-a-Objectos-vs-Funcional">&#182;</a></h4><p>El lenguaje <strong>Python</strong> soporta ambas.</p>
-<p>FILOSOFÍA DE USO: <em>Al final hacemos uso de las funciones del lenguaje que hacen el trabajo con el código más corto y limpio posible. Si eso significa que mezclar ambas, entonces eso hacemos</em></p>
+<h3 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h3><ul>
+<li>Datos Categóricos</li>
+<li>Extraer</li>
+<li>Procesar</li>
+</ul>
+<h3 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h3><ul>
+<li>Selección de Características.  Reducir el número de caracterísiticas trae los siguientes beneficios:<ul>
+<li>Reduce el número de redundancias en los datos</li>
+<li>Acelera los procesos de entrenamiento </li>
+<li>Reduce el 'overfitting'</li>
+<li>Muestreo de modelos base</li>
+</ul>
+</li>
+<li>Muestreo de los modelos base   </li>
+</ul>
+<hr>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Python</strong> distingue Mayúsculas y Minúsculas (<em>Case Sensitive</em>)</p>
+<p><em>Ajustamos un poco el estilo de este libro trabajo para tener graficas centradas</em></p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Ejemplo</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;style&gt;</span>
+<span class="s2">.output_png {</span>
+<span class="s2">    display: table-cell;</span>
+<span class="s2">    text-align: center;</span>
+<span class="s2">    vertical-align: middle;</span>
+<span class="s2">}</span>
+<span class="s2">&lt;/style&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Caracteristicas">Caracteristicas<a class="anchor-link" href="#Caracteristicas">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">caracteristicas</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;a:radio&#39;</span><span class="p">,</span><span class="s1">&#39;b:textura&#39;</span><span class="p">,</span><span class="s1">&#39;c:perimetro&#39;</span><span class="p">,</span> \
+             <span class="s1">&#39;d:area&#39;</span><span class="p">,</span> <span class="s1">&#39;e:suavidad&#39;</span><span class="p">,</span><span class="s1">&#39;f:compactes&#39;</span><span class="p">,</span> \
+             <span class="s1">&#39;g:concavidad&#39;</span><span class="p">,</span> <span class="s1">&#39;h:puntos_concavos&#39;</span><span class="p">,</span><span class="s1">&#39;i:simetria&#39;</span><span class="p">,</span>\
+             <span class="s1">&#39;j:dimension_fractal&#39;</span><span class="p">]</span>
+
+<span class="n">columnas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Diagnostico&#39;</span><span class="p">]</span> <span class="o">+</span> \
+              <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="s1">&#39;_promedio&#39;</span><span class="p">,</span> <span class="n">caracteristicas</span><span class="p">))</span> <span class="o">+</span> \
+              <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="s1">&#39;_error&#39;</span><span class="p">,</span> <span class="n">caracteristicas</span><span class="p">))</span> <span class="o">+</span>  \
+              <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="s1">&#39;_peor&#39;</span><span class="p">,</span> <span class="n">caracteristicas</span><span class="p">))</span>      
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h3><p>Resumen de la lección pasada</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/wisconsin.csv&#39;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">columnas</span><span class="p">);</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Benigno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Diagnostico&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;B&#39;</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Maligno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Benigno&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h2><p><strong>Datos Categóricos</strong></p>
+<p>Los datos categóricos son variables que contienen valores de etiqueta en lugar de valores numéricos. El número de valores posibles a menudo se limita a un conjunto fijo.</p>
+<p>Por ejemplo, los usuarios normalmente se describen por país, género, grupo de edad, etc.</p>
+<p>De hecho ya hemos  convertido los atributos del <em>Diagnóstico</em> a valores numéricos:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Maligno&#39;</span><span class="p">,</span><span class="s1">&#39;Benigno&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Maligno</th>
+      <th>Benigno</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>101</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>445</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Las columnas <em>Maligno</em> y <em>Benigno</em> son redundates. El conocimiento de una, automaticamente nos define la otra. Eliminamos una:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Maligno&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En este punto la columna <em>Diagnostico</em> tambien se vuelve redundante, por lo que también la eliminamos:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Diagnostico&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>División el conjunto de datos</strong></p>
+<p>Los datos que utilizamos generalmente se dividen en datos de entrenamiento y datos de prueba. 
+El conjunto de entrenamiento contiene <em>un</em> resultado conocido y 
+el modelo aprende sobre estos datos para generalizarse a otros datos más adelante. 
+Tenemos el conjunto de datos de prueba (o subconjunto) para probar la predicción de nuestro modelo 
+en este subconjunto.</p>
+<hr>
+<p>Primero, separamos el conjunto total de diagnósticos (presentado por la letra <em>Y</em>) del resto de los atributos (representados por la letra <em>X</em>)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">29</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">30</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Separamos el conjunto de entrenamiento y el conjunto prueba usando la biblioteca <strong>SciKit-Learn</strong>. Más en especifico, el método 'train_test_split':</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">linear_model</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El parametro <em>test</em>_<em>size</em> representa el porcentaje de los datos <em>(X,Y)</em>  que serán usados como datos de prueba. En nuestro caso hemos usado el veinticinco porciento. El parámetro <em>random</em>_<em>state</em> sirve para establecer la semilla del algoritmo aleatorio que selecciona los conjuntos de datos</p>
+<hr>
+<h3 id="Escalamiento-de-los-atributos">Escalamiento de los atributos<a class="anchor-link" href="#Escalamiento-de-los-atributos">&#182;</a></h3><p>La mayoría de las veces, un conjunto de datos contendrá características altamente variables en su magnitudes, unidades y rango. Por ejemplo notemos la gran disparidad que existe entre las columnas 'dimension_fractal' y 'radio_promedio':</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;area_promedio&#39;</span><span class="p">,</span><span class="s1">&#39;dimension_fractal_promedio&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[34]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>area_promedio</th>
+      <th>dimension_fractal_promedio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>569.000000</td>
+      <td>569.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>654.889104</td>
+      <td>0.062798</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>351.914129</td>
+      <td>0.007060</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>143.500000</td>
+      <td>0.049960</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>420.300000</td>
+      <td>0.057700</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>551.100000</td>
+      <td>0.061540</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>782.700000</td>
+      <td>0.066120</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2501.000000</td>
+      <td>0.097440</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Asi como la cercania o lejania entre dos ciudades distintas se establece con la distancia que los separa, en estadística también tenemos el concepto de distancia entre los datos <em>medidos</em> con los datos del <em>modelo teórico</em>. De hecho, la noción de distancia en estadística es la misma que la que hay para dos ciudades: la medida Euclideana.
+ Con ella, podemos decir si nuestras predicciones del modelo están cerca o lejos de las predicciones de los datos medidos. Es un poco descabellado comparar distancias de ciudades con las distancias entre dos hormigas en un mismo hormiguero, pero los ejemplos del 'area_promedio' y 'dimension_fractal_promedio' arriba expuestos  nos  están demostrando que semejantemente nos encontramos en esta situacion.</p>
+<hr>
+<p><div style="text-align: center">  _Es deseable llevar todas las características al mismo nivel de magnitudes. Esto se puede lograr mediante la escala. Esto significa transformar todos los datos a una misma  escala específica, 
+como  de 0 a 100 o de  0 a 1._  </div></p>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para ello, usamos el metodo <em>StandardScaler</em> de la bilbioteca <strong>sklearn</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">StandardScaler</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h3><ul>
+<li>Seleccion de Caracteristicas.  Reducir el numero de caracterisiticas trae los siguientes beneficios:<ul>
+<li>Reduce el numero de redundancias en los datos</li>
+<li>Acelera los procesos de entrenamiento </li>
+<li>Reduce el 'overfitting'</li>
+<li>Muestreo de modelos base</li>
+</ul>
+</li>
+<li>Muestreo de los modelos base   </li>
+</ul>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En el area del aprendizaje de maquinas se diferencian las predicciones en dos tipos. Por un lado, las predicciones que toman valores en el  continuo (en la recta real), se les llama <em>Regresiones</em>. Por ejemplo, el tiempo que tarda un avion en cruzar el continente. Mientras que las predicciones que invulcran solo un numero finito de predicciones (discreto o categórico), se les conoce como <em>clasificaciones</em>. Por ejemplo un conjunto de tres colores, el día o la noche, etc.</p>
+<hr>
+<p>En nuestro caso queremos predicir si el cancer es maligno o benigno, entonces usaremos <em>algoritmos de clasificacion para el aprendizaje supervisado</em></p>
+<hr>
+<p>La palabra supervisado, aqui significa que sabemos que etiqueta final queremos predecir: <em>Benigno</em> o <em>Maligno</em>. Las etiquetas <em>Benigno</em>  y <em>Maligno</em> que usamos para entrenar a la maquina, no deben ser llamadas  <em>predicciones</em> sino <em>datos de salida</em>: toda prediccion es un dato de salida pero no al reves.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>EN SUMA:
+En aprendizaje automático y estadísticas, la clasificación consiste identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de entrenamiento de datos que contienen observaciones (o instancias) cuya categoría de miembro es conocida.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Los siguientes nombres de algoritmos de clasificación en Aprendizaje Automático, son de los más populares en el mundo de la ciencia de datos:</p>
+<ol>
+<li><p>Regresión logística</p>
+</li>
+<li><p>Vecino más cercano</p>
+</li>
+<li><p>Soporte de máquinas de vectores</p>
+</li>
+<li><p>Kernel SVM</p>
+</li>
+<li><p>Naïve Bayes</p>
+</li>
+<li><p>Árbol de decisión</p>
+</li>
+<li><p>Bosques al azar</p>
+</li>
+</ol>
+<p>La biblioteca <strong>sklearn</strong> tiene en incluído todos estos casos. A continuación describimos cada uno de los métodos e importamos las correspondendientes sub-librerias .</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ejemplificamos con la regresion <em>regresión logística</em> el como se realizamos el analisis para despues analizar todos los casos juntos</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="REGRESI&#211;N-LOG&#205;STICA.">REGRESI&#211;N LOG&#205;STICA.<a class="anchor-link" href="#REGRESI&#211;N-LOG&#205;STICA.">&#182;</a></h3><p>En su forma mas sencilla (la cual es la que necesitamos aqui), la regresion logistica modela las variables de salida 'Benigno y 'Maligno, en este caso hablamos de una <em>regresión logística binaria</em></p>
+<p><strong>Ensayo de Bernoulli:</strong>
+Ensayos repetidos independientes de un experimento con exactamente dos resultados posibles se llaman <em>ensayos de Bernoulli</em> (el resultado de un paciente no influyen en los demás)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La regresión logística difiere de la regresión ordinaria en que la segunda regresa valores continuos. En la regresión logísitica, la simplicidad de la regresión lineal es usada, pero tiene que ser adicionada con  una forma de convertir una variable binaria en una continua que pueda tomar cualquier valor real (negativo o positivo).</p>
+<p>Para ello se definen  la <em>frontera de decisión</em> (<em>boundary decision</em>).</p>
+<p>Esta predicción categórica se puede basar en las probabilidades calculadas de éxito, y las probabilidades pronosticadas por encima de un valor de corte elegido se traducen en una predicción de éxito.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Funciones-de-Activaci&#243;n">Funciones de Activaci&#243;n<a class="anchor-link" href="#Funciones-de-Activaci&#243;n">&#182;</a></h3><p>Computacionalmente a veces es mejor aproximar probabilidades de valores categóricos con funciones continuas conocidas como funciones de activación.</p>
+<p>Por ejemplo las funciones <em>sigmoid</em> y <em>tanh</em>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  
+    <span class="k">return</span>  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">))</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="n">tanh</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="mi">0</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11986,34 +12515,42 @@ a.anchor-link {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-11-37a8cd86d034&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg">#Ejemplo</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> x <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">&lt;ipython-input-36-11f70edd28e8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">return</span> np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>np<span class="ansi-blue-fg">.</span>tanh<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> x<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>t <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">400</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+<span class="ansi-green-intense-fg ansi-bold">      9</span> a <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">*</span>sigmoid<span class="ansi-blue-fg">(</span>t<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">2</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;X&#39; is not defined</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined</pre>
 </div>
 </div>
 
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Sin-caracteres-de-terminaci&#243;n-de-declaraci&#243;n-obligatorios">Sin caracteres de terminaci&#243;n de declaraci&#243;n obligatorios<a class="anchor-link" href="#Sin-caracteres-de-terminaci&#243;n-de-declaraci&#243;n-obligatorios">&#182;</a></h4>
+<p>A continuación cargamos el método de regresión logística de <strong>skit-learn</strong>, para despues hacer el ajuste:</p>
+
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;este funciona&#39;</span><span class="p">),</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;este también&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Using Logistic Regression Algorithm to the Training Set</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
+
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#Una vez cargado el clasificador, hacemos el ajuste</span>
+<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12026,70 +12563,16 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>este funciona
-este también
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Asignaci&#243;n-de-Valores">Asignaci&#243;n de Valores<a class="anchor-link" href="#Asignaci&#243;n-de-Valores">&#182;</a></h3><p>Los valores se asignan (de hecho, los objetos están vinculados a los nombres) con el signo igual ("=")</p>
-<p>La prueba de igualdad se realiza utilizando dos signos iguales ("==")</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x vale 1</span>
-<span class="n">x</span>  <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1">#Nos preguntamos si x vale 1</span>
-<span class="n">x</span> <span class="o">==</span> <span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[37]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class=&#39;ovr&#39;, n_jobs=1,
+          penalty=&#39;l2&#39;, random_state=0, solver=&#39;liblinear&#39;, tol=0.0001,
+          verbose=0, warm_start=False)</pre>
 </div>
 
 </div>
@@ -12097,30 +12580,88 @@ este también
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Asignaci&#243;n-de-Valores">Asignaci&#243;n de Valores<a class="anchor-link" href="#Asignaci&#243;n-de-Valores">&#182;</a></h3><p>Puede aumentar/disminuir los valores utilizando los operadores + = y - =, respectivamente, por la cantidad del lado  derecho. Esto funciona en muchos tipos de datos, incluidas las cadenas.
-También puede utilizar múltiples variables en una línea.</p>
+<p>Para verificar la precisión de la predicción necesitamos importar el método de confusión de matriz de métricas. La matríz de confusión es una forma de tabular el número de clasificaciones erróneas, es decir, el número de clases predichas que terminaron en un contenedor de clasificación incorrecto basado en las clases verdaderas.</p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Matr&#237;z-de-Error-o-Matr&#237;z-de-Confusi&#243;n">Matr&#237;z de Error o Matr&#237;z de Confusi&#243;n<a class="anchor-link" href="#Matr&#237;z-de-Error-o-Matr&#237;z-de-Confusi&#243;n">&#182;</a></h3><p>En el análisis predictivo, una tabla de confusión (a veces también llamada matriz de confusión), es una tabla con dos filas y dos columnas que informa el número de <em>falsos positivos</em>, <em>falsos negativos</em>, <em>verdaderos positivos</em> y <em>verdaderos negativos</em>.</p>
+<p>Cada fila de la matriz representa las instancias en una clase predicha, mientras que cada columna representa las instancias en una clase real (o viceversa). En nuesro caso, tenemos algo como:</p>
+<table>
+<thead><tr>
+<th>Prediccion/Real</th>
+<th>Maligno</th>
+<th>Benigno</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maligno</td>
+<td>$VP$</td>
+<td>$FP$</td>
+</tr>
+<tr>
+<td>Benigno</td>
+<td>$FN$</td>
+<td>$VN$</td>
+</tr>
+</tbody>
+</table>
+<p>$VP$ = Numero de  Verdadero Positivo</p>
+<p>$FP$ = Numero de Falso Positivo</p>
+<p>$VN$ = Numero de Verdadero Negativo</p>
+<p>$FN$ = Numero de Falso Negativo</p>
+<p><strong>condición positiva (P):</strong>
+El número de casos positivos reales en los datos.</p>
+<p><strong>condición negativa (N):</strong>
+El número de casos negativos reales en los datos.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Importamos el método de métrica que contiene la matriz de confusión:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Sumamos 1 a x</span>
-<span class="n">x</span>  <span class="o">=</span> <span class="mi">1</span>
-<span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">metrics</span>
+<span class="c1">#La matriz de confusión</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">)</span>
 
-<span class="c1">#Multiples variables en una línea</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span>  <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y_test</span><span class="p">),</span> <span class="s1">&#39;casos probados&#39;</span><span class="p">,</span> \
+      <span class="s1">&#39;nos arrojan la siguiente matriz de confusión: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">cm</span> 
+     <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12137,8 +12678,9 @@ También puede utilizar múltiples variables en una línea.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-1 2
+<pre>Los 143 casos probados nos arrojan la siguiente matriz de confusión: 
+ [[49  4]
+ [ 4 86]]
 </pre>
 </div>
 </div>
@@ -12146,16 +12688,28 @@ También puede utilizar múltiples variables en una línea.</p>
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exactitud">Exactitud<a class="anchor-link" href="#Exactitud">&#182;</a></h3><p>Para el caso de errores categoricos (como en nuestro caso), esta simple clasificacion puede ser engañosa, por que las muestras pueden estar cargadas hacia un solo caso. Es recomendable apoyarnos en la <em>Exactitud Matematica</em>, la cual viene dada simplemente por la relacion:</p>
+<hr>
+<p>$\textit{Exactitud} = \frac{\text{Número de Predicciones Verdaderas}}{\text{Número Total de Predicciones}}$</p>
+<p>Para nuestro caso de predicciones categóricas binarias:</p>
+<p>$\textit{Exactitud} = \frac{\text{VP+VN}}{\text{VP+VN+FP+FN}}$</p>
+<hr>
+<p>El método _metrics.accuracy<em>score</em> lo calcula por nosotros</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#+= Funciona en cadenas</span>
-<span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;Hola&#39;</span>
-<span class="n">var</span> <span class="o">+=</span> <span class="s1">&#39; mundo&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12168,72 +12722,105 @@ También puede utilizar múltiples variables en una línea.</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hola mundo
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.9440559440559441</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
-</div>
-
-</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Tipos-de-Datos">Tipos de Datos<a class="anchor-link" href="#Tipos-de-Datos">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Las estructuras de datos disponibles en python son <em>listas</em>, <em>tuplas</em> y <em>diccionarios</em>. Los conjuntos están disponibles en la biblioteca de conjuntos.</p>
-<p>Las <em>listas</em> son <em>como</em> matrices unidimensionales (pero también puede tener listas de otras listas)</p>
-<p>Los <em>diccionarios</em> son matrices asociativas (también conocidas como tablas hash)</p>
-<p>Las <em>tuplas</em> son matrices unidimensionales inmutables</p>
-<p><strong>[las “matrices” de Python pueden ser de cualquier tipo, por lo que puede mezclar, por ejemplo, enteros, cadenas, etc. en listas / diccionarios / tuplas] </strong></p>
-<p>El índice del primer elemento en todos los tipos de matriz es 0. Los números negativos cuentan desde el final hasta el principio, -1 es el último elemento. Las variables pueden apuntar a funciones.</p>
+<p>Toca el turno de repetir el mismo ejercicio sobre las diferentes rutinas de Machine Learning que <strong>sklearn</strong> nos provee. Prim</p>
 
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Listas-(Ejemplo)">Listas (Ejemplo)<a class="anchor-link" href="#Listas-(Ejemplo)">&#182;</a></h3>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clasificadores</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1">#Para el conjunto de entrenamiento usamos:</span>
+
+<span class="c1">#Usando el Algoritmo de Regresion Logistica </span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Regresion Logistica&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Regresion Logistica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1">#Usando el Algoritmo de K Vecinos Próximos </span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;K Vecinos Próximos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">metric</span> <span class="o">=</span> <span class="s1">&#39;minkowski&#39;</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;K Vecinos Próximos&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1">#Usando el Algoritmo de Máquinas de Soporte Vectorial </span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">SVC</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Máquinas de Soporte Vectorial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span> <span class="o">=</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Máquinas de Soporte Vectorial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1">#Usando el Algoritmo de Núcleo SVM </span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">SVC</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Núcleo SVM &#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span> <span class="o">=</span> <span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Núcleo SVM &#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1">#Usando el Algoritmo Bayessiano Ingenuo</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">GaussianNB</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Bayes Ingenuo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Bayes Ingenuo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1">#Usando el Arbol de Decisión </span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Arbol de Decisión&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span> <span class="o">=</span> <span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Arbol de Decisión&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1">#Usando el Bosque Aleatorio </span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Bosque Aleatorio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">criterion</span> <span class="o">=</span> <span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">clasificadores</span><span class="p">[</span><span class="s1">&#39;Bosque Aleatorio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">);</span>
+</pre></div>
+
 </div>
 </div>
-</div><div class="fragment">
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ejemplo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;otra lista&#39;</span><span class="p">],</span> <span class="s1">&#39;letras&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;esto es&#39;</span><span class="p">,</span> <span class="s1">&#39;una tupla&#39;</span><span class="p">)]</span> <span class="c1">#Lista Mezclada</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">exactitudes</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">clasificador</span> <span class="ow">in</span> <span class="n">clasificadores</span><span class="p">:</span>
+    
+    <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">clasificadores</span><span class="p">[</span><span class="n">clasificador</span><span class="p">]</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
+    
+    <span class="n">exactitudes</span><span class="p">[</span><span class="n">clasificador</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;letras&#39;</span><span class="p">,</span><span class="mf">2.78</span><span class="p">]</span> <span class="c1">#Otra lista Mezclada</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">)</span>
-<span class="n">milista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ahora es caracter&quot;</span>  <span class="c1"># Notemos que &quot; &quot; y &#39; &#39;son igualmente válidas</span>
-<span class="n">milista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.21</span> <span class="c1"># Nos referimos al último elemento.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">clasificador</span> <span class="ow">in</span> <span class="n">exactitudes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El clasificador&#39;</span><span class="p">,</span> <span class="n">clasificador</span><span class="p">,</span> <span class="s1">&#39;es exacto hasta un&#39;</span><span class="p">,</span>  <span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">exactitudes</span><span class="p">[</span><span class="n">clasificador</span><span class="p">]),</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12250,8 +12837,13 @@ También puede utilizar múltiples variables en una línea.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1, 34, &#39;letras&#39;, 2.78]
-[&#39;ahora es caracter&#39;, 34, &#39;letras&#39;, 3.21]
+<pre>El clasificador Regresion Logistica es exacto hasta un 94.41 %
+El clasificador K Vecinos Próximos es exacto hasta un 95.80 %
+El clasificador Máquinas de Soporte Vectorial es exacto hasta un 96.50 %
+El clasificador Núcleo SVM  es exacto hasta un 96.50 %
+El clasificador Bayes Ingenuo es exacto hasta un 92.31 %
+El clasificador Arbol de Decisión es exacto hasta un 95.10 %
+El clasificador Bosque Aleatorio es exacto hasta un 95.80 %
 </pre>
 </div>
 </div>
@@ -12259,947 +12851,62 @@ También puede utilizar múltiples variables en una línea.</p>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Diccionarios-y-Tuplas-(Ejemplo)">Diccionarios y Tuplas (Ejemplo)<a class="anchor-link" href="#Diccionarios-y-Tuplas-(Ejemplo)">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Dic</span>
-<span class="n">midic</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;llave 1&quot;</span><span class="p">:</span> <span class="s2">&quot;valor 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;euler&quot;</span><span class="p">:</span> <span class="mf">2.78</span><span class="p">}</span>
-<span class="n">midic</span><span class="p">[</span><span class="s2">&quot;euler&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Así cambiamos valores en los diccionario</span>
-</pre></div>
+<h3 id="Validaci&#243;n-cruzada">Validaci&#243;n cruzada<a class="anchor-link" href="#Validaci&#243;n-cruzada">&#182;</a></h3><p>Mucha veces en vez de dividir inicialmente el conjunto de datos en dos subconjuntos, lo hacemos en tres subconjuntos: <em>entrenamiento</em>, <em>validación</em> y <em>prueba</em></p>
+<p>dejan de lado el conjunto de pruebas y eligen aleatoriamente el X% 
+de su conjunto de datos de tren para que sea el conjunto de trenes real y el restante (100-X)% 
+para ser el conjunto de validación, donde X es un número fijo (por ejemplo, 80%). ), 
+el modelo se entrena y valida iterativamente en estos diferentes conjuntos.
+Hay varias formas de hacer esto, y se conoce comúnmente como validación cruzada. 
+Básicamente, utiliza su conjunto de entrenamiento para generar múltiples divisiones 
+de los conjuntos de Entrenamiento y Validación. La validación cruzada evita el ajuste 
+excesivo y se está volviendo cada vez más popular, siendo la Validación Cruzada K-fold 
+el método más popular de validación cruzada.
+Mira esto para más.</p>
+<p>En el enfoque que estamos siguiendo (también muy común entre los practicantes del aprendizaje de datos)</p>
+<p>Nosotros estamos usando una forma especifica de _validacio</p>
 
 </div>
 </div>
 </div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#tupla</span>
-<span class="n">mitupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># Note los parentesis</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Asignacion-de-datos">Asignacion de datos<a class="anchor-link" href="#Asignacion-de-datos">&#182;</a></h3><h4 id="Las-variables-pueden-apuntar-a-funciones">Las variables pueden apuntar a funciones<a class="anchor-link" href="#Las-variables-pueden-apuntar-a-funciones">&#182;</a></h4>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ejemplo</span> <span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="c1">#Apunta hacia la función predeterminada len</span>
-<span class="n">mifuncion</span> <span class="o">=</span> <span class="nb">len</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mifuncion</span><span class="p">(</span><span class="n">ejemplo</span><span class="p">))</span>
-</pre></div>
+<p>Nota sobre la validación cruzada: muchas veces,
+las personas primero dividen su conjunto de datos en 2 - Train and Test.
+Después de esto, dejan de lado el conjunto de pruebas y eligen aleatoriamente el X% 
+de su conjunto de datos de tren para que sea el conjunto de trenes real y el restante (100-X)% 
+para ser el conjunto de validación, donde X es un número fijo (por ejemplo, 80%). ), 
+el modelo se entrena y valida iterativamente en estos diferentes conjuntos.
+Hay varias formas de hacer esto, y se conoce comúnmente como validación cruzada. 
+Básicamente, utiliza su conjunto de entrenamiento para generar múltiples divisiones 
+de los conjuntos de Entrenamiento y Validación. La validación cruzada evita el ajuste 
+excesivo y se está volviendo cada vez más popular, siendo la Validación Cruzada K-fold 
+el método más popular de validación cruzada.
+Mira esto para más.</p>
 
 </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>6
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Asignacion-de-datos">Asignacion de datos<a class="anchor-link" href="#Asignacion-de-datos">&#182;</a></h3><p>El siguiente codigo intercambia las variables en una línea.
- No viola la tipificación fuerte porque los valores no son
- siendo asignado realmente, pero los nuevos objetos están vinculados a
- los viejos nombres.</p>
+<p>Las columnas <em>Maligno</em> y <em>Benigno</em> son redundates. El conocimiento de una, automaticamente nos define la otra. Eliminamos una:</p>
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>  <span class="o">=</span> <span class="mi">1</span>
-<span class="n">lista</span> <span class="o">=</span> <span class="s1">&#39;hola&#39;</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">lista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">,</span> <span class="n">x</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Matrices">Matrices<a class="anchor-link" href="#Matrices">&#182;</a></h3><p>Puede acceder a los rangos de la matriz utilizando los dos puntos (:).</p>
-<p>Dejar el índice de inicio vacío supone el primer elemento, y el índice final supone el último elemento. 
-La indexación es inclusiva-exclusiva, por lo que al especificar [2:10] se devolverán los ítems [2] (el tercer ítem, debido a la indexación 0) al [9] (el décimo ítem), inclusive (8 ítems). Los índices negativos se cuentan desde el último elemento hacia atrás (por lo tanto, -1 es el último elemento) así:</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;List item 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[:])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;List item 1&#39;, 2, 3.14]
-[&#39;List item 1&#39;, 2]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Matrices.-M&#225;s-ejemplos">Matrices. M&#225;s ejemplos<a class="anchor-link" href="#Matrices.-M&#225;s-ejemplos">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">milista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;List item 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">milista</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;List item 1&#39;, 2]
-[2, 3.14]
-[&#39;List item 1&#39;, 3.14]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Caracteres">Caracteres<a class="anchor-link" href="#Caracteres">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Las cadenas pueden usar comillas simples o dobles, y puede tener comillas de un tipo dentro de una cadena que usa el otro tipo (es decir, "Él dijo 'hola'" es válido).</p>
-<p>Para llenar una cadena con valores, use el operado s% (módulo) y una tupla. Cada %s se reemplaza con un elemento de la tupla, de izquierda a derecha, como por ejemplo:</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre: </span><span class="si">%s</span><span class="s2">,</span><span class="se">\</span>
-<span class="s2"> Numero: </span><span class="si">%s</span><span class="s2">,</span><span class="se">\</span>
-<span class="s2"> Letra: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;enrique&#39;</span> <span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Nombre: enrique, Numero: 3, Letra: ---
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Caracteres-(Llaves)">Caracteres (Llaves)<a class="anchor-link" href="#Caracteres-(Llaves)">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Atención a la s en &quot;%(llave)s&quot;.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Esto </span><span class="si">%(verbo)s</span><span class="s2"> a </span><span class="si">%(sustantivo)s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;sustantivo&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba&quot;</span><span class="p">,</span> <span class="s2">&quot;verbo&quot;</span><span class="p">:</span> <span class="s2">&quot;es&quot;</span><span class="p">})</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Enrique&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hola, </span><span class="si">{name}</span><span class="s2">!&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Esto es a prueba.
-Hola, Enrique!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Declaraciones-de-control-de-flujo">Declaraciones de control de flujo<a class="anchor-link" href="#Declaraciones-de-control-de-flujo">&#182;</a></h3><p>Las declaraciones de control de flujo son <strong>if</strong>, <strong>for</strong> y <strong>while</strong>. No hay <strong>switch</strong>; en su lugar, use <strong>if</strong>. Use <strong>for</strong> para enumerar a través de miembros de una lista. Para obtener una lista de números, use la instrucción <em>rango(numero)</em>. La sintaxis de estas declaraciones es por lo tanto:</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Iteramos y comparamos usando la siguiente lista</span>
-<span class="n">listarango</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">listarango</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;primer elemento&#39;</span><span class="p">,</span> <span class="n">listarango</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>range(0, 10)
-primer elemento 0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="For--(Iteraciones)">For  (<em>Iteraciones</em>)<a class="anchor-link" href="#For--(Iteraciones)">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">listarango</span><span class="p">:</span>
-    <span class="c1"># Verifica si el numero es uno de los numeros en la tupla.</span>
-    <span class="k">if</span> <span class="n">numero</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
-        <span class="c1"># Con &#39;break&#39; rompemos la clausula  </span>
-        <span class="k">break</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># &quot;Continue&quot; empieza la siguiente iteracion. No tiene algun uso aqui: es la ultima setencia del lazo  </span>
-        <span class="k">continue</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="c1"># Este &#39;else&#39; es opcional y es ejecutado solo si el lazo no se rompe.</span>
-    <span class="k">pass</span> <span class="c1"># No hacemos nada</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="If-elif-else-(Condicionales)">If elif else (<em>Condicionales</em>)<a class="anchor-link" href="#If-elif-else-(Condicionales)">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">listarango</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El segundo item (las listas basadas en cero) es 2&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">listarango</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El segundo item (las listas basadas en cero) es 3&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No lo sé&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>No lo sé
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Los-bloques-se-especifican-por-sangr&#237;a.">Los bloques se especifican por sangr&#237;a.<a class="anchor-link" href="#Los-bloques-se-especifican-por-sangr&#237;a.">&#182;</a></h3><p>Sangrar para comenzar un bloque, des-sangrar para terminar uno.</p>
-<p>Las declaraciones que esperan un nivel de sangría terminan en dos puntos (:). Los comentarios comienzan con el signo de número (#) y son de una sola línea</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Esto es un comentario y no será compilado</span>
-
-<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
-    
-    <span class="c1">#Sangria por que estamos dentro de un if</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dentro del if&#39;</span><span class="p">)</span>
-    
-<span class="c1">#Sin sangría    </span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fuera del if&#39;</span><span class="p">)</span>    
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>dentro del if
-fuera del if
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="def-(Funciones)">def (<em>Funciones</em>)<a class="anchor-link" href="#def-(Funciones)">&#182;</a></h3><p>Las funciones se declaran con la palabra clave <strong>def</strong>.</p>
-<p>Los argumentos opcionales se establecen en la declaración de función después de los argumentos obligatorios al asignárseles un valor predeterminado.
-Para los argumentos con nombre, al nombre del argumento se le asigna un valor. Las funciones pueden devolver una tupla.</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># una_lista y un_entero son opcionales, tienen valores predeterminados </span>
-<span class="c1"># si alguno no ha sido pasado (2 and &quot;caracter por defecto&quot;, respectivamente).</span>
-<span class="k">def</span> <span class="nf">ejemplo_pase</span><span class="p">(</span><span class="n">una_lista</span><span class="p">,</span> <span class="n">un_entero</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">una_cadena</span> <span class="o">=</span> <span class="s2">&quot;caracter por defecto&quot;</span><span class="p">):</span>
-    <span class="n">una_lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Un nuevo elemento&quot;</span><span class="p">)</span>
-    <span class="n">un_entero</span> <span class="o">=</span> <span class="mi">4</span>
-    <span class="k">return</span> <span class="n">una_lista</span><span class="p">,</span> <span class="n">un_entero</span><span class="p">,</span> <span class="n">una_cadena</span>
-
-<span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">mi_entero</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ejemplo_pase</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">,</span> <span class="n">mi_entero</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>([1, 2, 3, &#39;Un nuevo elemento&#39;], 4, &#39;caracter por defecto&#39;)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Lambda-(Funciones)">Lambda (<em>Funciones</em>)<a class="anchor-link" href="#Lambda-(Funciones)">&#182;</a></h3><p>Las funciones <strong>Lambda</strong> son funciones <em>ad hoc</em> que se componen de una sola declaración. Los parámetros se pasan por <em>referencia</em>, pero los tipos inmutables (tuplas, ints, cadenas, etc.) no pueden ser cambiados en la llamada por el que llama.</p>
-
-</div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lo mismo que  def funcvar(x): return x + 1</span>
-<span class="n">funcvar</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">funcvar</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Clases">Clases<a class="anchor-link" href="#Clases">&#182;</a></h3><p>Python admite una forma limitada de herencia múltiple en clases. Las variables y los métodos privados se pueden declarar (por <em>convención</em>, esto no se aplica en el idioma) agregando al menos dos guiones bajos y a lo más uno al final (por ejemplo, __spam).</p>
-<p>También podemos vincular nombres arbitrarios a instancias de clase. Un ejemplo:</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">MiClase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">comun</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">mivariable</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="k">def</span> <span class="nf">mifuncion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mivariable</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta es la instanciación de clase.</span>
-<span class="n">instancia_clase</span> <span class="o">=</span> <span class="n">MiClase</span><span class="p">()</span>
-<span class="n">instancia_clase</span><span class="o">.</span><span class="n">mifuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[101]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta variable la comparten todas las clases</span>
-<span class="n">instancia_clase_2</span> <span class="o">=</span> <span class="n">MiClase</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">,</span> <span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10 10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Comportamiento-de-las-Instancias-(Clases)">Comportamiento de las Instancias (<em>Clases</em>)<a class="anchor-link" href="#Comportamiento-de-las-Instancias-(Clases)">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Observe cómo usamos el nombre de la clase en lugar de la instancia.</span>
-<span class="n">MiClase</span><span class="o">.</span><span class="n">comun</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>30
-30
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lo que sigue, no actualizará la variable en la clase, sino que enlazará </span>
-<span class="c1"># un nuevo objeto con el antiguo nombre de variable</span>
-<span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-30
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &quot;comun&quot; ahora es una variable de instancia.</span>
-<span class="n">MiClase</span><span class="o">.</span><span class="n">comun</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">instancia_clase_2</span><span class="o">.</span><span class="n">comun</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-50
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Herencia-de-Clases">Herencia de Clases<a class="anchor-link" href="#Herencia-de-Clases">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta clase hereda de MiClase. La clase del ejemplo anterior hereda de</span>
-<span class="c1">#&quot;objeto&quot;, (lo que la hace una &quot;clase de nuevo estilo&quot;). </span>
-<span class="c1"># La herencia múltiple se declara como: </span>
-<span class="c1">#class OtrasClases(MiClase1,MiClase2,MiClaseN)</span>
-
-<span class="k">class</span> <span class="nc">OtrasClases</span><span class="p">(</span><span class="n">MiClase</span><span class="p">):</span>
-    <span class="c1"># El argumento &quot;self&quot; se pasa automáticamente y hace referencia </span>
-    <span class="c1"># a la instancia de clase,   puede establecer variables de instancia</span>
-    <span class="c1"># como lo hicimos arriba, pero dentro de la clase.</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">mivariable</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
-
-<span class="n">instancia_clase</span> <span class="o">=</span> <span class="n">OtrasClases</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">)</span>
-<span class="n">instancia_clase</span><span class="o">.</span><span class="n">mifuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>hola
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[111]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Nuevos-Miembros-(Clases)">Nuevos Miembros (<em>Clases</em>)<a class="anchor-link" href="#Nuevos-Miembros-(Clases)">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Esta clase no tiene un miembro .prueba, pero</span>
-<span class="c1"># podemos agregar uno a la instancia. Notemos</span>
-<span class="c1"># que este solo será un miembro de instancia_clase.</span>
-<span class="n">instancia_clase</span><span class="o">.</span><span class="n">prueba</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">instancia_clase</span><span class="o">.</span><span class="n">prueba</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[112]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>100</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-<script>
-
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "reveal.js/lib/js/head.min.js",
-      "reveal.js/js/reveal.js"
-    ],
-
-    function(head, Reveal){
-
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-
-            transition: "none",
-
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "reveal.js/lib/js/classList.js",
-                  condition: function() { return !document.body.classList; } },
-                { src: "reveal.js/plugin/notes/notes.js",
-                  async: true,
-                  condition: function() { return !!document.body.classList; } }
-            ]
-        });
-
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
-
-        Reveal.addEventListener('slidechanged', update);
-
-        function setScrollingSlide() {
-            var scroll = true
-            if (scroll === true) {
-              var h = $('.reveal').height() * 0.95;
-              $('section.present').find('section')
-                .filter(function() {
-                  return $(this).height() > h;
-                })
-                .css('height', 'calc(95vh)')
-                .css('overflow-y', 'scroll')
-                .css('margin-top', '20px');
-            }
-        }
-
-        // check and set the scrolling slide every time the slide change
-        Reveal.addEventListener('slidechanged', setScrollingSlide);
-
-    }
-
-);
-</script>
-
+    </div>
+  </div>
 </body>
+
+ 
 
 
 </html>

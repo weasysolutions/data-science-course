@@ -12007,7 +12007,7 @@ a distancia en el tiempo de diagnóstico."</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h2><p><em>En estadística, el análisis exploratorio de los datos  es un enfoque para analizar conjuntos de datos para resumir sus características principales, a menudo con métodos visuales.</em></p>
+<h2 id="An&#225;lisis-exploratorio-de-los-datos">An&#225;lisis exploratorio de los datos<a class="anchor-link" href="#An&#225;lisis-exploratorio-de-los-datos">&#182;</a></h2><p><em>En estadística, el análisis exploratorio de los datos  es un enfoque para analizar conjuntos de datos para resumir sus características principales, a menudo con métodos visuales.</em></p>
 <p>Consiste en las siguientes tareas especificas</p>
 <ul>
 <li><strong>Extracción</strong>: Cargar el conjunto de datos y echarles una mirada</li>
@@ -12054,7 +12054,7 @@ a distancia en el tiempo de diagnóstico."</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
@@ -12086,13 +12086,13 @@ a distancia en el tiempo de diagnóstico."</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">wget</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data&#39;</span>  
-<span class="n">local_path</span> <span class="o">=</span> <span class="s1">&#39;./data/wisconsin.csv&#39;</span>
+<span class="n">local_path</span> <span class="o">=</span> <span class="s1">&#39;../data/wisconsin.csv&#39;</span>
 
 <span class="c1">#descargamos la informacion de url y la guardamos en local_path</span>
 <span class="n">wget</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">local_path</span><span class="p">)</span> 
@@ -12108,13 +12108,13 @@ a distancia en el tiempo de diagnóstico."</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[178]:</div>
+<div class="prompt output_prompt">Out[62]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;./data/wisconsin (1).csv&#39;</pre>
+<pre>&#39;../data/wisconsin (1).csv&#39;</pre>
 </div>
 
 </div>
@@ -12137,7 +12137,7 @@ a distancia en el tiempo de diagnóstico."</p>
 </code></pre>
 <p>Se calculan diez características de valor real para cada núcleo celular:</p>
 
-<pre><code>a) radio (media de las distancias desde el centro a los puntos en el perímetro)
+<pre><code>a) radio ( media de las distancias desde el centro al perímetro)    
 b) textura (desviación estándar de los valores de escala de grises)
 c) perímetro
 d) área
@@ -12155,13 +12155,11 @@ j) dimensión fractal ("aproximación de la línea de costa" - 1)</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>La media, el error estándar y el "peor" o mayor (media de las tres
+<p>La media, el error estándar y el "peor" o mayor (media de las tres
 los valores más grandes) de estas características se calcularon para cada imagen,
 dando como resultado 30 características. Por ejemplo, el campo 3 es Radio medio, campo
-13 es el radio SE, el campo 23 es el peor radio.
-
-Todos los valores de las funciones se registran con cuatro dígitos significativos.</code></pre>
+13 es el radio SE, el campo 23 es el peor radio.</p>
+<p>Todos los valores de las funciones se registran con cuatro dígitos significativos.</p>
 
 </div>
 </div>
@@ -12178,7 +12176,7 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;a:radio&#39;</span><span class="p">,</span><span class="s1">&#39;b:textura&#39;</span><span class="p">,</span><span class="s1">&#39;c:perimetro&#39;</span><span class="p">,</span> \
@@ -12209,12 +12207,12 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/wisconsin.csv&#39;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">columns_all</span><span class="p">);</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/wisconsin.csv&#39;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">columns_all</span><span class="p">);</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
 </pre></div>
 
@@ -12234,7 +12232,7 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -12250,7 +12248,7 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[181]:</div>
+<div class="prompt output_prompt">Out[65]:</div>
 
 
 
@@ -12298,124 +12296,124 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
   </thead>
   <tbody>
     <tr>
-      <th>18</th>
-      <td>849014</td>
+      <th>374</th>
+      <td>9013005</td>
+      <td>B</td>
+      <td>13.69</td>
+      <td>16.07</td>
+      <td>87.84</td>
+      <td>579.1</td>
+      <td>0.08302</td>
+      <td>0.06374</td>
+      <td>0.02556</td>
+      <td>0.02031</td>
+      <td>...</td>
+      <td>14.84</td>
+      <td>20.21</td>
+      <td>99.16</td>
+      <td>670.6</td>
+      <td>0.1105</td>
+      <td>0.2096</td>
+      <td>0.1346</td>
+      <td>0.06987</td>
+      <td>0.3323</td>
+      <td>0.07701</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>87164</td>
       <td>M</td>
-      <td>19.810</td>
-      <td>22.15</td>
-      <td>130.00</td>
-      <td>1260.0</td>
-      <td>0.09831</td>
-      <td>0.10270</td>
-      <td>0.147900</td>
-      <td>0.094980</td>
+      <td>15.46</td>
+      <td>11.89</td>
+      <td>102.50</td>
+      <td>736.9</td>
+      <td>0.12570</td>
+      <td>0.15550</td>
+      <td>0.20320</td>
+      <td>0.10970</td>
       <td>...</td>
-      <td>27.32</td>
-      <td>30.88</td>
-      <td>186.80</td>
-      <td>2398.0</td>
-      <td>0.1512</td>
-      <td>0.31500</td>
-      <td>0.53720</td>
-      <td>0.23880</td>
-      <td>0.2768</td>
-      <td>0.07615</td>
+      <td>18.79</td>
+      <td>17.04</td>
+      <td>125.00</td>
+      <td>1102.0</td>
+      <td>0.1531</td>
+      <td>0.3583</td>
+      <td>0.5830</td>
+      <td>0.18270</td>
+      <td>0.3216</td>
+      <td>0.10100</td>
     </tr>
     <tr>
-      <th>315</th>
-      <td>894089</td>
-      <td>B</td>
-      <td>12.490</td>
-      <td>16.85</td>
-      <td>79.19</td>
-      <td>481.6</td>
-      <td>0.08511</td>
-      <td>0.03834</td>
-      <td>0.004473</td>
-      <td>0.006423</td>
-      <td>...</td>
-      <td>13.34</td>
-      <td>19.71</td>
-      <td>84.48</td>
-      <td>544.2</td>
-      <td>0.1104</td>
-      <td>0.04953</td>
-      <td>0.01938</td>
-      <td>0.02784</td>
-      <td>0.1917</td>
-      <td>0.06174</td>
-    </tr>
-    <tr>
-      <th>245</th>
-      <td>884437</td>
-      <td>B</td>
-      <td>10.480</td>
-      <td>19.86</td>
-      <td>66.72</td>
-      <td>337.7</td>
-      <td>0.10700</td>
-      <td>0.05971</td>
-      <td>0.048310</td>
-      <td>0.030700</td>
-      <td>...</td>
-      <td>11.48</td>
-      <td>29.46</td>
-      <td>73.68</td>
-      <td>402.8</td>
-      <td>0.1515</td>
-      <td>0.10260</td>
-      <td>0.11810</td>
-      <td>0.06736</td>
-      <td>0.2883</td>
-      <td>0.07748</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>867739</td>
+      <th>489</th>
+      <td>913535</td>
       <td>M</td>
-      <td>18.450</td>
-      <td>21.91</td>
-      <td>120.20</td>
-      <td>1075.0</td>
-      <td>0.09430</td>
-      <td>0.09709</td>
-      <td>0.115300</td>
-      <td>0.068470</td>
+      <td>16.69</td>
+      <td>20.20</td>
+      <td>107.10</td>
+      <td>857.6</td>
+      <td>0.07497</td>
+      <td>0.07112</td>
+      <td>0.03649</td>
+      <td>0.02307</td>
       <td>...</td>
-      <td>22.52</td>
-      <td>31.39</td>
-      <td>145.60</td>
-      <td>1590.0</td>
-      <td>0.1465</td>
-      <td>0.22750</td>
-      <td>0.39650</td>
-      <td>0.13790</td>
-      <td>0.3109</td>
-      <td>0.07610</td>
+      <td>19.18</td>
+      <td>26.56</td>
+      <td>127.30</td>
+      <td>1084.0</td>
+      <td>0.1009</td>
+      <td>0.2920</td>
+      <td>0.2477</td>
+      <td>0.08737</td>
+      <td>0.4677</td>
+      <td>0.07623</td>
     </tr>
     <tr>
-      <th>359</th>
-      <td>901034301</td>
+      <th>422</th>
+      <td>906616</td>
       <td>B</td>
-      <td>9.436</td>
-      <td>18.32</td>
-      <td>59.82</td>
-      <td>278.6</td>
-      <td>0.10090</td>
-      <td>0.05956</td>
-      <td>0.027100</td>
-      <td>0.014060</td>
+      <td>11.61</td>
+      <td>16.02</td>
+      <td>75.46</td>
+      <td>408.2</td>
+      <td>0.10880</td>
+      <td>0.11680</td>
+      <td>0.07097</td>
+      <td>0.04497</td>
       <td>...</td>
-      <td>12.02</td>
-      <td>25.02</td>
-      <td>75.79</td>
-      <td>439.6</td>
-      <td>0.1333</td>
-      <td>0.10490</td>
-      <td>0.11440</td>
-      <td>0.05052</td>
-      <td>0.2454</td>
-      <td>0.08136</td>
+      <td>12.64</td>
+      <td>19.67</td>
+      <td>81.93</td>
+      <td>475.7</td>
+      <td>0.1415</td>
+      <td>0.2170</td>
+      <td>0.2302</td>
+      <td>0.11050</td>
+      <td>0.2787</td>
+      <td>0.07427</td>
+    </tr>
+    <tr>
+      <th>564</th>
+      <td>926424</td>
+      <td>M</td>
+      <td>21.56</td>
+      <td>22.39</td>
+      <td>142.00</td>
+      <td>1479.0</td>
+      <td>0.11100</td>
+      <td>0.11590</td>
+      <td>0.24390</td>
+      <td>0.13890</td>
+      <td>...</td>
+      <td>25.45</td>
+      <td>26.40</td>
+      <td>166.10</td>
+      <td>2027.0</td>
+      <td>0.1410</td>
+      <td>0.2113</td>
+      <td>0.4107</td>
+      <td>0.22160</td>
+      <td>0.2060</td>
+      <td>0.07115</td>
     </tr>
   </tbody>
 </table>
@@ -12435,7 +12433,7 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h3><p><strong>Limpieza</strong></p>
 <p>El analisis de datos en el aprendizaje de las maquinas supone uniformadidad de los datos para un mismo atributo.
-  Cuando extraemos los datos pueden que no esten presentados  de manera unfirme (por ejemlo alguna medicion pudo no haberse efectuado y en ese casa el atributo para ese registro presenta un valor nulo) y un proceso de limpieza se vuelve mandatorio.
+  Cuando extraemos los datos pueden que no esten presentados  de manera uniforme (por ejemplo alguna medicion pudo no haberse efectuado y en ese casa el atributo para ese registro presenta un valor nulo) y un proceso de limpieza se vuelve mandatorio.
   En nuestro caso, el <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.names"> archivo de atributos </a> especifica que:</p>
 
 <pre><code>  8. Valores de atributo faltantes: ninguno
@@ -12448,9 +12446,19 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
 </div>
 </div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Verificamos que  todos los registros estan llenos</p>
+<hr>
+
+</div>
+</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -12466,7 +12474,7 @@ Todos los valores de las funciones se registran con cuatro dígitos significativ
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[182]:</div>
+<div class="prompt output_prompt">Out[66]:</div>
 
 
 
@@ -12512,21 +12520,19 @@ dtype: int64</pre>
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vemos que efectivamente todos los registros estan llenos</p>
-<hr>
 <p>NO utlizaremos el 'ID' del paciente. Por lo que lo eliminamos de nuestros datos.</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">)</span>
@@ -12543,7 +12549,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[183]:</div>
+<div class="prompt output_prompt">Out[67]:</div>
 
 
 
@@ -12591,52 +12597,52 @@ dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>235</th>
-      <td>B</td>
-      <td>14.03</td>
-      <td>21.25</td>
-      <td>89.79</td>
-      <td>603.4</td>
-      <td>0.0907</td>
-      <td>0.06945</td>
-      <td>0.01462</td>
-      <td>0.01896</td>
-      <td>0.1517</td>
+      <th>366</th>
+      <td>M</td>
+      <td>20.20</td>
+      <td>26.83</td>
+      <td>133.70</td>
+      <td>1234.0</td>
+      <td>0.09905</td>
+      <td>0.16690</td>
+      <td>0.16410</td>
+      <td>0.12650</td>
+      <td>0.1875</td>
       <td>...</td>
-      <td>15.33</td>
-      <td>30.28</td>
-      <td>98.27</td>
-      <td>715.5</td>
-      <td>0.1287</td>
-      <td>0.1513</td>
-      <td>0.06231</td>
-      <td>0.07963</td>
-      <td>0.2226</td>
-      <td>0.07617</td>
+      <td>24.19</td>
+      <td>33.81</td>
+      <td>160.0</td>
+      <td>1671.0</td>
+      <td>0.12780</td>
+      <td>0.3416</td>
+      <td>0.3703</td>
+      <td>0.21520</td>
+      <td>0.3271</td>
+      <td>0.07632</td>
     </tr>
     <tr>
-      <th>537</th>
+      <th>243</th>
       <td>B</td>
-      <td>11.69</td>
-      <td>24.44</td>
-      <td>76.37</td>
-      <td>406.4</td>
-      <td>0.1236</td>
-      <td>0.15520</td>
-      <td>0.04515</td>
-      <td>0.04531</td>
-      <td>0.2131</td>
+      <td>13.75</td>
+      <td>23.77</td>
+      <td>88.54</td>
+      <td>590.0</td>
+      <td>0.08043</td>
+      <td>0.06807</td>
+      <td>0.04697</td>
+      <td>0.02344</td>
+      <td>0.1773</td>
       <td>...</td>
-      <td>12.98</td>
-      <td>32.19</td>
-      <td>86.12</td>
-      <td>487.7</td>
-      <td>0.1768</td>
-      <td>0.3251</td>
-      <td>0.13950</td>
-      <td>0.13080</td>
-      <td>0.2803</td>
-      <td>0.09970</td>
+      <td>15.01</td>
+      <td>26.34</td>
+      <td>98.0</td>
+      <td>706.0</td>
+      <td>0.09368</td>
+      <td>0.1442</td>
+      <td>0.1359</td>
+      <td>0.06106</td>
+      <td>0.2663</td>
+      <td>0.06321</td>
     </tr>
   </tbody>
 </table>
@@ -12649,7 +12655,7 @@ dtype: int64</pre>
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12662,7 +12668,7 @@ dtype: int64</pre>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -12678,7 +12684,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[184]:</div>
+<div class="prompt output_prompt">Out[68]:</div>
 
 
 
@@ -12953,7 +12959,7 @@ dtype: int64</pre>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Visualization of data</span>
@@ -12970,7 +12976,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[185]:</div>
+<div class="prompt output_prompt">Out[69]:</div>
 
 
 
@@ -13022,7 +13028,7 @@ dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Como vemos, <strong>pandas</strong> nos genera histrogramas haciendo divisiones automaticos sobre en los intervalos de los datos. A veces necesitamos ser más específicos en como dividermos las información y es necesario generar rutinas de codigo adicionales.</p>
+<p>Como vemos, <strong>pandas</strong> nos genera histrogramas haciendo divisiones automaticas en los intervalos de los datos. A veces necesitamos ser más específicos en como divideremos las información y es necesario generar rutinas de codigo adicionales.</p>
 <p>El manejo de números con decimales se realiza usando la librería <strong>numpy</strong></p>
 <p>La siguiente funcion agrupa los datos de una columna en intevarlos iguales:</p>
 
@@ -13031,7 +13037,7 @@ dtype: object</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13063,7 +13069,7 @@ dtype: object</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">intervalos</span><span class="p">(</span><span class="n">tajada</span><span class="p">):</span>
@@ -13094,7 +13100,7 @@ dtype: object</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">intervalos</span><span class="p">(</span><span class="mi">5</span><span class="p">)[</span><span class="s1">&#39;radio_promedio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>        
@@ -13152,7 +13158,7 @@ categories
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Benigno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Diagnostico&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;B&#39;</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span>
@@ -13177,7 +13183,7 @@ categories
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
@@ -13200,7 +13206,7 @@ categories
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">histograma_benigno_maligno</span><span class="p">(</span><span class="n">intervalo</span><span class="p">,</span><span class="n">atributo</span><span class="p">,</span><span class="n">xdecimales</span><span class="p">):</span>
@@ -13239,7 +13245,7 @@ categories
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">histograma_benigno_maligno</span><span class="p">(</span><span class="n">intervalos</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="s1">&#39;radio_promedio&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -13284,7 +13290,7 @@ categories
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[193]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">histograma_benigno_maligno</span><span class="p">(</span><span class="n">intervalos</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="s1">&#39;perimetro_promedio&#39;</span> <span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -13319,7 +13325,7 @@ categories
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">histograma_benigno_maligno</span><span class="p">(</span><span class="n">intervalos</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="s1">&#39;area_promedio&#39;</span><span class="p">,</span><span class="mi">1</span> <span class="p">)</span>
@@ -13398,7 +13404,7 @@ W. Nick Street, W. H. Wolberg, O. L. Mangasarian, Proceedings Volume 1905, Biome
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[195]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">histograma_benigno_maligno</span><span class="p">(</span><span class="n">intervalos</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span><span class="s1">&#39;dimension_fractal_promedio&#39;</span><span class="p">,</span><span class="mi">3</span> <span class="p">)</span>
@@ -13433,7 +13439,7 @@ W. Nick Street, W. H. Wolberg, O. L. Mangasarian, Proceedings Volume 1905, Biome
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">histograma_benigno_maligno</span><span class="p">(</span><span class="n">intervalos</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span><span class="s1">&#39;simetria_promedio&#39;</span><span class="p">,</span><span class="mi">3</span> <span class="p">)</span>
@@ -13471,6 +13477,16 @@ W. Nick Street, W. H. Wolberg, O. L. Mangasarian, Proceedings Volume 1905, Biome
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>La distribución de tamaños en intervalos iguales no influye de manera tan decisiva en el tipo de cáncer (Maligno vs Benigno) como en el caso de áreas, radios y perímetros.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Conclusiones">Conclusiones<a class="anchor-link" href="#Conclusiones">&#182;</a></h3><p>Hemos observado como las diferentes características de los datos nos arrojan patrones que nos permiten  diferenciar los casos malignos de los casos beginos. Una buena ingeniería de características se vuelve de vital importancia  cuando los conjuntos de datos son grandes y ademas nos ayudan a evitar el fenoneno de 'overfitting'.</p>
+<p>En la siguiente sección implementamos las rutinas de Aprendizaje de Datos que nos permitirán ofrecer predicciones a partir de nuestro conjunto de datos</p>
 
 </div>
 </div>

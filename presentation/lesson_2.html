@@ -11783,8 +11783,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4><em><font color=blue>  Objetivo de la lección: </font></em></h4>
 <p><font color=blue>
-    _Objetivo del curso_: Aprender las diferentes fases del Aprendizaje de Datos (ML) a traves de  ejemplos reales. Esto con el fin de obtener una idea clara de lo que significa la ciencia de datos. 
+ Aprender las diferentes fases del Aprendizaje de Datos (ML): Analisis exploratorio e Ingenieria de caracteristicas de los datos. 
 </font></p>
 
 </div>
@@ -11794,18 +11795,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La mejor manera de entender los procesos involucrados en la ciencia de datos, es a traves de ejemplos realistas (concretos).</p>
-<p>Estaremos trabajando sobre <em>notebook</em> de <strong>jupyter</strong>: Usaremos <strong>Python</strong> en cada nivel de la tubería</p>
-<p>La librerias principales de Python involucradas en este curso son</p>
+<p>La librerias de <strong>Python</strong> que se usan en esta lección del curso son</p>
 <ul>
 <li><b>Pandas</b> para la manipulación e ingesta de los datos</li>
 <li><b>Matplotlib</b> and <b> seaborn</b> para la vizualización de los datos</li>
 <li><b>Numpy</b> para computo de arreglos multidimensionales</li>
 <li><b>sklearn</b> para el aprendizaje de máquinas y el modelado predectivo</li>
 </ul>
-<h3 id="Proceso-de-Instalaci&#243;n">Proceso de Instalaci&#243;n<a class="anchor-link" href="#Proceso-de-Instalaci&#243;n">&#182;</a></h3><p>Una manera sencilla de installar esta paqueteria es descargar e instalar 
-la distribucion <a href="http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install">Conda</a> que encapsula a todas las librerias mencionadas. Esta distribución esta disponible en todas las plataformas (Windows, Linux and Mac OSX).</p>
-<h3 id="Nota">Nota<a class="anchor-link" href="#Nota">&#182;</a></h3><p>...</p>
 
 </div>
 </div>
@@ -11814,12 +11810,32 @@ la distribucion <a href="http://conda.pydata.org/docs/install/quick.html#os-x-mi
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="El-conjunto-de-datos-(Wisconsin)-del-C&#225;ncer-de-mama">El conjunto de datos (Wisconsin) del C&#225;ncer de mama<a class="anchor-link" href="#El-conjunto-de-datos-(Wisconsin)-del-C&#225;ncer-de-mama">&#182;</a></h3><p>Las características se calculan a partir de una imagen digitalizada de un aspirado con aguja fina (FNA) de una masa mamaria. Describen las características de los núcleos celulares presentes en la imagen. El espacio tridimensional es el descrito en: [K. P. Bennett y O. L. Mangasarian: "Discriminación robusta de la programación lineal de dos conjuntos linealmente inseparables", Métodos de optimización y software 1, 1992, 23-34].</p>
-<p>Del artículo mencionado, leemos que:</p>
+<h3 id="Proceso-de-Instalaci&#243;n">Proceso de Instalaci&#243;n<a class="anchor-link" href="#Proceso-de-Instalaci&#243;n">&#182;</a></h3><p>Una manera sencilla de installar esta paqueteria es descargar e instalar 
+la distribucion <a href="http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install">Conda</a> que encapsula a todas las librerias mencionadas. Esta distribución esta disponible en todas las plataformas (Windows, Linux and Mac OSX).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="El-conjunto-de-datos-(Wisconsin)-del-C&#225;ncer-de-mama">El conjunto de datos (Wisconsin) del C&#225;ncer de mama<a class="anchor-link" href="#El-conjunto-de-datos-(Wisconsin)-del-C&#225;ncer-de-mama">&#182;</a></h3><p>Nuestro caso de estudio es el conjunto de datos obtenidos para el cancer de mama en el hospital de Wisconsin. El articulo donde se describe la metología empleada para la obtencion de las caracteristicas de la informacion es</p>
+<p><em>[K. P. Bennett y O. L. Mangasarian: "Discriminación robusta de la programación lineal de dos conjuntos linealmente inseparables", Métodos de optimización y software 1, 1992, 23-34].</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="El-conjunto-de-datos-(Wisconsin)-del-C&#225;ncer-de-mama">El conjunto de datos (Wisconsin) del C&#225;ncer de mama<a class="anchor-link" href="#El-conjunto-de-datos-(Wisconsin)-del-C&#225;ncer-de-mama">&#182;</a></h4><p>Del artículo mencionado, leemos que:</p>
 <p>"Cada registro representa información de seguimiento para un caso cáncer de mama. 
 Estos  pacientes han sido atentidos por el Dr. Wolberg desde el año 1984,
 están incluídos sólo aquellos casos que exhiben cáncer de mama y donde no hay evidencia de metástasis 
 a distancia en el tiempo de diagnóstico."</p>
+<p><em>Las características se calculan a partir de una imagen digitalizada de un aspirado con aguja fina (FNA) de una masa mamaria</em></p>
 
 </div>
 </div>
@@ -11828,10 +11844,20 @@ a distancia en el tiempo de diagnóstico."</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="../images/fna-cell.png" alt=""></p>
-<h5 align="center">Imagen ampliada de un seno maligno obtenida con la biopsia FNA (Fine Needle Aspiration). Los núcleos de células visibles se han esbozado con la ayuda de un programa de ajuste de curvas. El sistema también calcula varias características para cada núcleo y diagnostica con precisión la muestra. El proceso de diagnóstico interactivo toma alrededor de 5 minutos por muestra.</h5><p>FUENTE: K. P. Bennett and O. L. Mangasarian: "Robust Linear Programming Discrimination of Two Linearly Inseparable Sets", Optimization Methods and Software 1, 1992, 23-34</p>
-<p>Los datos se encuentran en el repositorio de aprendizaje automático de UCI: <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29</a></p>
+<p><img style="float: center;" src="../images/fna-cell.png"></p>
+<h5 align="justify">Imagen ampliada de un seno maligno obtenida con la biopsia FNA (Fine Needle Aspiration). Los núcleos de células visibles se han esbozado con la ayuda de un programa de ajuste de curvas. El sistema también calcula varias características para cada núcleo y diagnostica con precisión la muestra. El proceso de diagnóstico interactivo toma alrededor de 5 minutos por muestra.</h5><p>FUENTE: K. P. Bennett and O. L. Mangasarian: "Robust Linear Programming Discrimination of Two Linearly Inseparable Sets", Optimization Methods and Software 1, 1992, 23-34</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Los datos se encuentran en el 
+  <strong><a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">repositorio de aprendizaje automático de UCI:</a></strong></p>
 <hr>
+<p><em>El repositorio de aprendizaje automático de UCI es una colección de bases de datos, teorías de dominio y generadores de datos que la comunidad de aprendizaje automático utiliza para el análisis empírico de los algoritmos de aprendizaje automático. El archivo fue creado como archivo ftp en 1987 por David Aha y otros estudiantes graduados en UC Irvine. Desde entonces, ha sido ampliamente utilizado por estudiantes, educadores e investigadores de todo el mundo como fuente principal de conjuntos de datos de aprendizaje automático.</em></p>
 
 </div>
 </div>
@@ -11840,12 +11866,24 @@ a distancia en el tiempo de diagnóstico."</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 align="center">El flujo de trabajo en un proyecto de ciencia de datos </h2><p>El conjunto de  lineamientos específicos ('ducto') en un proyecto de  ciencia de datos varía dependiendo de la naturaleza del mismo. Aquí presentamos un ducto estandar:</p>
-<h3 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h3><ul>
-<li>Extracción: Cargar el conjunto de datos y echarles una mirada</li>
-<li>Limpieza: Encontrar los valores que faltan</li>
-<li>Visualización: Crear algunas gráficas interesantes que nos permitan idendificar correlaciones y </li>
-<li>Suposiciones: Formular hipótesis sobre los gráficos</li>
+<h2 align="center">El flujo de trabajo en un proyecto de ciencia de datos </h2><p>El conjunto de  lineamientos específicos ('ducto') en un proyecto de  ciencia de datos varía dependiendo de la naturaleza del mismo. Aquí trabajamos el ducto estandar:</p>
+<h3 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h3><h3 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h3><h3 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h3><hr>
+<p>Especificamente en esta leccion nos enfocamos en los primeros dos puntos</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="An&#225;lisis-exploratorio-de-los-datos">An&#225;lisis exploratorio de los datos<a class="anchor-link" href="#An&#225;lisis-exploratorio-de-los-datos">&#182;</a></h2><p><em>En estadística, el análisis exploratorio de los datos  es un enfoque para analizar conjuntos de datos para resumir sus características principales, a menudo con métodos visuales.</em></p>
+<p>Consiste en las siguientes tareas especificas</p>
+<ul>
+<li><strong>Extracción</strong>: Cargar el conjunto de datos y echarles una mirada</li>
+<li><strong>Limpieza</strong>: Encontrar los valores que faltan</li>
+<li><strong>Visualización</strong>: Crear algunas gráficas interesantes que nos permitan idendificar correlaciones y </li>
+<li><strong>Suposiciones</strong>: Formular hipótesis sobre los gráficos</li>
 </ul>
 
 </div>
@@ -11969,7 +12007,7 @@ a distancia en el tiempo de diagnóstico."</p>
 </code></pre>
 <p>Se calculan diez características de valor real para cada núcleo celular:</p>
 
-<pre><code>a) radio (media de las distancias desde el centro a los puntos en el perímetro)
+<pre><code>a) radio ( media de las distancias desde el centro a los puntos en el perímetro )    
 b) textura (desviación estándar de los valores de escala de grises)
 c) perímetro
 d) área
@@ -11987,13 +12025,11 @@ j) dimensión fractal ("aproximación de la línea de costa" - 1)</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>La media, el error estándar y el "peor" o mayor (media de las tres
+<p>La media, el error estándar y el "peor" o mayor (media de las tres
 los valores más grandes) de estas características se calcularon para cada imagen,
 dando como resultado 30 características. Por ejemplo, el campo 3 es Radio medio, campo
-13 es el radio SE, el campo 23 es el peor radio.
-
-Todos los valores de las funciones se registran con cuatro dígitos significativos.</code></pre>
+13 es el radio SE, el campo 23 es el peor radio.</p>
+<p>Todos los valores de las funciones se registran con cuatro dígitos significativos.</p>
 
 </div>
 </div>
@@ -13303,6 +13339,16 @@ W. Nick Street, W. H. Wolberg, O. L. Mangasarian, Proceedings Volume 1905, Biome
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>La distribución de tamaños en intervalos iguales no influye de manera tan decisiva en el tipo de cáncer (Maligno vs Benigno) como en el caso de áreas, radios y perímetros.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Conclusiones">Conclusiones<a class="anchor-link" href="#Conclusiones">&#182;</a></h3><p>Hemos observado como las diferentes características de los datos nos arrojan patrones que nos permiten  diferenciar los casos malignos de los casos beginos. Una buena ingeniería de características se vuelve de vital importancia  cuando los conjuntos de datos son grandes y ademas nos ayudan a evitar el fenoneno de 'overfitting'.</p>
+<p>En la siguiente sección implementamos las rutinas de Aprendizaje de Datos nos permitirán ofrecer predicciones a partir de nuestro conjunto de datos</p>
 
 </div>
 </div>
