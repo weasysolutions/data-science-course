@@ -15,6 +15,8 @@ El curso esta divido en tres lecciones seriadas.
 
 3) [Las rutinas del aprendizaje de datos](https://weasysolutions.github.io/data-science-course/presentation/lesson_3.slides.html#/) 
 
+3) [Manejo de Gigante de datos](https://weasysolutions.github.io/data-science-course/presentation/lesson_4.slides.html#/) 
+
 ### Creditos
 [![N|Equipo](https://weasysolutions.github.io/data-science-course/images/weasysolutions.png)](http://weasysolutions.com)
 
