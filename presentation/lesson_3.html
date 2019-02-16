@@ -11783,8 +11783,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4><em><font color=blue>  Objetivo de la lección: </font></em></h4>
 <p><font color=blue>
-    _Objetivo del curso_: Aprender las diferentes fases del Aprendizaje de Datos (ML) a traves de  ejemplos reales. Esto con el fin de obtener una idea clara de lo que significa la ciencia de datos.
+ Aprender las diferentes fases del Aprendizaje de Datos (ML): Modelado de datos.
 </font></p>
 
 </div>
@@ -11794,37 +11795,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 align="center">El flujo de trabajo en un proyecto de ciencia de datos </h2><p>El conjunto de  lineamientos específicos ('ducto') en un proyecto de  ciencia de datos varía dependiendo de la naturaleza del mismo. Aquí presentamos un ducto estandar:</p>
-<h3 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h3><ul>
-<li>Extracción: Cargar el conjunto de datos y echarles una mirada</li>
-<li>Limpieza: Encontrar los valores que faltan</li>
-<li>Visualización: Crear algunas gráficas interesantes que nos permitan idendificar correlaciones y </li>
-<li>Suposiciones: Formular hipótesis sobre los gráficos</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h3><ul>
-<li>Datos Categóricos</li>
-<li>Extraer</li>
-<li>Procesar</li>
-</ul>
-<h3 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h3><ul>
-<li>Selección de Características.  Reducir el número de caracterísiticas trae los siguientes beneficios:<ul>
-<li>Reduce el número de redundancias en los datos</li>
-<li>Acelera los procesos de entrenamiento </li>
-<li>Reduce el 'overfitting'</li>
-<li>Muestreo de modelos base</li>
-</ul>
-</li>
-<li>Muestreo de los modelos base   </li>
-</ul>
-<hr>
+<h2 align="center">El flujo de trabajo en un proyecto de ciencia de datos </h2><p>El conjunto de  lineamientos específicos ('ducto') en un proyecto de  ciencia de datos varía dependiendo de la naturaleza del mismo. Aquí trabajamos el ducto estandar:</p>
+<h3 id="An&#225;lisis-exploratorio-de-los-datos">An&#225;lisis exploratorio de los datos<a class="anchor-link" href="#An&#225;lisis-exploratorio-de-los-datos">&#182;</a></h3><h3 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h3><h3 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h3><hr>
+<p>Especificamente en esta leccion nos enfocamos en los dos último puntos</p>
 
 </div>
 </div>
@@ -11840,22 +11813,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
@@ -11879,13 +11837,23 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Caracteristicas">Caracteristicas<a class="anchor-link" href="#Caracteristicas">&#182;</a></h3>
+<h2 id="An&#225;lisis-exploratorio-de-los-datos">An&#225;lisis exploratorio de los datos<a class="anchor-link" href="#An&#225;lisis-exploratorio-de-los-datos">&#182;</a></h2><p>Los resultados de la lección pasada</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Caracter&#237;sticas">Caracter&#237;sticas<a class="anchor-link" href="#Caracter&#237;sticas">&#182;</a></h3><p>Los nombres de las características del conjunto de datos</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">caracteristicas</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;a:radio&#39;</span><span class="p">,</span><span class="s1">&#39;b:textura&#39;</span><span class="p">,</span><span class="s1">&#39;c:perimetro&#39;</span><span class="p">,</span> \
@@ -11908,17 +11876,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Analisis-exploratorio-de-los-datos">Analisis exploratorio de los datos<a class="anchor-link" href="#Analisis-exploratorio-de-los-datos">&#182;</a></h3><p>Resumen de la lección pasada</p>
+<h4 id="Extracci&#243;n">Extracci&#243;n<a class="anchor-link" href="#Extracci&#243;n">&#182;</a></h4><p>Importamos la librería <strong>Pandas</strong> para extraer el conjunto de datos</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/wisconsin.csv&#39;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">columnas</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/wisconsin.csv&#39;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">columnas</span><span class="p">);</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">)</span>
 
@@ -11935,8 +11905,21 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h2><p><strong>Datos Categóricos</strong></p>
-<p>Los datos categóricos son variables que contienen valores de etiqueta en lugar de valores numéricos. El número de valores posibles a menudo se limita a un conjunto fijo.</p>
+<p>La ingeniería de características es el proceso de utilizar el conocimiento de dominio de los datos para crear características que hacen que los algoritmos de aprendizaje automático funcionen. La ingeniería de características es fundamental para la aplicación del aprendizaje automático.</p>
+<h2 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h2><ul>
+<li>Datos Categóricos</li>
+<li>Divsion del conjunto de datos</li>
+<li>Escalamiento de los atributos</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h3><h3 id="Datos-Categ&#243;ricos">Datos Categ&#243;ricos<a class="anchor-link" href="#Datos-Categ&#243;ricos">&#182;</a></h3><p>Los datos categóricos son variables que contienen valores de etiqueta en lugar de valores numéricos. El número de valores posibles a menudo se limita a un conjunto fijo.</p>
 <p>Por ejemplo, los usuarios normalmente se describen por país, género, grupo de edad, etc.</p>
 <p>De hecho ya hemos  convertido los atributos del <em>Diagnóstico</em> a valores numéricos:</p>
 
@@ -11945,7 +11928,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Maligno&#39;</span><span class="p">,</span><span class="s1">&#39;Benigno&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -11961,7 +11944,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[28]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -11990,14 +11973,14 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>101</th>
-      <td>0</td>
+      <th>32</th>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>445</th>
-      <td>0</td>
+      <th>229</th>
       <td>1</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -12021,7 +12004,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Maligno&#39;</span><span class="p">)</span>
@@ -12043,7 +12026,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Diagnostico&#39;</span><span class="p">)</span>
@@ -12058,21 +12041,30 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>División el conjunto de datos</strong></p>
-<p>Los datos que utilizamos generalmente se dividen en datos de entrenamiento y datos de prueba. 
+<h3 id="Divisi&#243;n-del-conjunto-de-datos">Divisi&#243;n del conjunto de datos<a class="anchor-link" href="#Divisi&#243;n-del-conjunto-de-datos">&#182;</a></h3><p>Los datos que utilizamos generalmente se dividen en datos de <em>entrenamiento</em> y datos de <em>prueba</em>. 
 El conjunto de entrenamiento contiene <em>un</em> resultado conocido y 
 el modelo aprende sobre estos datos para generalizarse a otros datos más adelante. 
 Tenemos el conjunto de datos de prueba (o subconjunto) para probar la predicción de nuestro modelo 
 en este subconjunto.</p>
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <p>Primero, separamos el conjunto total de diagnósticos (presentado por la letra <em>Y</em>) del resto de los atributos (representados por la letra <em>X</em>)</p>
+<hr>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">29</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -12088,7 +12080,7 @@ en este subconjunto.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Separamos el conjunto de entrenamiento y el conjunto prueba usando la biblioteca <strong>SciKit-Learn</strong>. Más en especifico, el método 'train_test_split':</p>
+<p>Separamos el conjunto de entrenamiento y el conjunto prueba usando la biblioteca <strong>SciKit-Learn</strong>. Más en especifico, usamos el método 'train_test_split':</p>
 
 </div>
 </div>
@@ -12096,23 +12088,6 @@ en este subconjunto.</p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">linear_model</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
@@ -12128,8 +12103,18 @@ en este subconjunto.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>El parametro test<em>__size</em> representa el porcentaje de los datos <em>(X,Y)</em>  que serán usados como datos de prueba. En nuestro caso hemos usado el veinticinco porciento. El parámetro <em>random</em>_<em>state</em> sirve para establecer la semilla del algoritmo aleatorio que selecciona los conjuntos de datos</p>
+<p>El parametro test<em>__size</em> que aparece en el método</p>
+<p><em>train</em>_<em>test</em>_<em>split()</em></p>
+<p>representa el porcentaje de los datos <em>(X,Y)</em>  que serán usados como datos de prueba. En nuestro caso hemos usado el veinticinco porciento. El parámetro <em>random</em>_<em>state</em> sirve para establecer la semilla del algoritmo aleatorio que selecciona los conjuntos de datos</p>
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Escalamiento-de-los-atributos">Escalamiento de los atributos<a class="anchor-link" href="#Escalamiento-de-los-atributos">&#182;</a></h3><p>La mayoría de las veces, un conjunto de datos contendrá características altamente variables en su magnitudes, unidades y rango. Por ejemplo notemos la gran disparidad que existe entre las columnas 'dimension_fractal' y 'radio_promedio':</p>
 
 </div>
@@ -12137,7 +12122,7 @@ en este subconjunto.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;area_promedio&#39;</span><span class="p">,</span><span class="s1">&#39;dimension_fractal_promedio&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> 
@@ -12153,7 +12138,7 @@ en este subconjunto.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -12239,8 +12224,16 @@ en este subconjunto.</p>
 <p>Asi como la cercania o lejania entre dos ciudades distintas se establece con la distancia que los separa, en estadística también tenemos el concepto de distancia entre los datos <em>medidos</em> con los datos del <em>modelo teórico</em>. De hecho, la noción de distancia en estadística es la misma que la que hay para dos ciudades: la medida Euclideana.
  Con ella, podemos decir si nuestras predicciones del modelo están cerca o lejos de las predicciones de los datos medidos. Es un poco descabellado comparar distancias de ciudades con las distancias entre dos hormigas en un mismo hormiguero, pero los ejemplos del 'area_promedio' y 'dimension_fractal_promedio' arriba expuestos  nos  están demostrando que semejantemente nos encontramos en esta situacion.</p>
 <hr>
-<p><div style="text-align: center">  _Es deseable llevar todas las características al mismo nivel de magnitudes. Esto se puede lograr mediante la escala. Esto significa transformar todos los datos a una misma  escala específica, 
-como  de 0 a 100 o de  0 a 1._  </div></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em><div style="text-align: center">  Es deseable llevar todas las características al mismo nivel de magnitudes (normalizar los datos). Esto se puede lograr mediante la escala. Esto significa transformar todos los datos a una misma  escala específica, 
+como  de 0 a 100 o de  0 a 1.  </div></em></p>
 <hr>
 
 </div>
@@ -12250,7 +12243,7 @@ como  de 0 a 100 o de  0 a 1._  </div></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Para ello, usamos el metodo <em>StandardScaler</em> de la bilbioteca <strong>sklearn</strong></p>
+<p>Para normalizar los datos, usamos el metodo <em>StandardScaler</em> de la bilbioteca <strong>sklearn</strong></p>
 
 </div>
 </div>
@@ -12275,16 +12268,16 @@ como  de 0 a 100 o de  0 a 1._  </div></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h3><ul>
-<li>Seleccion de Caracteristicas.  Reducir el numero de caracterisiticas trae los siguientes beneficios:<ul>
-<li>Reduce el numero de redundancias en los datos</li>
-<li>Acelera los procesos de entrenamiento </li>
-<li>Reduce el 'overfitting'</li>
-<li>Muestreo de modelos base</li>
-</ul>
-</li>
-<li>Muestreo de los modelos base   </li>
-</ul>
+<h2 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h2><p>El modelado de datos en ingeniería de software representa el proceso de crear un modelo de datos para un sistema de información mediante la aplicación de las técnicas de Aprendizaje de Datos</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En el área del aprendizaje de maquinas, las predicciones se diferencían  en dos tipos. Por un lado, las predicciones que toman valores en el  continúo (en la recta real), se les llama <em>Regresiones</em>. Por ejemplo, el tiempo que tarda un avion en cruzar el continente. Mientras que las predicciones que involucran solo un número finito de predicciones (discreto o categórico), se les conoce como <em>clasificaciones</em>. Por ejemplo un conjunto de tres colores, el día o la noche, etc.</p>
 <hr>
 
 </div>
@@ -12294,11 +12287,9 @@ como  de 0 a 100 o de  0 a 1._  </div></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En el area del aprendizaje de maquinas se diferencian las predicciones en dos tipos. Por un lado, las predicciones que toman valores en el  continuo (en la recta real), se les llama <em>Regresiones</em>. Por ejemplo, el tiempo que tarda un avion en cruzar el continente. Mientras que las predicciones que invulcran solo un numero finito de predicciones (discreto o categórico), se les conoce como <em>clasificaciones</em>. Por ejemplo un conjunto de tres colores, el día o la noche, etc.</p>
+<p>En nuestro caso queremos predicir si el cancer es maligno o benigno, entonces usaremos <em>algoritmos de clasificación para el aprendizaje supervisado</em></p>
 <hr>
-<p>En nuestro caso queremos predicir si el cancer es maligno o benigno, entonces usaremos <em>algoritmos de clasificacion para el aprendizaje supervisado</em></p>
-<hr>
-<p>La palabra supervisado, aqui significa que sabemos que etiqueta final queremos predecir: <em>Benigno</em> o <em>Maligno</em>. Las etiquetas <em>Benigno</em>  y <em>Maligno</em> que usamos para entrenar a la maquina, no deben ser llamadas  <em>predicciones</em> sino <em>datos de salida</em>: toda prediccion es un dato de salida pero no al reves.</p>
+<p>La palabra supervisado, aquí significa que sabemos que etiqueta final queremos predecir: <em>Benigno</em> o <em>Maligno</em>. Las etiquetas <em>Benigno</em>  y <em>Maligno</em> que usamos para entrenar a la maquina, no deben ser llamadas  <em>predicciones</em> sino <em>datos de salida</em>: toda prediccion es un dato de salida pero no al reves.</p>
 
 </div>
 </div>
@@ -12307,8 +12298,8 @@ como  de 0 a 100 o de  0 a 1._  </div></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>EN SUMA:
-En aprendizaje automático y estadísticas, la clasificación consiste identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de entrenamiento de datos que contienen observaciones (o instancias) cuya categoría de miembro es conocida.</p>
+<h3 id="Clasificaci&#243;n-in-ML">Clasificaci&#243;n in ML<a class="anchor-link" href="#Clasificaci&#243;n-in-ML">&#182;</a></h3><p>EN SUMA:</p>
+<p>En aprendizaje automático y estadística, la clasificación consiste identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de entrenamiento de datos que contienen observaciones (o instancias) cuya categoría de miembro es conocida.</p>
 
 </div>
 </div>
@@ -12317,24 +12308,23 @@ En aprendizaje automático y estadísticas, la clasificación consiste identific
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Los siguientes nombres de algoritmos de clasificación en Aprendizaje Automático, son de los más populares en el mundo de la ciencia de datos:</p>
+<h2 id="Algoritmos-de-ML">Algoritmos de ML<a class="anchor-link" href="#Algoritmos-de-ML">&#182;</a></h2><p>Los siguientes nombres de algoritmos de clasificación en Aprendizaje Automático, son de los más populares en el mundo de la ciencia de datos:</p>
 <ol>
-<li><p>Regresión logística</p>
+<li><p>Regresión Logística</p>
 </li>
-<li><p>Vecino más cercano</p>
+<li><p>Vecino Más Cercano</p>
 </li>
-<li><p>Soporte de máquinas de vectores</p>
+<li><p>Soporte de Máquinas de Vectores</p>
 </li>
 <li><p>Kernel SVM</p>
 </li>
 <li><p>Naïve Bayes</p>
 </li>
-<li><p>Árbol de decisión</p>
+<li><p>Árbol de Decisión</p>
 </li>
-<li><p>Bosques al azar</p>
+<li><p>Bosques al Azar</p>
 </li>
 </ol>
-<p>La biblioteca <strong>sklearn</strong> tiene en incluído todos estos casos. A continuación describimos cada uno de los métodos e importamos las correspondendientes sub-librerias .</p>
 
 </div>
 </div>
@@ -12343,7 +12333,8 @@ En aprendizaje automático y estadísticas, la clasificación consiste identific
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ejemplificamos con la regresion <em>regresión logística</em> el como se realizamos el analisis para despues analizar todos los casos juntos</p>
+<p>La biblioteca <strong>sklearn</strong> incluye todos estos métodos. A continuación describimos cada uno de los métodos e importamos las correspondientes sub-librerias .</p>
+<p>Ejemplificamos a detalle el análisis que hacemos de los datos para el caso de  la  <em>regresión logística</em>. Despues introducimos los demás algoritmos.</p>
 
 </div>
 </div>
@@ -12352,9 +12343,10 @@ En aprendizaje automático y estadísticas, la clasificación consiste identific
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="REGRESI&#211;N-LOG&#205;STICA.">REGRESI&#211;N LOG&#205;STICA.<a class="anchor-link" href="#REGRESI&#211;N-LOG&#205;STICA.">&#182;</a></h3><p>En su forma mas sencilla (la cual es la que necesitamos aqui), la regresion logistica modela las variables de salida 'Benigno y 'Maligno, en este caso hablamos de una <em>regresión logística binaria</em></p>
-<p><strong>Ensayo de Bernoulli:</strong>
-Ensayos repetidos independientes de un experimento con exactamente dos resultados posibles se llaman <em>ensayos de Bernoulli</em> (el resultado de un paciente no influyen en los demás)</p>
+<h3 id="REGRESI&#211;N-LOG&#205;STICA.">REGRESI&#211;N LOG&#205;STICA.<a class="anchor-link" href="#REGRESI&#211;N-LOG&#205;STICA.">&#182;</a></h3><p>En su forma más sencilla (la cual es la que necesitamos aqui), la regresión logística modela las variables de salida 'Benigno y 'Maligno', en este caso hablamos de una <em>regresión logística binaria</em></p>
+<p>El resultado de un paciente no influyen en los demás, entonces las pruebas de los pacientes constituyen un
+<strong>Ensayo de Bernoulli:</strong>
+Ensayos repetidos independientes de un experimento con exactamente dos resultados posibles.</p>
 
 </div>
 </div>
@@ -12363,7 +12355,7 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La regresión logística difiere de la regresión ordinaria en que la segunda regresa valores continuos. En la regresión logísitica, la simplicidad de la regresión lineal es usada, pero tiene que ser adicionada con  una forma de convertir una variable binaria en una continua que pueda tomar cualquier valor real (negativo o positivo).</p>
+<h4 id="Regresi&#243;n-Log&#237;stica-vs-Regresi&#243;n-Ordinaria">Regresi&#243;n Log&#237;stica vs Regresi&#243;n Ordinaria<a class="anchor-link" href="#Regresi&#243;n-Log&#237;stica-vs-Regresi&#243;n-Ordinaria">&#182;</a></h4><p>La regresión logística difiere de la regresión ordinaria en que la segunda regresa valores continuos. En la regresión logísitica, la simplicidad de la regresión lineal es usada, pero tiene que ser adicionada con  una forma de convertir una variable binaria en una continua que pueda tomar cualquier valor real (negativo o positivo).</p>
 <p>Para ello se definen  la <em>frontera de decisión</em> (<em>boundary decision</em>).</p>
 <p>Esta predicción categórica se puede basar en las probabilidades calculadas de éxito, y las probabilidades pronosticadas por encima de un valor de corte elegido se traducen en una predicción de éxito.</p>
 
@@ -12375,17 +12367,27 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Funciones-de-Activaci&#243;n">Funciones de Activaci&#243;n<a class="anchor-link" href="#Funciones-de-Activaci&#243;n">&#182;</a></h3><p>Computacionalmente a veces es mejor aproximar probabilidades de valores categóricos con funciones continuas conocidas como funciones de activación.</p>
-<p>Por ejemplo las funciones <em>sigmoid</em> y <em>tanh</em>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Ejemplo">Ejemplo<a class="anchor-link" href="#Ejemplo">&#182;</a></h3><p>Las siguientes dos funciones, son funciones de activacion y se conocen como las funciones <em>sigmoid</em> y <em>tanh</em>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  
     <span class="k">return</span>  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">))</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
 
 <span class="k">def</span> <span class="nf">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -12414,19 +12416,14 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-36-11f70edd28e8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">return</span> np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>np<span class="ansi-blue-fg">.</span>tanh<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> x<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> 
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>t <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">400</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> 
-<span class="ansi-green-intense-fg ansi-bold">      9</span> a <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">*</span>sigmoid<span class="ansi-blue-fg">(</span>t<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">2</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined</pre>
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
+
 </div>
 
 </div>
@@ -12437,14 +12434,14 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A continuación cargamos el método de regresión logística de <strong>skit-learn</strong>, para despues hacer el ajuste:</p>
+<p>A continuación cargamos el método de regresión logística de <strong>skit-learn</strong> que hará el <em>ajuste</em>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Using Logistic Regression Algorithm to the Training Set</span>
@@ -12466,7 +12463,7 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -12483,6 +12480,15 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Teniendo el <em>clasificador</em> entrenado, toca el turno de generar predicciones (<em>respuestas</em>) para el conjunto de prueba (<em>predictór</em> ) X_test,</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12501,7 +12507,7 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Para verificar la precisión de la predicción necesitamos importar el método de confusión de matriz de métricas. La matríz de confusión es una forma de tabular el número de clasificaciones erróneas, es decir, el número de clases predichas que terminaron en un contenedor de clasificación incorrecto basado en las clases verdaderas.</p>
+<p>Para verificar la precisión de la predicción importamos el método de confusión de matriz de métricas. La matríz de confusión es una forma de tabular el número de clasificaciones erróneas, es decir, el número de clases predichas (Y_pred) que terminaron en un contenedor de clasificación incorrecto basado en las clases verdaderas (Y_train).</p>
 
 </div>
 </div>
@@ -12510,8 +12516,8 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Matr&#237;z-de-Error-o-Matr&#237;z-de-Confusi&#243;n">Matr&#237;z de Error o Matr&#237;z de Confusi&#243;n<a class="anchor-link" href="#Matr&#237;z-de-Error-o-Matr&#237;z-de-Confusi&#243;n">&#182;</a></h3><p>En el análisis predictivo, una tabla de confusión (a veces también llamada matriz de confusión), es una tabla con dos filas y dos columnas que informa el número de <em>falsos positivos</em>, <em>falsos negativos</em>, <em>verdaderos positivos</em> y <em>verdaderos negativos</em>.</p>
-<p>Cada fila de la matriz representa las instancias en una clase predicha, mientras que cada columna representa las instancias en una clase real (o viceversa). En nuesro caso, tenemos algo como:</p>
+<h3 id="Matr&#237;z-de-Error-o-Matr&#237;z-de-Confusi&#243;n">Matr&#237;z de Error o Matr&#237;z de Confusi&#243;n<a class="anchor-link" href="#Matr&#237;z-de-Error-o-Matr&#237;z-de-Confusi&#243;n">&#182;</a></h3><p>En el análisis predictivo, una tabla de confusión (o matríz de confusión), es una tabla con dos filas y dos columnas que informa el número de <em>falsos positivos</em>, <em>falsos negativos</em>, <em>verdaderos positivos</em> y <em>verdaderos negativos</em>.</p>
+<p>Cada fila de la matríz representa las instancias en una clase predicha, mientras que cada columna representa las instancias en una clase real (o viceversa). En nuesro caso, tenemos algo como:</p>
 <table>
 <thead><tr>
 <th>Prediccion/Real</th>
@@ -12532,10 +12538,10 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </tr>
 </tbody>
 </table>
-<p>$VP$ = Numero de  Verdadero Positivo</p>
-<p>$FP$ = Numero de Falso Positivo</p>
-<p>$VN$ = Numero de Verdadero Negativo</p>
-<p>$FN$ = Numero de Falso Negativo</p>
+<p>$VP$ = Número de  Verdadero Positivo</p>
+<p>$FP$ = Número de Falso Positivo</p>
+<p>$VN$ = Número de Verdadero Negativo</p>
+<p>$FN$ = Número de Falso Negativo</p>
 <p><strong>condición positiva (P):</strong>
 El número de casos positivos reales en los datos.</p>
 <p><strong>condición negativa (N):</strong>

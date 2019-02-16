@@ -10,6 +10,8 @@
 
 
 source ~/.zshrc
+
+./copy-nb4.sh
 #echo  $1 $2
 #jupyter nbconvert $1  $2 $3 \
 

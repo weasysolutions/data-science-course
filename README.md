@@ -1,7 +1,7 @@
 
 # Curso Ciencia de Datos
 
-Curso de Ciencia de datos con un enfoque pragmático. Presentamos un flujo de ciencia de datos para el conjunto de datos de Cancer de Mama del Hospital de Wisconsin.
+Curso de Ciencia de datos con un enfoque pragmático. Presentamos un ducto de ciencia de datos. 
 
 ## Introducción
 En los últimos años la Ciencia de datos ha adquirido relevancia muy importante en el mundo de la salud. Por lo que es deseable que los organismos  públicos y privados se encuentrán al tanto de los avances  en deteccion y prevencion de enfermedades usando los métodos de la Ciencia de Datos. 

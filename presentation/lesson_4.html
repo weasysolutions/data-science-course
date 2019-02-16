@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Cuarta-Lecci&#243;n">Cuarta Lecci&#243;n<a class="anchor-link" href="#Cuarta-Lecci&#243;n">&#182;</a></h1>
+<h1 id="Lecci&#243;n-IV">Lecci&#243;n IV<a class="anchor-link" href="#Lecci&#243;n-IV">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11783,9 +11783,10 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Apache Spark está escrito en el lenguaje de programación Scala que compila el código del programa en un código de bytes para la Máquina Virtual de Java para el procesamiento de big data de spark. La comunidad de código abierto ha desarrollado una maravillosa utilidad para el procesamiento de big data de spark python conocido como PySpark.</p>
-<p>PySpark ayuda a los científicos de datos a interactuar con los Datos Resilientes Distribuidos (Resilient Distributed Datasets) en apache spark y python. Py4J es una biblioteca popular integrada en PySpark que permite a Python interactuar dinámicamente con objetos JVM (RDD).</p>
-<p>La mayoría de las operaciones de RDD son perezosas. Un RDD es como una descripción de una serie de operaciones. Un RDD no son datos. Las operaciones RDD que requieren la observación del contenido de los datos no pueden ser perezosas. (Estas son llamadas acciones.) Por ejemplo, la funcion count() que enumera el numero de elementos.</p>
+<h4><em><font color=blue>  Objetivo de la lección: </font></em></h4>
+<p><font color=blue>
+  Manejo Masivo de Datos: Pyspark. 
+</font></p>
 
 </div>
 </div>
@@ -11794,11 +11795,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Para el procesamiento paralelo, Apache Spark utiliza variables compartidas. Una copia de la variable compartida va a cada nodo del clúster cuando el controlador envía una tarea al ejecutor en el clúster, de modo que pueda usarse para realizar tareas.</p>
-<p>Apache Spark admite dos tipos de variables compartidas:</p>
-<p><strong>Emisión</strong></p>
-<p><strong>Acumulación</strong></p>
-<p>Vamos a entenderlos en detalle.</p>
+<h2 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h2><p><strong>Apache Spark</strong> se está convirtiendo rápidamente en una de las mejores plataformas de análisis de datos de código abierto.</p>
+<p>Con la mejora continua de <strong>Apache Spark</strong>, especialmente el motor <strong>SQL</strong> y el surgimiento de proyectos relacionados,  estamos comenzando a obtener la funcionalidad de análisis de datos que teníamos en configuraciones de una sola máquina utilizando RDBMS y bibliotecas de análisis de datos como <strong>Pandas</strong>.</p>
+<p><strong>Pandas</strong>, una herramienta de análisis de datos para el lenguaje de programación Python, es actualmente la herramienta de análisis de datos abierta más popular y madura. La biblioteca está altamente optimizada para el rendimiento, con rutas de código críticas escritas en Cython o C.</p>
 
 </div>
 </div>
@@ -11807,14 +11806,559 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Emisi&#243;n">Emisi&#243;n<a class="anchor-link" href="#Emisi&#243;n">&#182;</a></h3><p>Las variables de difusión se utilizan para guardar la copia de datos en todos los nodos. Esta variable se almacena en caché en todas las máquinas y no se envía en máquinas con tareas. El siguiente bloque de código tiene los detalles de una clase de transmisión para PySpark.</p>
+<h3 id="Pandas-vs-Spark">Pandas vs Spark<a class="anchor-link" href="#Pandas-vs-Spark">&#182;</a></h3><p>Hemos usado <strong>Pandas</strong> para ordenar  nuestros datos de manera directa, facil y eficiente. Pandas nos ha ayudado a limpiar, transformar, manipular y analizar los datos. El punto de introducir Spark, es que este se vuelve mejor que <strong>Pandas</strong> cuando la cantidad de datos no es <em>grande</em> sino <em>gigante</em>.</p>
+<p>Hay una gran diferencia entre la cantidad de  datos grande (<em>Large</em>)  y la cantidad de datos gigante (<em>Big</em>). Y aunque estas medidas relativas algunos autores llama <em>big data</em> a datos que ocupan mas de 100 GB.</p>
+<p>Los numeros exactos de cuando usar uno o el otro varian dependiendo del tipo de version de software y hardware con que se cuenta. Aunque algunas pruebas concluyen que conjunto de datos con menos de 10 millones de filas (&lt;5 GB de archivo) no se debe analizar con Spark, mientras que otras sugieren usar Spark solo cuando los datos sobrepasan los 200 GB.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#191;Por-qu&#233;-usar-PySpark-en-un-cuaderno-Jupyter?">&#191;Por qu&#233; usar PySpark en un cuaderno Jupyter?<a class="anchor-link" href="#&#191;Por-qu&#233;-usar-PySpark-en-un-cuaderno-Jupyter?">&#182;</a></h3><p>Al utilizar Spark, la mayoría de los ingenieros de datos recomienda desarrollarlo en Scala (que es el lenguaje Spark "nativo") o en Python a través de la API completa de PySpark.</p>
+<p>Hemos visto que Python es flexible, robusto, fácil de aprender y se beneficia de la gran cantidad de bibliotecas que hay. Para nosotros Python es el lenguaje perfecto para la creación de prototipos en los campos de Big Data / Machine Learning.</p>
+<p>Al igual que en las lecciones pasadas implementamos un proyecto concreto  de ciencia de datos.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Accidentes-cerebrovasculares:-El-conjunto-de-datos">Accidentes cerebrovasculares: El conjunto de datos<a class="anchor-link" href="#Accidentes-cerebrovasculares:-El-conjunto-de-datos">&#182;</a></h2><p>Spark es un proyecto de código abierto de Apache. También es el motor de análisis más utilizado para el big data y el aprendizaje automático.</p>
+<p>Esta publicación se centrará en un inicio rápido para desarrollar un algoritmo de predicción con Spark.</p>
+<p>Elegí el conjunto de datos "Healthcare Dataset Stroke Data" para trabajar con kaggle.com, la comunidad de científicos de datos y aprendizaje automático más grande del mundo.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Contenido:">Contenido:<a class="anchor-link" href="#Contenido:">&#182;</a></h2><p>Según la Organización Mundial de la Salud, la cardiopatía isquémica y el accidente cerebrovascular representan las mayores causas de muerte en el mundo.</p>
+<p>Información del sitio oficial: <a href="http://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death">http://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death</a></p>
+<p>Lo que debemos hacer es predecir la probabilidad de accidente cerebrovascular utilizando la información dada de los pacientes. Es un problema de clasificación, en el que intentaremos predecir la probabilidad de que una observación pertenezca a una categoría (en nuestro caso, la probabilidad de sufrir un accidente cerebrovascular).</p>
+<p>Como hemos visto existe una amplia gamma de para resolver los problemas de clasificación. Nos restringimos al algoritmo de Árbol de decisiones.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Configurando-Spark-y-cargando-los-datos">Configurando Spark y cargando los datos<a class="anchor-link" href="#Configurando-Spark-y-cargando-los-datos">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para correr en <strong>Pyspark</strong> usamos uno de los
+<strong><a href="https://github.com/jupyter/docker-stacks">contenedores de docker</a></strong> para Spark y Python.</p>
+<p><em>Docker es una herramienta diseñada para facilitar la creación, implementación y ejecución de aplicaciones mediante el uso de contenedores.</em></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="k">import</span> <span class="n">SparkSession</span>
+<span class="kn">import</span> <span class="nn">pyspark.sql</span> <span class="k">as</span> <span class="nn">sparksql</span>
+<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s1">&#39;stroke&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+<span class="n">entrena</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s1">&#39;../data/train_2v.csv&#39;</span><span class="p">,</span> <span class="n">inferSchema</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exploraci&#243;n-de-datos">Exploraci&#243;n de datos<a class="anchor-link" href="#Exploraci&#243;n-de-datos">&#182;</a></h3><p>La primera operación que se realiza después de importar datos es obtener información sobre su aspecto. Se puede hacer con los siguientes comandos:</p>
+<p><em>df.printSchema()</em></p>
+<p><em>df.describe()</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>root
+ |-- id: integer (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- age: double (nullable = true)
+ |-- hypertension: integer (nullable = true)
+ |-- heart_disease: integer (nullable = true)
+ |-- ever_married: string (nullable = true)
+ |-- work_type: string (nullable = true)
+ |-- Residence_type: string (nullable = true)
+ |-- avg_glucose_level: double (nullable = true)
+ |-- bmi: double (nullable = true)
+ |-- smoking_status: string (nullable = true)
+ |-- stroke: integer (nullable = true)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DataFrame[summary: string, id: string, gender: string, age: string, hypertension: string, heart_disease: string, ever_married: string, work_type: string, Residence_type: string, avg_glucose_level: string, bmi: string, smoking_status: string, stroke: string]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s1">&#39;stroke&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+------+-----+
+|stroke|count|
++------+-----+
+|     1|  783|
+|     0|42617|
++------+-----+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Como se puede ver en esta observación. Este es un conjunto de datos desequilibrado, donde el número de observaciones que pertenecen a una clase es significativamente menor que las que pertenecen a las otras clases. En este caso, el modelo predictivo podría ser parcial e inexacto. Existen diferentes estrategias para manejar los conjuntos de datos desequilibrados, por lo tanto, está fuera del alcance de esta publicación, en cambio me centraré en Spark. Para encontrar más información sobre el conjunto de datos desequilibrado:</p>
+<p><a href="https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/">https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/</a></p>
+<p>Aquí tenemos mediciones clínicas (por ejemplo, hipertensión, enfermedad cardíaca, edad, antecedentes familiares de la enfermedad) para varios pacientes, así como información sobre si cada paciente ha tenido un accidente cerebrovascular. En la práctica, queremos que este método prediga con precisión el riesgo de accidente cerebrovascular para futuros pacientes en función de sus mediciones clínicas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img style="float: center;" src="../images/kaggle-table.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="An&#225;lisis">An&#225;lisis<a class="anchor-link" href="#An&#225;lisis">&#182;</a></h3><p>Realizar un breve análisis utilizando operaciones básicas. Es posible hacerlo de varias maneras:</p>
+<p>Los DataFrames proporcionan un lenguaje específico del dominio para la manipulación de datos estructurados, el acceso a las columnas de un DataFrame puede ser por atributo o por indexación para ejecutar consultas SQL mediante programación y devolver el resultado como un DataFrame
+Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebrovascular, podemos hacer lo siguiente:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># crear un DataFrame como una vista temporal</span>
+<span class="n">entrena</span><span class="o">.</span><span class="n">createOrReplaceTempView</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Spark-SQL">Spark SQL<a class="anchor-link" href="#Spark-SQL">&#182;</a></h2><p>Spark SQL es un módulo de Spark para el procesamiento de datos estructurados. Internamente, Spark SQL utiliza esta información adicional para realizar optimizaciones adicionales.</p>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Un uso de Spark SQL es ejecutar consultas SQL. Spark SQL también se puede utilizar para leer datos de una instalación existente de Hive. Para obtener más información sobre cómo configurar esta función, consulte la sección Tablas de Hive. Al ejecutar SQL desde otro lenguaje de programación, los resultados se devolverán como un conjunto de datos / marco de datos. También puede interactuar con la interfaz SQL utilizando la línea de comandos o sobre JDBC / ODBC.</p>
+<h3 id="Dataframes">Dataframes<a class="anchor-link" href="#Dataframes">&#182;</a></h3><p>Un DataFrame es un Dataset organizado en columnas con nombre. Es similar al Dataframe de <strong>Pandas</strong>. Conceptualmente es equivalente a una tabla en una base de datos relacional o un marco de datos en R / Python, pero con optimizaciones más ricas bajo el capó. Los DataFrames se pueden construir a partir de una amplia gama de fuentes, tales como: archivos de datos estructurados, tablas en Hive, bases de datos externas o RDD existentes.</p>
+<p><em><strong>PySpark</strong> y <strong>Pandas</strong> refieren su estructura de datos como 'DataFrames' pero son diferentes plataformas en tiempo de ejecución.</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="An&#225;lisis-Exploratorio:-Consultas-SQL">An&#225;lisis Exploratorio: Consultas SQL<a class="anchor-link" href="#An&#225;lisis-Exploratorio:-Consultas-SQL">&#182;</a></h3><p>En spark podemos hecer nuestros analisis exploratorios de los datos mediante consultas SQL  (expresiones formales en el lenguaje SQL).</p>
+<p>SQL es un lenguaje de administración de bases de datos para bases de datos relacionales.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT work_type, count(work_type) as work_type_count </span><span class="se">\</span>
+<span class="s2">           FROM table WHERE stroke == 1 GROUP BY work_type </span><span class="se">\</span>
+<span class="s2">           ORDER BY work_type_count DESC&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+-------------+---------------+
+|    work_type|work_type_count|
++-------------+---------------+
+|      Private|            441|
+|Self-employed|            251|
+|     Govt_job|             89|
+|     children|              2|
++-------------+---------------+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Parece que la ocupación privada es el tipo de trabajo más peligroso en este conjunto de datos.</p>
+<p>Averigüemos quiénes participaron en esta medición clínica.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT gender, count(gender) as count_gender,</span><span class="se">\</span>
+<span class="s2">           count(gender)*100/sum(count(gender)) over() as percent </span><span class="se">\</span>
+<span class="s2">           FROM table GROUP BY gender&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+------+------------+-------------------+
+|gender|count_gender|            percent|
++------+------------+-------------------+
+|Female|       25665|  59.13594470046083|
+| Other|          11|0.02534562211981567|
+|  Male|       17724|  40.83870967741935|
++------+------------+-------------------+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;count app&quot;</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
+   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of elements in RDD -&gt; </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">counts</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-10-e9c47cdebbf5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>sc<span class="ansi-blue-fg">.</span>stop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">from</span> pyspark <span class="ansi-green-fg">import</span> SparkContext
+<span class="ansi-green-intense-fg ansi-bold">      3</span> sc <span class="ansi-blue-fg">=</span> SparkContext<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;local&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;count app&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> words = sc.parallelize (
+<span class="ansi-green-intense-fg ansi-bold">      5</span>    [&#34;scala&#34;, 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sc&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Collect app&quot;</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
+   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">coll</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Elements in RDD -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">coll</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Elements in RDD -&gt; [&#39;scala&#39;, &#39;java&#39;, &#39;hadoop&#39;, &#39;spark&#39;, &#39;akka&#39;, &#39;spark vs hadoop&#39;, &#39;pyspark&#39;, &#39;pyspark and spark&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Filter app&quot;</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
+   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">words_filter</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;spark&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">filtered</span> <span class="o">=</span> <span class="n">words_filter</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fitered RDD -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">filtered</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Fitered RDD -&gt; [&#39;spark&#39;, &#39;spark vs hadoop&#39;, &#39;pyspark&#39;, &#39;pyspark and spark&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span> 
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Cache app&quot;</span><span class="p">)</span> 
+<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
+   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
+<span class="p">)</span> 
+<span class="n">words</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span> 
+<span class="n">caching</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span><span class="o">.</span><span class="n">is_cached</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words got chached &gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">caching</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Words got chached &gt; True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
@@ -11831,44 +12375,178 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Stored data -&gt; [&#39;scala&#39;, &#39;java&#39;, &#39;hadoop&#39;, &#39;spark&#39;, &#39;akka&#39;]
+Printing a particular element in RDD -&gt; hadoop
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Consideremos el siguiente ejemplo de uso de SparkConf en un programa PySpark. En este ejemplo, estamos configurando el nombre de la aplicación de la chispa como aplicación PySpark y estableciendo la URL maestra para una aplicación de la chispa en → spark: // master: 7077.</p>
-<p>El siguiente bloque de código tiene las líneas, cuando se agregan en el archivo Python, establece las configuraciones básicas para ejecutar una aplicación PySpark.</p>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkConf</span><span class="p">,</span> <span class="n">SparkContext</span>
-<span class="n">conf</span> <span class="o">=</span> <span class="n">SparkConf</span><span class="p">()</span><span class="o">.</span><span class="n">setAppName</span><span class="p">(</span><span class="s2">&quot;PySpark App&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="s2">&quot;spark://master:7077&quot;</span><span class="p">)</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">conf</span><span class="o">=</span><span class="n">conf</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span> 
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Accumulator app&quot;</span><span class="p">)</span> 
+<span class="n">num</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">accumulator</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
+   <span class="k">global</span> <span class="n">num</span> 
+   <span class="n">num</span><span class="o">+=</span><span class="n">x</span> 
+<span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">])</span> 
+<span class="n">rdd</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> 
+<span class="n">final</span> <span class="o">=</span> <span class="n">num</span><span class="o">.</span><span class="n">value</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accumulated value is -&gt; </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">final</span><span class="p">))</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Accumulated value is -&gt; 150
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En Apache Spark, puede cargar sus archivos usando sc.addFile (sc es su SparkContext predeterminado) y obtener la ruta de acceso de un trabajador que usa SparkFiles.get. Por lo tanto, SparkFiles resuelve las rutas a los archivos agregados a través de SparkContext.addFile ().</p>
+<p>SparkFiles contiene los siguientes métodos de clase:</p>
+<p>obtener (nombre de archivo)
+getrootdirectory ()
+Vamos a entenderlos en detalle.</p>
+<p>obtener (nombre de archivo)
+Especifica la ruta del archivo que se agrega a través de SparkContext.addFile ().</p>
+<p>getrootdirectory ()
+Especifica la ruta al directorio raíz, que contiene el archivo que se agrega a través del SparkContext.addFile ().</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
 <span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkFiles</span>
 <span class="n">finddistance</span> <span class="o">=</span> <span class="s2">&quot;/home/hadoop/examples_pyspark/finddistance.R&quot;</span>
 <span class="n">finddistancename</span> <span class="o">=</span> <span class="s2">&quot;finddistance.R&quot;</span>
 <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;SparkFile App&quot;</span><span class="p">)</span>
 <span class="n">sc</span><span class="o">.</span><span class="n">addFile</span><span class="p">(</span><span class="n">finddistance</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s2">&quot;Absolute Path -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">SparkFiles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">finddistancename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Absolute Path -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">SparkFiles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">finddistancename</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">Py4JJavaError</span>                             Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-30-c541c7d42c84&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> finddistancename <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;finddistance.R&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> sc <span class="ansi-blue-fg">=</span> SparkContext<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;local&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;SparkFile App&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>sc<span class="ansi-blue-fg">.</span>addFile<span class="ansi-blue-fg">(</span>finddistance<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Absolute Path -&gt; %s&#34;</span> <span class="ansi-blue-fg">%</span> SparkFiles<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>finddistancename<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/usr/local/spark/python/pyspark/context.py</span> in <span class="ansi-cyan-fg">addFile</span><span class="ansi-blue-fg">(self, path, recursive)</span>
+<span class="ansi-green-intense-fg ansi-bold">    896</span>         <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">200</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">300</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">400</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    897</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">--&gt; 898</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_jsc<span class="ansi-blue-fg">.</span>sc<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>addFile<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">,</span> recursive<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    899</span> 
+<span class="ansi-green-intense-fg ansi-bold">    900</span>     <span class="ansi-green-fg">def</span> addPyFile<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> path<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/usr/local/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1255</span>         answer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>gateway_client<span class="ansi-blue-fg">.</span>send_command<span class="ansi-blue-fg">(</span>command<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1256</span>         return_value = get_return_value(
+<span class="ansi-green-fg">-&gt; 1257</span><span class="ansi-red-fg">             answer, self.gateway_client, self.target_id, self.name)
+</span><span class="ansi-green-intense-fg ansi-bold">   1258</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1259</span>         <span class="ansi-green-fg">for</span> temp_arg <span class="ansi-green-fg">in</span> temp_args<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/usr/local/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py</span> in <span class="ansi-cyan-fg">get_return_value</span><span class="ansi-blue-fg">(answer, gateway_client, target_id, name)</span>
+<span class="ansi-green-intense-fg ansi-bold">    326</span>                 raise Py4JJavaError(
+<span class="ansi-green-intense-fg ansi-bold">    327</span>                     <span class="ansi-blue-fg">&#34;An error occurred while calling {0}{1}{2}.\n&#34;</span><span class="ansi-blue-fg">.</span>
+<span class="ansi-green-fg">--&gt; 328</span><span class="ansi-red-fg">                     format(target_id, &#34;.&#34;, name), value)
+</span><span class="ansi-green-intense-fg ansi-bold">    329</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    330</span>                 raise Py4JError(
+
+<span class="ansi-red-fg">Py4JJavaError</span>: An error occurred while calling o368.addFile.
+: java.io.FileNotFoundException: File file:/home/hadoop/examples_pyspark/finddistance.R does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:611)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:824)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:601)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:421)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1544)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkConf</span><span class="p">,</span> <span class="n">SparkContext</span>
+<span class="n">conf</span> <span class="o">=</span> <span class="n">SparkConf</span><span class="p">()</span><span class="o">.</span><span class="n">setAppName</span><span class="p">(</span><span class="s2">&quot;PySpark App&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="s2">&quot;local[*]&quot;</span><span class="p">)</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">conf</span> <span class="o">=</span> <span class="n">conf</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11880,9 +12558,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color=blue>
-    _Objetivo del curso_: Aprender las diferentes fases del Aprendizaje de Datos (ML) a traves de  ejemplos reales. Esto con el fin de obtener una idea clara de lo que significa la ciencia de datos.
-</font></p>
+<p>Este punto de referencia comparará el rendimiento de esos marcos en tareas comunes de análisis de datos:
+    Complejo donde las cláusulas
+    Ordenar un conjunto de datos
+    Unirse a un conjunto de datos
+    Auto se une
+    Agrupando los datos</p>
+<p>Las pruebas se realizarán en el conjunto de datos de la placa de licencia de OpenData de Holanda (que se encuentra aquí) que tiene ~ 13.5 millones de registros, pero usé herramientas de línea de comando para dividirlo en archivos con 100k, 1m, 5m, 10m y ~ 13.5 líneas. Los tamaños de archivo correspondientes son: 49 MB, 480 MB, 2,4 GB, 4,7 GB y 6,5 GB en consecuencia. Para realizar la prueba de combinaciones, hice este pequeño conjunto de datos con ~ 100 filas.</p>
+<p>El software subyacente es Python 3.5.3 / pandas 0.19.2 y Scala 2.10 / Spark 1.6.2 en una máquina con 32GB de RAM y 8 CPU. El modo local de Spark se realizó en la misma máquina con 32 GB de RAM y 8 CPU, mientras que el modo distribuido se realizó en el modo de hilado-cliente utilizando los blocs de notas de zeppelin en una configuración en 3 máquinas con las mismas especificaciones. En el modo local de Spark utilicé el sistema de archivos normal y en el modo distribuido utilicé HDFS.</p>
+<p>Puedes encontrar el código Scala para Spark aquí. (* el código no es un archivo de Scala adecuado, pero puede copiarse simplemente en las celdas del cuaderno Zeppelin). El Código para Pandas (en python) está aquí.
+Prueba 1: Complejo donde se encuentran las cláusulas.
+Esperanzas de heredar:</p>
+<p>Este es un caso en el que Spark debería brillar, ya que puede leer simultáneamente un conjunto de datos de varias máquinas.</p>
+<p>Consulta:</p>
 
 </div>
 </div>
