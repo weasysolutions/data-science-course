@@ -11806,7 +11806,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pandas-vs-Spark">Pandas vs Spark<a class="anchor-link" href="#Pandas-vs-Spark">&#182;</a></h3><p>Hemos usado <strong>Pandas</strong> para ordenar  nuestros datos de manera directa, facil y eficiente. Pandas nos ha ayudado a limpiar, transformar, manipular y analizar los datos. El punto de introducir Spark, es que este se vuelve mejor que <strong>Pandas</strong> cuando la cantidad de datos no es <em>grande</em> sino <em>gigante</em>.</p>
+<h3 id="Pandas-vs-Spark">Pandas vs Spark<a class="anchor-link" href="#Pandas-vs-Spark">&#182;</a></h3><p>Hemos usado <strong>Pandas</strong> para ordenar  nuestros datos de manera directa, facil y eficiente. Pandas nos ha ayudado a limpiar, transformar, manipular y analizar los datos. El punto de introducir <strong>Spark</strong>, es que se vuelve mejor que  <strong>Pandas</strong> cuando la cantidad de datos no es <em>grande</em> sino <em>gigante</em>.</p>
 <p>Hay una gran diferencia entre la cantidad de  datos grande (<em>Large</em>)  y la cantidad de datos gigante (<em>Big</em>). Y aunque estas medidas relativas algunos autores llama <em>big data</em> a datos que ocupan mas de 100 GB.</p>
 <p>Los numeros exactos de cuando usar uno o el otro varian dependiendo del tipo de version de software y hardware con que se cuenta. Aunque algunas pruebas concluyen que conjunto de datos con menos de 10 millones de filas (&lt;5 GB de archivo) no se debe analizar con Spark, mientras que otras sugieren usar Spark solo cuando los datos sobrepasan los 200 GB.</p>
 
@@ -11829,7 +11829,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Accidentes-cerebrovasculares:-El-conjunto-de-datos">Accidentes cerebrovasculares: El conjunto de datos<a class="anchor-link" href="#Accidentes-cerebrovasculares:-El-conjunto-de-datos">&#182;</a></h2><p>Spark es un proyecto de código abierto de Apache. También es el motor de análisis más utilizado para el big data y el aprendizaje automático.</p>
-<p>Esta publicación se centrará en un inicio rápido para desarrollar un algoritmo de predicción con Spark.</p>
+<p>Esta lección se centrará en un inicio rápido para desarrollar un algoritmo de predicción con Spark.</p>
 <p>Elegí el conjunto de datos "Healthcare Dataset Stroke Data" para trabajar con kaggle.com, la comunidad de científicos de datos y aprendizaje automático más grande del mundo.</p>
 
 </div>
@@ -11839,7 +11839,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Contenido:">Contenido:<a class="anchor-link" href="#Contenido:">&#182;</a></h2><p>Según la Organización Mundial de la Salud, la cardiopatía isquémica y el accidente cerebrovascular representan las mayores causas de muerte en el mundo.</p>
+<h2 id="Accidentes-cerebrovasculares">Accidentes cerebrovasculares<a class="anchor-link" href="#Accidentes-cerebrovasculares">&#182;</a></h2><p>Según la Organización Mundial de la Salud, la cardiopatía isquémica y el accidente cerebrovascular representan las mayores causas de muerte en el mundo.</p>
 <p>Información del sitio oficial: <a href="http://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death">http://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death</a></p>
 <p>Lo que debemos hacer es predecir la probabilidad de accidente cerebrovascular utilizando la información dada de los pacientes. Es un problema de clasificación, en el que intentaremos predecir la probabilidad de que una observación pertenezca a una categoría (en nuestro caso, la probabilidad de sufrir un accidente cerebrovascular).</p>
 <p>Como hemos visto existe una amplia gamma de para resolver los problemas de clasificación. Nos restringimos al algoritmo de Árbol de decisiones.</p>
@@ -12040,7 +12040,7 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># crear un DataFrame como una vista temporal</span>
@@ -12076,7 +12076,7 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT work_type, count(work_type) as work_type_count </span><span class="se">\</span>
@@ -12127,7 +12127,7 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT gender, count(gender) as count_gender,</span><span class="se">\</span>
@@ -12165,9 +12165,192 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A partir de esta información, existe la posibilidad de recuperar información sobre la cantidad de mujeres / hombres que tienen un ataque (cerebrovascular). El 59% de todas las personas son mujeres y solo el 40% son hombres que participaron en la investigación de accidentes cerebrovasculares:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">porcentaje_ataque</span><span class="p">(</span><span class="n">genero</span><span class="o">=</span><span class="s1">&#39;Male&#39;</span><span class="p">):</span>
+    <span class="n">genero</span> <span class="o">=</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">+</span><span class="n">genero</span><span class="o">+</span><span class="s2">&quot;&#39;&quot;</span>    
+    <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT gender, count(gender),</span><span class="se">\</span>
+<span class="s2">           (COUNT(gender) * 100.0) /(SELECT count(gender) </span><span class="se">\</span>
+<span class="s2">            FROM table WHERE gender == &quot;</span><span class="o">+</span><span class="n">genero</span><span class="o">+</span><span class="s2">&quot;) as percentage </span><span class="se">\</span>
+<span class="s2">            FROM table WHERE stroke = &#39;1&#39; </span><span class="se">\</span>
+<span class="s2">            and gender = &quot;</span><span class="o">+</span><span class="n">genero</span><span class="o">+</span><span class="s2">&quot; GROUP BY gender&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span>    
+
+<span class="n">porcentaje_ataque</span><span class="p">(</span><span class="s1">&#39;Male&#39;</span><span class="p">)</span>
+
+<span class="n">porcentaje_ataque</span><span class="p">(</span><span class="s1">&#39;Female&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1,68% Mujeres y casi 2% Hombres han tenido un accidente cerebrovascular.&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+------+-------------+----------------+
+|gender|count(gender)|      percentage|
++------+-------------+----------------+
+|  Male|          352|1.98600767321146|
++------+-------------+----------------+
+
++------+-------------+----------------+
+|gender|count(gender)|      percentage|
++------+-------------+----------------+
+|Female|          431|1.67932982661212|
++------+-------------+----------------+
+
+1,68% Mujeres y casi 2% Hombres han tenido un accidente cerebrovascular.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>También podemos ver si la edad influye en el accidente cerebrovascular y cuál es el riesgo por edad.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT age, count(age) as age_count </span><span class="se">\</span>
+<span class="s2">          FROM table WHERE stroke == 1 GROUP BY age </span><span class="se">\</span>
+<span class="s2">          ORDER BY age_count DESC&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+----+---------+
+| age|age_count|
++----+---------+
+|79.0|       70|
+|78.0|       57|
+|80.0|       49|
+|81.0|       43|
+|82.0|       36|
+|70.0|       25|
+|76.0|       24|
+|74.0|       24|
+|77.0|       24|
+|75.0|       23|
+|67.0|       23|
+|72.0|       21|
+|59.0|       20|
+|69.0|       20|
+|68.0|       20|
+|71.0|       19|
+|57.0|       19|
+|63.0|       18|
+|65.0|       18|
+|66.0|       17|
++----+---------+
+only showing top 20 rows
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>También podemos ver si la edad influye en el accidente cerebrovascular y cuál es el riesgo por edad.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">filter</span><span class="p">((</span><span class="n">entrena</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">entrena</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="s1">&#39;50&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>708</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Como podemos ver, la edad es un factor de riesgo importante para desarrollar un derrame cerebral.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
@@ -12204,7 +12387,7 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-e9c47cdebbf5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">&lt;ipython-input-11-e9c47cdebbf5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>sc<span class="ansi-blue-fg">.</span>stop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">from</span> pyspark <span class="ansi-green-fg">import</span> SparkContext
 <span class="ansi-green-intense-fg ansi-bold">      3</span> sc <span class="ansi-blue-fg">=</span> SparkContext<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;local&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;count app&#34;</span><span class="ansi-blue-fg">)</span>

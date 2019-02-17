@@ -11936,7 +11936,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pandas-vs-Spark">Pandas vs Spark<a class="anchor-link" href="#Pandas-vs-Spark">&#182;</a></h3><p>Hemos usado <strong>Pandas</strong> para ordenar  nuestros datos de manera directa, facil y eficiente. Pandas nos ha ayudado a limpiar, transformar, manipular y analizar los datos. El punto de introducir Spark, es que este se vuelve mejor que <strong>Pandas</strong> cuando la cantidad de datos no es <em>grande</em> sino <em>gigante</em>.</p>
+<h3 id="Pandas-vs-Spark">Pandas vs Spark<a class="anchor-link" href="#Pandas-vs-Spark">&#182;</a></h3><p>Hemos usado <strong>Pandas</strong> para ordenar  nuestros datos de manera directa, facil y eficiente. Pandas nos ha ayudado a limpiar, transformar, manipular y analizar los datos. El punto de introducir <strong>Spark</strong>, es que se vuelve mejor que  <strong>Pandas</strong> cuando la cantidad de datos no es <em>grande</em> sino <em>gigante</em>.</p>
 <p>Hay una gran diferencia entre la cantidad de  datos grande (<em>Large</em>)  y la cantidad de datos gigante (<em>Big</em>). Y aunque estas medidas relativas algunos autores llama <em>big data</em> a datos que ocupan mas de 100 GB.</p>
 <p>Los numeros exactos de cuando usar uno o el otro varian dependiendo del tipo de version de software y hardware con que se cuenta. Aunque algunas pruebas concluyen que conjunto de datos con menos de 10 millones de filas (&lt;5 GB de archivo) no se debe analizar con Spark, mientras que otras sugieren usar Spark solo cuando los datos sobrepasan los 200 GB.</p>
 
@@ -11947,7 +11947,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#191;Por-qu&#233;-usar-PySpark-en-un-cuaderno-Jupyter?">&#191;Por qu&#233; usar PySpark en un cuaderno Jupyter?<a class="anchor-link" href="#&#191;Por-qu&#233;-usar-PySpark-en-un-cuaderno-Jupyter?">&#182;</a></h3><p>Al utilizar Spark, la mayoría de los ingenieros de datos recomienda desarrollarlo en Scala (que es el lenguaje Spark "nativo") o en Python a través de la API completa de PySpark.</p>
+<h3 id="&#191;Por-qu&#233;-usar-PySpark?">&#191;Por qu&#233; usar PySpark?<a class="anchor-link" href="#&#191;Por-qu&#233;-usar-PySpark?">&#182;</a></h3><p>Al utilizar Spark, la mayoría de los ingenieros de datos recomienda desarrollarlo en Scala (que es el lenguaje Spark "nativo") o en Python a través de la API completa de PySpark.</p>
 <p>Hemos visto que Python es flexible, robusto, fácil de aprender y se beneficia de la gran cantidad de bibliotecas que hay. Para nosotros Python es el lenguaje perfecto para la creación de prototipos en los campos de Big Data / Machine Learning.</p>
 <p>Al igual que en las lecciones pasadas implementamos un proyecto concreto  de ciencia de datos.</p>
 
@@ -11959,7 +11959,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Accidentes-cerebrovasculares:-El-conjunto-de-datos">Accidentes cerebrovasculares: El conjunto de datos<a class="anchor-link" href="#Accidentes-cerebrovasculares:-El-conjunto-de-datos">&#182;</a></h2><p>Spark es un proyecto de código abierto de Apache. También es el motor de análisis más utilizado para el big data y el aprendizaje automático.</p>
-<p>Esta publicación se centrará en un inicio rápido para desarrollar un algoritmo de predicción con Spark.</p>
+<p>Esta lección se centrará en un inicio rápido para desarrollar un algoritmo de predicción con Spark.</p>
 <p>Elegí el conjunto de datos "Healthcare Dataset Stroke Data" para trabajar con kaggle.com, la comunidad de científicos de datos y aprendizaje automático más grande del mundo.</p>
 
 </div>
@@ -11969,7 +11969,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Contenido:">Contenido:<a class="anchor-link" href="#Contenido:">&#182;</a></h2><p>Según la Organización Mundial de la Salud, la cardiopatía isquémica y el accidente cerebrovascular representan las mayores causas de muerte en el mundo.</p>
+<h2 id="Accidentes-cerebrovasculares">Accidentes cerebrovasculares<a class="anchor-link" href="#Accidentes-cerebrovasculares">&#182;</a></h2><p>Según la Organización Mundial de la Salud, la cardiopatía isquémica y el accidente cerebrovascular representan las mayores causas de muerte en el mundo.</p>
 <p>Información del sitio oficial: <a href="http://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death">http://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death</a></p>
 <p>Lo que debemos hacer es predecir la probabilidad de accidente cerebrovascular utilizando la información dada de los pacientes. Es un problema de clasificación, en el que intentaremos predecir la probabilidad de que una observación pertenezca a una categoría (en nuestro caso, la probabilidad de sufrir un accidente cerebrovascular).</p>
 <p>Como hemos visto existe una amplia gamma de para resolver los problemas de clasificación. Nos restringimos al algoritmo de Árbol de decisiones.</p>
@@ -11998,7 +11998,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="k">import</span> <span class="n">SparkSession</span>
@@ -12011,7 +12011,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12022,10 +12022,10 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
@@ -12066,10 +12066,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -12085,7 +12085,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[80]:</div>
 
 
 
@@ -12099,10 +12099,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s1">&#39;stroke&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -12136,7 +12136,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12147,7 +12147,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12156,7 +12156,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12167,10 +12167,10 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># crear un DataFrame como una vista temporal</span>
@@ -12181,19 +12181,27 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Spark-SQL">Spark SQL<a class="anchor-link" href="#Spark-SQL">&#182;</a></h2><p>Spark SQL es un módulo de Spark para el procesamiento de datos estructurados. Internamente, Spark SQL utiliza esta información adicional para realizar optimizaciones adicionales.</p>
 <h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Un uso de Spark SQL es ejecutar consultas SQL. Spark SQL también se puede utilizar para leer datos de una instalación existente de Hive. Para obtener más información sobre cómo configurar esta función, consulte la sección Tablas de Hive. Al ejecutar SQL desde otro lenguaje de programación, los resultados se devolverán como un conjunto de datos / marco de datos. También puede interactuar con la interfaz SQL utilizando la línea de comandos o sobre JDBC / ODBC.</p>
-<h3 id="Dataframes">Dataframes<a class="anchor-link" href="#Dataframes">&#182;</a></h3><p>Un DataFrame es un Dataset organizado en columnas con nombre. Es similar al Dataframe de <strong>Pandas</strong>. Conceptualmente es equivalente a una tabla en una base de datos relacional o un marco de datos en R / Python, pero con optimizaciones más ricas bajo el capó. Los DataFrames se pueden construir a partir de una amplia gama de fuentes, tales como: archivos de datos estructurados, tablas en Hive, bases de datos externas o RDD existentes.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Spark-SQL">Spark SQL<a class="anchor-link" href="#Spark-SQL">&#182;</a></h2><h3 id="Dataframes">Dataframes<a class="anchor-link" href="#Dataframes">&#182;</a></h3><p>Un DataFrame es un Dataset organizado en columnas con nombre. Es similar al Dataframe de <strong>Pandas</strong>. Conceptualmente es equivalente a una tabla en una base de datos relacional o un marco de datos en R / Python, pero con optimizaciones más ricas bajo el capó. Los DataFrames se pueden construir a partir de una amplia gama de fuentes, tales como: archivos de datos estructurados, tablas en Hive, bases de datos externas o RDD existentes.</p>
 <p><em><strong>PySpark</strong> y <strong>Pandas</strong> refieren su estructura de datos como 'DataFrames' pero son diferentes plataformas en tiempo de ejecución.</em></p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12203,10 +12211,10 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT work_type, count(work_type) as work_type_count </span><span class="se">\</span>
@@ -12244,7 +12252,7 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12254,10 +12262,10 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT gender, count(gender) as count_gender,</span><span class="se">\</span>
@@ -12294,308 +12302,52 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;count app&quot;</span><span class="p">)</span>
-<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
-   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
-<span class="p">)</span>
-<span class="n">counts</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of elements in RDD -&gt; </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">counts</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-e9c47cdebbf5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>sc<span class="ansi-blue-fg">.</span>stop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">from</span> pyspark <span class="ansi-green-fg">import</span> SparkContext
-<span class="ansi-green-intense-fg ansi-bold">      3</span> sc <span class="ansi-blue-fg">=</span> SparkContext<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;local&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;count app&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> words = sc.parallelize (
-<span class="ansi-green-intense-fg ansi-bold">      5</span>    [&#34;scala&#34;, 
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sc&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Collect app&quot;</span><span class="p">)</span>
-<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
-   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
-<span class="p">)</span>
-<span class="n">coll</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Elements in RDD -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">coll</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Elements in RDD -&gt; [&#39;scala&#39;, &#39;java&#39;, &#39;hadoop&#39;, &#39;spark&#39;, &#39;akka&#39;, &#39;spark vs hadoop&#39;, &#39;pyspark&#39;, &#39;pyspark and spark&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Filter app&quot;</span><span class="p">)</span>
-<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
-   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
-<span class="p">)</span>
-<span class="n">words_filter</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;spark&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
-<span class="n">filtered</span> <span class="o">=</span> <span class="n">words_filter</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fitered RDD -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">filtered</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Fitered RDD -&gt; [&#39;spark&#39;, &#39;spark vs hadoop&#39;, &#39;pyspark&#39;, &#39;pyspark and spark&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span> 
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Cache app&quot;</span><span class="p">)</span> 
-<span class="n">words</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span> <span class="p">(</span>
-   <span class="p">[</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;java&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;spark&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;akka&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;spark vs hadoop&quot;</span><span class="p">,</span> 
-   <span class="s2">&quot;pyspark&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;pyspark and spark&quot;</span><span class="p">]</span>
-<span class="p">)</span> 
-<span class="n">words</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span> 
-<span class="n">caching</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span><span class="o">.</span><span class="n">is_cached</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words got chached &gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">caching</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Words got chached &gt; True
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span> 
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Broadcast app&quot;</span><span class="p">)</span> 
-<span class="n">words_new</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">broadcast</span><span class="p">([</span><span class="s2">&quot;scala&quot;</span><span class="p">,</span> <span class="s2">&quot;java&quot;</span><span class="p">,</span> <span class="s2">&quot;hadoop&quot;</span><span class="p">,</span> <span class="s2">&quot;spark&quot;</span><span class="p">,</span> <span class="s2">&quot;akka&quot;</span><span class="p">])</span> 
-<span class="n">data</span> <span class="o">=</span> <span class="n">words_new</span><span class="o">.</span><span class="n">value</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stored data -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">elem</span> <span class="o">=</span> <span class="n">words_new</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Printing a particular element in RDD -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">elem</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Stored data -&gt; [&#39;scala&#39;, &#39;java&#39;, &#39;hadoop&#39;, &#39;spark&#39;, &#39;akka&#39;]
-Printing a particular element in RDD -&gt; hadoop
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span> 
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;Accumulator app&quot;</span><span class="p">)</span> 
-<span class="n">num</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">accumulator</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
-   <span class="k">global</span> <span class="n">num</span> 
-   <span class="n">num</span><span class="o">+=</span><span class="n">x</span> 
-<span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">])</span> 
-<span class="n">rdd</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> 
-<span class="n">final</span> <span class="o">=</span> <span class="n">num</span><span class="o">.</span><span class="n">value</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accumulated value is -&gt; </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">final</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Accumulated value is -&gt; 150
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En Apache Spark, puede cargar sus archivos usando sc.addFile (sc es su SparkContext predeterminado) y obtener la ruta de acceso de un trabajador que usa SparkFiles.get. Por lo tanto, SparkFiles resuelve las rutas a los archivos agregados a través de SparkContext.addFile ().</p>
-<p>SparkFiles contiene los siguientes métodos de clase:</p>
-<p>obtener (nombre de archivo)
-getrootdirectory ()
-Vamos a entenderlos en detalle.</p>
-<p>obtener (nombre de archivo)
-Especifica la ruta del archivo que se agrega a través de SparkContext.addFile ().</p>
-<p>getrootdirectory ()
-Especifica la ruta al directorio raíz, que contiene el archivo que se agrega a través del SparkContext.addFile ().</p>
+<p>El 59% de todas las personas son mujeres y solo el 40% son hombres que participaron en la investigación de accidentes cerebrovasculares:</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A partir de esta información, existe la posibilidad de recuperar información sobre la cantidad de mujeres / hombres que tienen un ataque (cerebrovascular). La siguiente funcion nos devuelve el porcentaje de un genero dado</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">porcentaje_ataque</span><span class="p">(</span><span class="n">genero</span><span class="o">=</span><span class="s1">&#39;Male&#39;</span><span class="p">):</span>
+    <span class="n">genero</span> <span class="o">=</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">+</span><span class="n">genero</span><span class="o">+</span><span class="s2">&quot;&#39;&quot;</span>    
+    <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT gender, count(gender),</span><span class="se">\</span>
+<span class="s2">           (COUNT(gender) * 100.0) /(SELECT count(gender) </span><span class="se">\</span>
+<span class="s2">            FROM table WHERE gender == &quot;</span><span class="o">+</span><span class="n">genero</span><span class="o">+</span><span class="s2">&quot;) as percentage </span><span class="se">\</span>
+<span class="s2">            FROM table WHERE stroke = &#39;1&#39; </span><span class="se">\</span>
+<span class="s2">            and gender = &quot;</span><span class="o">+</span><span class="n">genero</span><span class="o">+</span><span class="s2">&quot; GROUP BY gender&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span>    
+</pre></div>
 
 </div>
 </div>
 </div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkContext</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkFiles</span>
-<span class="n">finddistance</span> <span class="o">=</span> <span class="s2">&quot;/home/hadoop/examples_pyspark/finddistance.R&quot;</span>
-<span class="n">finddistancename</span> <span class="o">=</span> <span class="s2">&quot;finddistance.R&quot;</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;SparkFile App&quot;</span><span class="p">)</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">addFile</span><span class="p">(</span><span class="n">finddistance</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Absolute Path -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">SparkFiles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">finddistancename</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">porcentaje_ataque</span><span class="p">(</span><span class="s1">&#39;Male&#39;</span><span class="p">)</span>
+<span class="n">porcentaje_ataque</span><span class="p">(</span><span class="s1">&#39;Female&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12611,55 +12363,19 @@ Especifica la ruta al directorio raíz, que contiene el archivo que se agrega a 
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">Py4JJavaError</span>                             Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-30-c541c7d42c84&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> finddistancename <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;finddistance.R&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> sc <span class="ansi-blue-fg">=</span> SparkContext<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;local&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;SparkFile App&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>sc<span class="ansi-blue-fg">.</span>addFile<span class="ansi-blue-fg">(</span>finddistance<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Absolute Path -&gt; %s&#34;</span> <span class="ansi-blue-fg">%</span> SparkFiles<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>finddistancename<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+------+-------------+----------------+
+|gender|count(gender)|      percentage|
++------+-------------+----------------+
+|  Male|          352|1.98600767321146|
++------+-------------+----------------+
 
-<span class="ansi-green-fg">/usr/local/spark/python/pyspark/context.py</span> in <span class="ansi-cyan-fg">addFile</span><span class="ansi-blue-fg">(self, path, recursive)</span>
-<span class="ansi-green-intense-fg ansi-bold">    896</span>         <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">200</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">300</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">400</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">    897</span>         &#34;&#34;&#34;
-<span class="ansi-green-fg">--&gt; 898</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_jsc<span class="ansi-blue-fg">.</span>sc<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>addFile<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">,</span> recursive<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    899</span> 
-<span class="ansi-green-intense-fg ansi-bold">    900</span>     <span class="ansi-green-fg">def</span> addPyFile<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> path<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
++------+-------------+----------------+
+|gender|count(gender)|      percentage|
++------+-------------+----------------+
+|Female|          431|1.67932982661212|
++------+-------------+----------------+
 
-<span class="ansi-green-fg">/usr/local/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1255</span>         answer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>gateway_client<span class="ansi-blue-fg">.</span>send_command<span class="ansi-blue-fg">(</span>command<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1256</span>         return_value = get_return_value(
-<span class="ansi-green-fg">-&gt; 1257</span><span class="ansi-red-fg">             answer, self.gateway_client, self.target_id, self.name)
-</span><span class="ansi-green-intense-fg ansi-bold">   1258</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1259</span>         <span class="ansi-green-fg">for</span> temp_arg <span class="ansi-green-fg">in</span> temp_args<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py</span> in <span class="ansi-cyan-fg">get_return_value</span><span class="ansi-blue-fg">(answer, gateway_client, target_id, name)</span>
-<span class="ansi-green-intense-fg ansi-bold">    326</span>                 raise Py4JJavaError(
-<span class="ansi-green-intense-fg ansi-bold">    327</span>                     <span class="ansi-blue-fg">&#34;An error occurred while calling {0}{1}{2}.\n&#34;</span><span class="ansi-blue-fg">.</span>
-<span class="ansi-green-fg">--&gt; 328</span><span class="ansi-red-fg">                     format(target_id, &#34;.&#34;, name), value)
-</span><span class="ansi-green-intense-fg ansi-bold">    329</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    330</span>                 raise Py4JError(
-
-<span class="ansi-red-fg">Py4JJavaError</span>: An error occurred while calling o368.addFile.
-: java.io.FileNotFoundException: File file:/home/hadoop/examples_pyspark/finddistance.R does not exist
-	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:611)
-	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:824)
-	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:601)
-	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:421)
-	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1544)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
-	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
-	at py4j.Gateway.invoke(Gateway.java:282)
-	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
-	at py4j.commands.CallCommand.execute(CallCommand.java:79)
-	at py4j.GatewayConnection.run(GatewayConnection.java:238)
-	at java.lang.Thread.run(Thread.java:748)
 </pre>
 </div>
 </div>
@@ -12667,44 +12383,499 @@ Especifica la ruta al directorio raíz, que contiene el archivo que se agrega a 
 </div>
 </div>
 
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1,68% Mujeres y casi 2% Hombres han tenido un accidente cerebrovascular.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>También podemos ver si la edad influye en el accidente cerebrovascular y cuál es el riesgo por edad.</p>
+
+</div>
+</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="kn">from</span> <span class="nn">pyspark</span> <span class="k">import</span> <span class="n">SparkConf</span><span class="p">,</span> <span class="n">SparkContext</span>
-<span class="n">conf</span> <span class="o">=</span> <span class="n">SparkConf</span><span class="p">()</span><span class="o">.</span><span class="n">setAppName</span><span class="p">(</span><span class="s2">&quot;PySpark App&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="s2">&quot;local[*]&quot;</span><span class="p">)</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">conf</span> <span class="o">=</span> <span class="n">conf</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT age, count(age) as age_count </span><span class="se">\</span>
+<span class="s2">          FROM table WHERE stroke == 1 GROUP BY age </span><span class="se">\</span>
+<span class="s2">          ORDER BY age_count DESC&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+----+---------+
+| age|age_count|
++----+---------+
+|79.0|       70|
+|78.0|       57|
+|80.0|       49|
+|81.0|       43|
+|82.0|       36|
+|70.0|       25|
+|74.0|       24|
+|77.0|       24|
+|76.0|       24|
+|67.0|       23|
+|75.0|       23|
+|72.0|       21|
+|69.0|       20|
+|59.0|       20|
+|68.0|       20|
+|71.0|       19|
+|57.0|       19|
+|63.0|       18|
+|65.0|       18|
+|66.0|       17|
++----+---------+
+only showing top 20 rows
+
+</pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Este punto de referencia comparará el rendimiento de esos marcos en tareas comunes de análisis de datos:
-    Complejo donde las cláusulas
-    Ordenar un conjunto de datos
-    Unirse a un conjunto de datos
-    Auto se une
-    Agrupando los datos</p>
-<p>Las pruebas se realizarán en el conjunto de datos de la placa de licencia de OpenData de Holanda (que se encuentra aquí) que tiene ~ 13.5 millones de registros, pero usé herramientas de línea de comando para dividirlo en archivos con 100k, 1m, 5m, 10m y ~ 13.5 líneas. Los tamaños de archivo correspondientes son: 49 MB, 480 MB, 2,4 GB, 4,7 GB y 6,5 GB en consecuencia. Para realizar la prueba de combinaciones, hice este pequeño conjunto de datos con ~ 100 filas.</p>
-<p>El software subyacente es Python 3.5.3 / pandas 0.19.2 y Scala 2.10 / Spark 1.6.2 en una máquina con 32GB de RAM y 8 CPU. El modo local de Spark se realizó en la misma máquina con 32 GB de RAM y 8 CPU, mientras que el modo distribuido se realizó en el modo de hilado-cliente utilizando los blocs de notas de zeppelin en una configuración en 3 máquinas con las mismas especificaciones. En el modo local de Spark utilicé el sistema de archivos normal y en el modo distribuido utilicé HDFS.</p>
-<p>Puedes encontrar el código Scala para Spark aquí. (* el código no es un archivo de Scala adecuado, pero puede copiarse simplemente en las celdas del cuaderno Zeppelin). El Código para Pandas (en python) está aquí.
-Prueba 1: Complejo donde se encuentran las cláusulas.
-Esperanzas de heredar:</p>
-<p>Este es un caso en el que Spark debería brillar, ya que puede leer simultáneamente un conjunto de datos de varias máquinas.</p>
-<p>Consulta:</p>
+<p>Podemos usar la operación de filtro para calcular el número de casos de accidente cerebrovascular para personas después de 50 años.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena</span><span class="o">.</span><span class="n">filter</span><span class="p">((</span><span class="n">entrena</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">entrena</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="s1">&#39;50&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
 
 </div>
 </div>
 </div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[88]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>708</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Como podemos ver, la edad es un factor de riesgo importante para desarrollar un derrame cerebral.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Limpieza-de-Datos">Limpieza de Datos<a class="anchor-link" href="#Limpieza-de-Datos">&#182;</a></h3><p>El siguiente paso de la exploración es tratar con los valores categóricos y los valores faltantes. Hay valores faltantes para smoking_status y bmi.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Rellenamos smoking_status con un valor de 'Sin información'</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena_f</span> <span class="o">=</span> <span class="n">entrena</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">&#39;No Info&#39;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Rellenamos el parámetro bmi con el valor medio.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="k">import</span> <span class="n">mean</span>
+<span class="n">promedio</span> <span class="o">=</span> <span class="n">entrena_f</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">entrena_f</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="n">promedio_bmi</span> <span class="o">=</span> <span class="n">promedio</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">entrena_f</span> <span class="o">=</span> <span class="n">entrena_f</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">promedio_bmi</span><span class="p">,[</span><span class="s1">&#39;bmi&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La mayoría de los algoritmos ML no pueden trabajar directamente con datos categóricos. La codificación permite que los algoritmos que esperan que las características continuas usen características categóricas.</p>
+<p>StringIndexer -&gt; OneHotEncoder -&gt; VectorAssembler</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.ml.feature</span> <span class="k">import</span> <span class="p">(</span><span class="n">VectorAssembler</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">,</span>
+                                <span class="n">StringIndexer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">indexador_genero</span> <span class="o">=</span> <span class="n">StringIndexer</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;genderIndex&#39;</span><span class="p">)</span>
+<span class="n">codificador_genero</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;genderIndex&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;genderVec&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">indexador_casado</span> <span class="o">=</span> <span class="n">StringIndexer</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;ever_married&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;ever_marriedIndex&#39;</span><span class="p">)</span> 
+<span class="n">codificador_casado</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;ever_marriedIndex&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;ever_marriedVec&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">indexador_tipo_trabajo</span> <span class="o">=</span> <span class="n">StringIndexer</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;work_type&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;work_typeIndex&#39;</span><span class="p">)</span>
+<span class="n">codificador_tipo_trabajo</span> <span class="o">=</span> <span class="n">OneHotEncoder</span> <span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;work_typeIndex&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;work_typeVec&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">indexador_residencia</span> <span class="o">=</span> <span class="n">StringIndexer</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;Residence_type&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;Residence_typeIndex&#39;</span><span class="p">)</span> 
+<span class="n">codificador_residencia</span> <span class="o">=</span> <span class="n">OneHotEncoder</span> <span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;Residence_typeIndex&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;Residence_typeVec&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">indexador_status_fumador</span> <span class="o">=</span> <span class="n">StringIndexer</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;smoking_statusIndex&#39;</span><span class="p">)</span>
+<span class="n">codificador_status_fumador</span> <span class="o">=</span> <span class="n">OneHotEncoder</span> <span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s1">&#39;smoking_statusIndex&#39;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;smoking_statusVec&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>No es necesario saber cuántas categorías hay de antemano  en una característica, la combinación de StringIndexer y OneHotEncoder se encargan de ello.</p>
+<p>El siguiente paso es crear un ensamblador, que combine una lista dada de columnas en una columna de un solo vector para entrenar el modelo ML. Usamos las columnas de vectores, que obtuvimos después de OneHotEncoding.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ensamblador</span> <span class="o">=</span> <span class="n">VectorAssembler</span><span class="p">(</span><span class="n">inputCols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;genderVec&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;age&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;hypertension&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;heart_disease&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;ever_marriedVec&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;work_typeVec&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Residence_typeVec&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;bmi&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;smoking_statusVec&#39;</span><span class="p">],</span><span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;features&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Luego crearemos un objeto DecisionTree. Para hacer esto necesitamos importar DecisionTreeClassifier.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.ml.classification</span> <span class="k">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="n">dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">labelCol</span><span class="o">=</span><span class="s1">&#39;stroke&#39;</span><span class="p">,</span><span class="n">featuresCol</span><span class="o">=</span><span class="s1">&#39;features&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hasta ahora tenemos una tarea compleja que contiene un montón de etapas, que deben realizarse para procesar los datos. Para envolver todo eso, Spark ML representa un flujo de trabajo como Pipeline, que consiste en una secuencia de PipelineStages que se ejecutarán en un orden específico.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.ml</span> <span class="k">import</span> <span class="n">Pipeline</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">stages</span><span class="o">=</span><span class="p">[</span><span class="n">indexador_genero</span><span class="p">,</span> <span class="n">indexador_casado</span><span class="p">,</span>\
+                            <span class="n">indexador_tipo_trabajo</span><span class="p">,</span> <span class="n">indexador_residencia</span><span class="p">,</span> 
+                            <span class="n">indexador_status_fumador</span><span class="p">,</span>\
+                            <span class="n">codificador_genero</span><span class="p">,</span> <span class="n">codificador_casado</span><span class="p">,</span> \
+                            <span class="n">codificador_tipo_trabajo</span><span class="p">,</span> <span class="n">codificador_residencia</span><span class="p">,</span> \
+                            <span class="n">codificador_status_fumador</span> <span class="p">,</span> \
+                            <span class="n">assembler</span><span class="p">,</span> <span class="n">dtc</span> \
+                           <span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El siguiente paso es dividir el conjunto de datos para entrenar y probar.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entrena_data</span><span class="p">,</span><span class="n">prueba_data</span> <span class="o">=</span> <span class="n">entrena_f</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lo que voy a hacer ahora es ajustar el modelo. Para esto usaré el pipeline que fue creado y train_data</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">modelo</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">entrena_data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Después de eso transforma los test_data.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dtc_predicciones</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">prueba_data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Es ahora, el momento de evaluar un modelo</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.ml.evaluation</span> <span class="k">import</span> <span class="n">MulticlassClassificationEvaluator</span>
+<span class="c1"># Select (prediction, true label) and compute test error</span>
+<span class="n">acc_evaluator</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">labelCol</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="n">predictionCol</span><span class="o">=</span><span class="s2">&quot;prediction&quot;</span><span class="p">,</span>\
+                                                  <span class="n">metricName</span><span class="o">=</span><span class="s2">&quot;accuracy&quot;</span><span class="p">)</span>
+<span class="n">dtc_acc</span> <span class="o">=</span> <span class="n">acc_evaluator</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">dtc_predicciones</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A Decision Tree algorithm had an accuracy of: </span><span class="si">{0:2.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dtc_acc</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A Decision Tree algorithm had an accuracy of: 98.04%
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Un algoritmo de Árbol de Decisión tenía una precisión de: 98.04%</p>
+<p>Como se definió al principio, el modelo predictivo de un conjunto de datos desequilibrado podría ser con una precisión engañosa.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Conclusiones">Conclusiones<a class="anchor-link" href="#Conclusiones">&#182;</a></h3><p>Hemos discutido las ventajas y desventajas de usar Pyspark o Pandas.  Hemos trabajado el ducto de ciencias de datos para el conjunto de datos para el caso de accidentes cerebrovasculares</p>
+
+</div>
+</div>
+</div></section></section>
 </div>
 </div>
 
