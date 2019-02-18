@@ -12161,9 +12161,29 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Spark-SQL">Spark SQL<a class="anchor-link" href="#Spark-SQL">&#182;</a></h2><p>Spark SQL es un módulo de Spark para el procesamiento de datos estructurados. Internamente, Spark SQL utiliza esta información adicional para realizar optimizaciones adicionales.</p>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Un uso de Spark SQL es ejecutar consultas SQL. Spark SQL también se puede utilizar para leer datos de una instalación existente de Hive. Para obtener más información sobre cómo configurar esta función, consulte la sección Tablas de Hive. Al ejecutar SQL desde otro lenguaje de programación, los resultados se devolverán como un conjunto de datos / marco de datos. También puede interactuar con la interfaz SQL utilizando la línea de comandos o sobre JDBC / ODBC.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Spark-SQL">Spark SQL<a class="anchor-link" href="#Spark-SQL">&#182;</a></h2><h3 id="Dataframes">Dataframes<a class="anchor-link" href="#Dataframes">&#182;</a></h3><p>Un DataFrame es un Dataset organizado en columnas con nombre. Es similar al Dataframe de <strong>Pandas</strong>. Conceptualmente es equivalente a una tabla en una base de datos relacional o un marco de datos en R / Python, pero con optimizaciones más ricas. Los DataFrames se pueden construir a partir de una amplia gama de fuentes, tales como: archivos de datos estructurados, tablas en Hive, bases de datos externas o RDD existentes.</p>
+<p><em><strong>PySpark</strong> y <strong>Pandas</strong> refieren su estructura de datos como 'DataFrames' pero son diferentes plataformas en tiempo de ejecución.</em></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="An&#225;lisis">An&#225;lisis<a class="anchor-link" href="#An&#225;lisis">&#182;</a></h3><p>Realizar un breve análisis utilizando operaciones básicas. Es posible hacerlo de varias maneras:</p>
-<p>Los DataFrames proporcionan un lenguaje específico del dominio para la manipulación de datos estructurados, el acceso a las columnas de un DataFrame puede ser por atributo o por indexación para ejecutar consultas SQL mediante programación y devolver el resultado como un DataFrame
-Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebrovascular, podemos hacer lo siguiente:</p>
+<p>Los DataFrames proporcionan un lenguaje específico del dominio para la manipulación de datos estructurados, el acceso a las columnas de un DataFrame puede ser por atributo o por indexación para ejecutar consultas SQL mediante programación y devolver el resultado como un DataFrame</p>
+<p>Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidentes cerebrovasculares, podemos hacer lo siguiente:</p>
 
 </div>
 </div>
@@ -12182,26 +12202,6 @@ Por ejemplo, para ver qué tipo de trabajo tiene más casos de accidente cerebro
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Spark-SQL">Spark SQL<a class="anchor-link" href="#Spark-SQL">&#182;</a></h2><p>Spark SQL es un módulo de Spark para el procesamiento de datos estructurados. Internamente, Spark SQL utiliza esta información adicional para realizar optimizaciones adicionales.</p>
-<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Un uso de Spark SQL es ejecutar consultas SQL. Spark SQL también se puede utilizar para leer datos de una instalación existente de Hive. Para obtener más información sobre cómo configurar esta función, consulte la sección Tablas de Hive. Al ejecutar SQL desde otro lenguaje de programación, los resultados se devolverán como un conjunto de datos / marco de datos. También puede interactuar con la interfaz SQL utilizando la línea de comandos o sobre JDBC / ODBC.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Spark-SQL">Spark SQL<a class="anchor-link" href="#Spark-SQL">&#182;</a></h2><h3 id="Dataframes">Dataframes<a class="anchor-link" href="#Dataframes">&#182;</a></h3><p>Un DataFrame es un Dataset organizado en columnas con nombre. Es similar al Dataframe de <strong>Pandas</strong>. Conceptualmente es equivalente a una tabla en una base de datos relacional o un marco de datos en R / Python, pero con optimizaciones más ricas bajo el capó. Los DataFrames se pueden construir a partir de una amplia gama de fuentes, tales como: archivos de datos estructurados, tablas en Hive, bases de datos externas o RDD existentes.</p>
-<p><em><strong>PySpark</strong> y <strong>Pandas</strong> refieren su estructura de datos como 'DataFrames' pero son diferentes plataformas en tiempo de ejecución.</em></p>
-
-</div>
-</div>
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
