@@ -14,13 +14,13 @@ El curso esta divido en cuatro lecciones seriadas.
 
 ## Lecciones del Curso
 
-1) [La Estructura de Python](https://weasysolutions.github.io/data-science-course/blob/v-0-1-0-wip/presentation/lesson_1.slides.html#/)  
+1) [La Estructura de Python](https://weasysolutions.github.io/data-science-course/presentation/lesson_1.slides.html#/)  
 
-2) [Los Conjuntos de Datos](https://weasysolutions.github.io/data-science-course/blob/v-0-1-0-wip/presentation/lesson_2.slides.html#/) 
+2) [Los Conjuntos de Datos](https://weasysolutions.github.io/data-science-course/presentation/lesson_2.slides.html#/) 
 
-3) [Las Rutinas del Aprendizaje de Datos](https://weasysolutions.github.io/data-science-course/blob/v-0-1-0-wip/presentation/lesson_3.slides.html#/) 
+3) [Las Rutinas del Aprendizaje de Datos](https://weasysolutions.github.io/data-science-course/presentation/lesson_3.slides.html#/) 
 
-3) [Manejo Gigante de Datos: Pyspark](https://weasysolutions.github.io/data-science-course/blob/v-0-1-0-wip/presentation/lesson_4.slides.html#/) 
+3) [Manejo Gigante de Datos: Pyspark](https://weasysolutions.github.io/data-science-course/presentation/lesson_4.slides.html#/) 
 
 ### Creditos
 [![N|Equipo](https://weasysolutions.github.io/data-science-course/images/weasysolutions.png)](http://weasysolutions.com)
