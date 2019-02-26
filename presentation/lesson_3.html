@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Tercera-Lecci&#243;n">Tercera Lecci&#243;n<a class="anchor-link" href="#Tercera-Lecci&#243;n">&#182;</a></h1>
+<h1 id="Lecci&#243;n-III">Lecci&#243;n III<a class="anchor-link" href="#Lecci&#243;n-III">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11785,7 +11785,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4><em><font color=blue>  Objetivo de la lección: </font></em></h4>
 <p><font color=blue>
- Aprender las diferentes fases del Aprendizaje de Datos (ML): Modelado de datos.
+ Aprender las diferentes fases del Aprendizaje de Datos (ML): Ingeniería de caacterísticas y Modelado de Datos.
 </font></p>
 
 </div>
@@ -11795,9 +11795,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 align="center">El flujo de trabajo en un proyecto de ciencia de datos </h2><p>El conjunto de  lineamientos específicos ('ducto') en un proyecto de  ciencia de datos varía dependiendo de la naturaleza del mismo. Aquí trabajamos el ducto estandar:</p>
+<h2 align="center">El flujo de trabajo en un proyecto de ciencia de datos </h2><p>El conjunto de  lineamientos específicos ('ducto') en un proyecto de  ciencia de datos varía dependiendo de la naturaleza del mismo. Un ducto estandar consiste en:</p>
 <h3 id="An&#225;lisis-exploratorio-de-los-datos">An&#225;lisis exploratorio de los datos<a class="anchor-link" href="#An&#225;lisis-exploratorio-de-los-datos">&#182;</a></h3><h3 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h3><h3 id="Modelado-de-datos">Modelado de datos<a class="anchor-link" href="#Modelado-de-datos">&#182;</a></h3><hr>
-<p>Especificamente en esta leccion nos enfocamos en los dos último puntos</p>
+<p>Específicamente, en esta leccion se tratan los dos últimos puntos</p>
 
 </div>
 </div>
@@ -11806,14 +11806,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Ajustamos un poco el estilo de este libro trabajo para tener graficas centradas</em></p>
+<p><em>Con el siguiente comando se ajusta el libro trabajo para tener graficas centradas</em></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
@@ -11853,7 +11853,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">caracteristicas</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;a:radio&#39;</span><span class="p">,</span><span class="s1">&#39;b:textura&#39;</span><span class="p">,</span><span class="s1">&#39;c:perimetro&#39;</span><span class="p">,</span> \
@@ -11876,14 +11876,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Extracci&#243;n">Extracci&#243;n<a class="anchor-link" href="#Extracci&#243;n">&#182;</a></h4><p>Importamos la librería <strong>Pandas</strong> para extraer el conjunto de datos</p>
+<h4 id="Extracci&#243;n">Extracci&#243;n<a class="anchor-link" href="#Extracci&#243;n">&#182;</a></h4><p>Se importa la biblioteca <strong>Pandas</strong> para extraer el conjunto de datos</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11905,10 +11905,10 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La ingeniería de características es el proceso de utilizar el conocimiento de dominio de los datos para crear características que hacen que los algoritmos de aprendizaje automático funcionen. La ingeniería de características es fundamental para la aplicación del aprendizaje automático.</p>
+<p>La ingeniería de características es el proceso de utilizar el conocimiento de los datos para crear características que hacen que los algoritmos de aprendizaje automático funcionen. La ingeniería de características es fundamental para la aplicación del aprendizaje automático.</p>
 <h2 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h2><ul>
 <li>Datos Categóricos</li>
-<li>Divsion del conjunto de datos</li>
+<li>División del conjunto de datos</li>
 <li>Escalamiento de los atributos</li>
 </ul>
 
@@ -11921,14 +11921,14 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Ingenier&#237;a-de-Caracter&#237;sticas">Ingenier&#237;a de Caracter&#237;sticas<a class="anchor-link" href="#Ingenier&#237;a-de-Caracter&#237;sticas">&#182;</a></h3><h3 id="Datos-Categ&#243;ricos">Datos Categ&#243;ricos<a class="anchor-link" href="#Datos-Categ&#243;ricos">&#182;</a></h3><p>Los datos categóricos son variables que contienen valores de etiqueta en lugar de valores numéricos. El número de valores posibles a menudo se limita a un conjunto fijo.</p>
 <p>Por ejemplo, los usuarios normalmente se describen por país, género, grupo de edad, etc.</p>
-<p>De hecho ya hemos  convertido los atributos del <em>Diagnóstico</em> a valores numéricos:</p>
+<p>De hecho ya se han  convertido los atributos del <em>Diagnóstico</em> a valores numéricos:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Maligno&#39;</span><span class="p">,</span><span class="s1">&#39;Benigno&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -11944,7 +11944,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -11973,14 +11973,14 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>32</th>
-      <td>1</td>
+      <th>235</th>
       <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>229</th>
-      <td>1</td>
+      <th>148</th>
       <td>0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -11997,14 +11997,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Las columnas <em>Maligno</em> y <em>Benigno</em> son redundates. El conocimiento de una, automaticamente nos define la otra. Eliminamos una:</p>
+<p>Las columnas <em>Maligno</em> y <em>Benigno</em> son redundates. El conocimiento de una, automáticamente nos define la otra. Eliminamos una:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Maligno&#39;</span><span class="p">)</span>
@@ -12019,14 +12019,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En este punto la columna <em>Diagnostico</em> tambien se vuelve redundante, por lo que también la eliminamos:</p>
+<p>En este punto la columna <em>Diagnostico</em> tambien se vuelve redundante. Elimine esta columna:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Diagnostico&#39;</span><span class="p">)</span>
@@ -12044,7 +12044,7 @@ div#notebook {
 <h3 id="Divisi&#243;n-del-conjunto-de-datos">Divisi&#243;n del conjunto de datos<a class="anchor-link" href="#Divisi&#243;n-del-conjunto-de-datos">&#182;</a></h3><p>Los datos que utilizamos generalmente se dividen en datos de <em>entrenamiento</em> y datos de <em>prueba</em>. 
 El conjunto de entrenamiento contiene <em>un</em> resultado conocido y 
 el modelo aprende sobre estos datos para generalizarse a otros datos más adelante. 
-Tenemos el conjunto de datos de prueba (o subconjunto) para probar la predicción de nuestro modelo 
+Se tiene al conjunto de datos de prueba (o subconjunto) para probar la predicción del modelo 
 en este subconjunto.</p>
 <hr>
 
@@ -12056,7 +12056,7 @@ en este subconjunto.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>Primero, separamos el conjunto total de diagnósticos (presentado por la letra <em>Y</em>) del resto de los atributos (representados por la letra <em>X</em>)</p>
+<p>Primero, se separa el conjunto total de diagnósticos (presentado por la letra <em>Y</em>) del resto de los atributos (representados por la letra <em>X</em>)</p>
 <hr>
 
 </div>
@@ -12064,7 +12064,7 @@ en este subconjunto.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">29</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -12080,14 +12080,14 @@ en este subconjunto.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Separamos el conjunto de entrenamiento y el conjunto prueba usando la biblioteca <strong>SciKit-Learn</strong>. Más en especifico, usamos el método 'train_test_split':</p>
+<p>Se separa el conjunto de entrenamiento y el conjunto prueba usando la biblioteca <strong>SciKit-Learn</strong>. Use el método 'train_test_split':</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
@@ -12103,9 +12103,9 @@ en este subconjunto.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>El parametro test<em>__size</em> que aparece en el método</p>
+<p>El parámetro <em>test</em>_<em>size</em> que aparece en el método</p>
 <p><em>train</em>_<em>test</em>_<em>split()</em></p>
-<p>representa el porcentaje de los datos <em>(X,Y)</em>  que serán usados como datos de prueba. En nuestro caso hemos usado el veinticinco porciento. El parámetro <em>random</em>_<em>state</em> sirve para establecer la semilla del algoritmo aleatorio que selecciona los conjuntos de datos</p>
+<p>representa el porcentaje de los datos <em>(X,Y)</em>  que serán usados como datos de prueba. Aque se ha usado el veinticinco porciento. El parámetro <em>random</em>_<em>state</em> sirve para establecer la semilla del algoritmo aleatorio que selecciona los conjuntos de datos</p>
 <hr>
 
 </div>
@@ -12115,14 +12115,14 @@ en este subconjunto.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Escalamiento-de-los-atributos">Escalamiento de los atributos<a class="anchor-link" href="#Escalamiento-de-los-atributos">&#182;</a></h3><p>La mayoría de las veces, un conjunto de datos contendrá características altamente variables en su magnitudes, unidades y rango. Por ejemplo notemos la gran disparidad que existe entre las columnas 'dimension_fractal' y 'radio_promedio':</p>
+<h3 id="Escalamiento-de-los-atributos">Escalamiento de los atributos<a class="anchor-link" href="#Escalamiento-de-los-atributos">&#182;</a></h3><p>La mayoría de las veces, un conjunto de datos contendrá características altamente variables en su magnitudes, unidades y rango. Por ejemplo, note la gran disparidad que existe entre las columnas 'dimension_fractal' y 'radio_promedio':</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;area_promedio&#39;</span><span class="p">,</span><span class="s1">&#39;dimension_fractal_promedio&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> 
@@ -12138,7 +12138,7 @@ en este subconjunto.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -12221,8 +12221,8 @@ en este subconjunto.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Asi como la cercania o lejania entre dos ciudades distintas se establece con la distancia que los separa, en estadística también tenemos el concepto de distancia entre los datos <em>medidos</em> con los datos del <em>modelo teórico</em>. De hecho, la noción de distancia en estadística es la misma que la que hay para dos ciudades: la medida Euclideana.
- Con ella, podemos decir si nuestras predicciones del modelo están cerca o lejos de las predicciones de los datos medidos. Es un poco descabellado comparar distancias de ciudades con las distancias entre dos hormigas en un mismo hormiguero, pero los ejemplos del 'area_promedio' y 'dimension_fractal_promedio' arriba expuestos  nos  están demostrando que semejantemente nos encontramos en esta situacion.</p>
+<p>Asi como la cercanía o lejanía entre dos ciudades distintas se establece con la distancia que los separa, en estadística también se tiene el concepto de distancia entre los datos <em>medidos</em> con los datos del <em>modelo teórico</em>. De hecho, la noción de distancia en estadística es la misma que la que hay para dos ciudades: la medida Euclideana.
+ Con ella, se decide si predicciones del modelo están cerca o lejos de las predicciones de los datos medidos. Es un poco descabellado comparar distancias de ciudades con las distancias entre dos hormigas en un mismo hormiguero, pero los ejemplos del 'area_promedio' y 'dimension_fractal_promedio' arriba expuestos  demuestran que se está en esta situacion.</p>
 <hr>
 
 </div>
@@ -12243,14 +12243,14 @@ como  de 0 a 100 o de  0 a 1.  </div></em></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Para normalizar los datos, usamos el metodo <em>StandardScaler</em> de la bilbioteca <strong>sklearn</strong></p>
+<p>Para normalizar los datos, use el método <em>StandardScaler</em> de la bilbioteca <strong>sklearn</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">StandardScaler</span>
@@ -12287,9 +12287,9 @@ como  de 0 a 100 o de  0 a 1.  </div></em></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En nuestro caso queremos predicir si el cancer es maligno o benigno, entonces usaremos <em>algoritmos de clasificación para el aprendizaje supervisado</em></p>
+<p>Aquí se requiere predicir si el cáncer es maligno o benigno, entonces se necesitan <em>algoritmos de clasificación para el aprendizaje supervisado</em></p>
 <hr>
-<p>La palabra supervisado, aquí significa que sabemos que etiqueta final queremos predecir: <em>Benigno</em> o <em>Maligno</em>. Las etiquetas <em>Benigno</em>  y <em>Maligno</em> que usamos para entrenar a la maquina, no deben ser llamadas  <em>predicciones</em> sino <em>datos de salida</em>: toda prediccion es un dato de salida pero no al reves.</p>
+<p>La palabra supervisado, significa que sabe que etiqueta final se  predecirá: <em>Benigno</em> o <em>Maligno</em>. Las etiquetas <em>Benigno</em>  y <em>Maligno</em> que se usan entrenar a la maquina, no deben ser llamadas  <em>predicciones</em> sino <em>datos de salida</em>: toda predicción es un dato de salida pero no al reves.</p>
 
 </div>
 </div>
@@ -12299,7 +12299,7 @@ como  de 0 a 100 o de  0 a 1.  </div></em></p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Clasificaci&#243;n-in-ML">Clasificaci&#243;n in ML<a class="anchor-link" href="#Clasificaci&#243;n-in-ML">&#182;</a></h3><p>EN SUMA:</p>
-<p>En aprendizaje automático y estadística, la clasificación consiste identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de entrenamiento de datos que contienen observaciones (o instancias) cuya categoría de miembro es conocida.</p>
+<p>En aprendizaje automático y estadística, la clasificación consiste en identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de entrenamiento de datos que contienen observaciones (o instancias) cuya categoría de miembro es conocida.</p>
 
 </div>
 </div>
@@ -12333,8 +12333,7 @@ como  de 0 a 100 o de  0 a 1.  </div></em></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La biblioteca <strong>sklearn</strong> incluye todos estos métodos. A continuación describimos cada uno de los métodos e importamos las correspondientes sub-librerias .</p>
-<p>Ejemplificamos a detalle el análisis que hacemos de los datos para el caso de  la  <em>regresión logística</em>. Despues introducimos los demás algoritmos.</p>
+<p>La biblioteca <strong>sklearn</strong> incluye todos estos métodos. A continuación se hace el análisis de clasificación de datos usando  la  <em>regresión logística</em>. Después se introducen los demás clasificadores.</p>
 
 </div>
 </div>
@@ -12343,8 +12342,8 @@ como  de 0 a 100 o de  0 a 1.  </div></em></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="REGRESI&#211;N-LOG&#205;STICA.">REGRESI&#211;N LOG&#205;STICA.<a class="anchor-link" href="#REGRESI&#211;N-LOG&#205;STICA.">&#182;</a></h3><p>En su forma más sencilla (la cual es la que necesitamos aqui), la regresión logística modela las variables de salida 'Benigno y 'Maligno', en este caso hablamos de una <em>regresión logística binaria</em></p>
-<p>El resultado de un paciente no influyen en los demás, entonces las pruebas de los pacientes constituyen un
+<h3 id="REGRESI&#211;N-LOG&#205;STICA.">REGRESI&#211;N LOG&#205;STICA.<a class="anchor-link" href="#REGRESI&#211;N-LOG&#205;STICA.">&#182;</a></h3><p>En su forma más sencilla, la regresión logística modela las variables de salida 'Benigno y 'Maligno', en este se habla de una <em>regresión logística binaria</em></p>
+<p>El resultado de un paciente no influyen en el resultado los demás pacientes, entonces las pruebas de los pacientes constituyen un
 <strong>Ensayo de Bernoulli:</strong>
 Ensayos repetidos independientes de un experimento con exactamente dos resultados posibles.</p>
 
@@ -12356,8 +12355,8 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Regresi&#243;n-Log&#237;stica-vs-Regresi&#243;n-Ordinaria">Regresi&#243;n Log&#237;stica vs Regresi&#243;n Ordinaria<a class="anchor-link" href="#Regresi&#243;n-Log&#237;stica-vs-Regresi&#243;n-Ordinaria">&#182;</a></h4><p>La regresión logística difiere de la regresión ordinaria en que la segunda regresa valores continuos. En la regresión logísitica, la simplicidad de la regresión lineal es usada, pero tiene que ser adicionada con  una forma de convertir una variable binaria en una continua que pueda tomar cualquier valor real (negativo o positivo).</p>
-<p>Para ello se definen  la <em>frontera de decisión</em> (<em>boundary decision</em>).</p>
-<p>Esta predicción categórica se puede basar en las probabilidades calculadas de éxito, y las probabilidades pronosticadas por encima de un valor de corte elegido se traducen en una predicción de éxito.</p>
+<p>Para ello se define la <em>frontera de decisión</em> (<em>boundary decision</em>).</p>
+<p>Esta predicción categórica se puede basar en las probabilidades calculadas de éxito. Las probabilidades pronosticadas por encima de un valor de corte elegido se traducen en una predicción de éxito.</p>
 
 </div>
 </div>
@@ -12382,10 +12381,12 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
 
 <span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  
     <span class="k">return</span>  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">))</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
@@ -12434,14 +12435,14 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A continuación cargamos el método de regresión logística de <strong>skit-learn</strong> que hará el <em>ajuste</em>:</p>
+<p>Cargue el método de regresión logística de <strong>skit-learn</strong> que hará el <em>ajuste</em>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Using Logistic Regression Algorithm to the Training Set</span>
@@ -12463,7 +12464,7 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -12485,14 +12486,14 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Teniendo el <em>clasificador</em> entrenado, toca el turno de generar predicciones (<em>respuestas</em>) para el conjunto de prueba (<em>predictór</em> ) X_test,</p>
+<p>Teniendo el <em>clasificador</em> entrenado, toca el turno de generar predicciones (<em>respuestas</em>) para el conjunto de prueba (<em>predictór</em> ) X_test:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -12502,15 +12503,6 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Para verificar la precisión de la predicción importamos el método de confusión de matriz de métricas. La matríz de confusión es una forma de tabular el número de clasificaciones erróneas, es decir, el número de clases predichas (Y_pred) que terminaron en un contenedor de clasificación incorrecto basado en las clases verdaderas (Y_train).</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12538,10 +12530,10 @@ Ensayos repetidos independientes de un experimento con exactamente dos resultado
 </tr>
 </tbody>
 </table>
-<p>$VP$ = Número de  Verdadero Positivo</p>
-<p>$FP$ = Número de Falso Positivo</p>
-<p>$VN$ = Número de Verdadero Negativo</p>
-<p>$FN$ = Número de Falso Negativo</p>
+<p>$VP$ = Número de  Verdaderos Positivos</p>
+<p>$FP$ = Número de Falsos Positivos</p>
+<p>$VN$ = Número de Verdaderos Negativos</p>
+<p>$FN$ = Número de Falsos Negativos</p>
 <p><strong>condición positiva (P):</strong>
 El número de casos positivos reales en los datos.</p>
 <p><strong>condición negativa (N):</strong>
@@ -12554,14 +12546,14 @@ El número de casos negativos reales en los datos.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Importamos el método de métrica que contiene la matriz de confusión:</p>
+<p>En suma, la matríz de confusión es una forma de tabular el número de clasificaciones erróneas, es decir, el número de clases predichas (Y_pred) que terminaron en un contenedor de clasificación incorrecto basado en las clases verdaderas (Y_train). Importe el método de métrica que contiene la matriz de confusión:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">metrics</span>
@@ -12602,20 +12594,27 @@ El número de casos negativos reales en los datos.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exactitud">Exactitud<a class="anchor-link" href="#Exactitud">&#182;</a></h3><p>Para el caso de errores categoricos (como en nuestro caso), esta simple clasificacion puede ser engañosa, por que las muestras pueden estar cargadas hacia un solo caso. Es recomendable apoyarnos en la <em>Exactitud Matematica</em>, la cual viene dada simplemente por la relacion:</p>
+<h3 id="Exactitud">Exactitud<a class="anchor-link" href="#Exactitud">&#182;</a></h3><p>Para el caso de errores categoricos (como el caso que tratamos aquí), esta simple clasificación puede ser engañosa, por que las muestras pueden estar cargadas hacia un solo caso. Es recomendable apoyarnos en la <em>Exactitud Matemática</em>, la cual viene dada simplemente por la relacion:</p>
 <hr>
 <p>$\textit{Exactitud} = \frac{\text{Número de Predicciones Verdaderas}}{\text{Número Total de Predicciones}}$</p>
-<p>Para nuestro caso de predicciones categóricas binarias:</p>
+<p>Para el caso de predicciones categóricas binarias:</p>
 <p>$\textit{Exactitud} = \frac{\text{VP+VN}}{\text{VP+VN+FP+FN}}$</p>
-<hr>
-<p>El método _metrics.accuracy<em>score</em> lo calcula por nosotros</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El método <em>metrics.accuracy</em>_ <em>score</em> sirve para calcularlo:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
@@ -12631,13 +12630,13 @@ El número de casos negativos reales en los datos.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.9440559440559441</pre>
+<pre>0.958041958041958</pre>
 </div>
 
 </div>
@@ -12650,14 +12649,14 @@ El número de casos negativos reales en los datos.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Toca el turno de repetir el mismo ejercicio sobre las diferentes rutinas de Machine Learning que <strong>sklearn</strong> nos provee. Prim</p>
+<p>Toca el turno de repetir el ejercicio sobre las diferentes rutinas de Machine Learning. Llame los métodos usando <strong>sklearn</strong> :</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clasificadores</span> <span class="o">=</span> <span class="p">{}</span>
@@ -12705,9 +12704,27 @@ El número de casos negativos reales en los datos.</p>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Itere sobre los clasificadores para obtener las correspondientes predicciones:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">exactitudes</span> <span class="o">=</span> <span class="p">{}</span>
@@ -12723,9 +12740,18 @@ El número de casos negativos reales en los datos.</p>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Imprima los correspondientes resultados:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">clasificador</span> <span class="ow">in</span> <span class="n">exactitudes</span><span class="p">:</span>
@@ -12765,48 +12791,7 @@ El clasificador Bosque Aleatorio es exacto hasta un 95.80 %
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Validaci&#243;n-cruzada">Validaci&#243;n cruzada<a class="anchor-link" href="#Validaci&#243;n-cruzada">&#182;</a></h3><p>Mucha veces en vez de dividir inicialmente el conjunto de datos en dos subconjuntos, lo hacemos en tres subconjuntos: <em>entrenamiento</em>, <em>validación</em> y <em>prueba</em></p>
-<p>dejan de lado el conjunto de pruebas y eligen aleatoriamente el X% 
-de su conjunto de datos de tren para que sea el conjunto de trenes real y el restante (100-X)% 
-para ser el conjunto de validación, donde X es un número fijo (por ejemplo, 80%). ), 
-el modelo se entrena y valida iterativamente en estos diferentes conjuntos.
-Hay varias formas de hacer esto, y se conoce comúnmente como validación cruzada. 
-Básicamente, utiliza su conjunto de entrenamiento para generar múltiples divisiones 
-de los conjuntos de Entrenamiento y Validación. La validación cruzada evita el ajuste 
-excesivo y se está volviendo cada vez más popular, siendo la Validación Cruzada K-fold 
-el método más popular de validación cruzada.
-Mira esto para más.</p>
-<p>En el enfoque que estamos siguiendo (también muy común entre los practicantes del aprendizaje de datos)</p>
-<p>Nosotros estamos usando una forma especifica de _validacio</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Nota sobre la validación cruzada: muchas veces,
-las personas primero dividen su conjunto de datos en 2 - Train and Test.
-Después de esto, dejan de lado el conjunto de pruebas y eligen aleatoriamente el X% 
-de su conjunto de datos de tren para que sea el conjunto de trenes real y el restante (100-X)% 
-para ser el conjunto de validación, donde X es un número fijo (por ejemplo, 80%). ), 
-el modelo se entrena y valida iterativamente en estos diferentes conjuntos.
-Hay varias formas de hacer esto, y se conoce comúnmente como validación cruzada. 
-Básicamente, utiliza su conjunto de entrenamiento para generar múltiples divisiones 
-de los conjuntos de Entrenamiento y Validación. La validación cruzada evita el ajuste 
-excesivo y se está volviendo cada vez más popular, siendo la Validación Cruzada K-fold 
-el método más popular de validación cruzada.
-Mira esto para más.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Las columnas <em>Maligno</em> y <em>Benigno</em> son redundates. El conocimiento de una, automaticamente nos define la otra. Eliminamos una:</p>
+<h2 id="Conclusiones">Conclusiones<a class="anchor-link" href="#Conclusiones">&#182;</a></h2><p>Hemos completado el ducto de ciencia de datos para el caso del conjunto de datos del cáncer de mama de Wisconsin</p>
 
 </div>
 </div>
