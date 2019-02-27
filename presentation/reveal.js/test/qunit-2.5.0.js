@@ -1172,7 +1172,7 @@
   	var sample = parseInt(generateHash(seed), 16) || -1;
   	return function () {
   		sample ^= sample << 13;
-  		sample ^= sample >>> 17;
+  		sample ^= sample >> 17;
   		sample ^= sample << 5;
 
   		// ECMAScript has no unsigned number type
