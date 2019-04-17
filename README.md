@@ -7,7 +7,7 @@ Curso de Ciencia de datos desarrollado en un cuaderno de notas de Jupyter. Usamo
 En los últimos años la Ciencia de datos ha adquirido una relevancia muy importante en el mundo de la salud. Por lo que es deseable que los organismos  públicos y privados se encuentren al tanto de los avances  en detección y prevención de enfermedades usando los métodos de la Ciencia de Datos.
 
 ### Requisitos
-Se asume cierta familiaridad con los aspectos baásicos de programación. Algunas cosas se introducen directamente en el código y solo se comenten brevemente.
+Se asume cierta familiaridad con los aspectos baásicos de programación. Algunas cosas se introducen directamente en el código y solo se comentan brevemente.
 
 ## Estructura del Curso 
 El curso esta divido en cuatro lecciones seriadas. 
